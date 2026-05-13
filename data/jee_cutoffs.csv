@@ -1,0 +1,15 @@
+college,branch,category,cutoff_rank
+NIT Trichy,CSE,GM,5000
+NIT Surathkal,CSE,GM,7000
+NIT Warangal,CSE,GM,6000
+
+NIT Trichy,CSE,OBC,9000
+NIT Surathkal,CSE,OBC,11000
+
+NIT Trichy,CSE,SC,20000
+NIT Surathkal,CSE,SC,25000
+
+NIT Trichy,CSE,ST,30000
+NIT Surathkal,CSE,ST,35000
+
+NIT Trichy,CSE,EWS,8000

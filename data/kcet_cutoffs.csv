@@ -1,0 +1,1833 @@
+college,branch,category,cutoff_rank
+R V College of Engineering,CSE,1G,2013
+R V College of Engineering,CSE,1R,2620
+R V College of Engineering,CSE,2AG,1726
+R V College of Engineering,CSE,2AK,5067
+R V College of Engineering,CSE,2AR,2126
+R V College of Engineering,CSE,2BG,2171
+R V College of Engineering,CSE,2BR,6074
+R V College of Engineering,CSE,3AG,769
+R V College of Engineering,CSE,3AR,1393
+R V College of Engineering,CSE,3BG,910
+R V College of Engineering,CSE,3BK,2152
+R V College of Engineering,CSE,3BR,1027
+R V College of Engineering,CSE,GM,499
+R V College of Engineering,CSE,GMK,1462
+R V College of Engineering,CSE,GMR,813
+R V College of Engineering,CSE,SCG,6653
+R V College of Engineering,CSE,SCK,18292
+R V College of Engineering,CSE,SCR,11320
+R V College of Engineering,CSE,STG,7162
+R V College of Engineering,CSE,STK,13536
+R V College of Engineering,CSE,STR,9917
+R V College of Engineering,ECE,1G,3675
+R V College of Engineering,ECE,1R,5199
+R V College of Engineering,ECE,2AG,2559
+R V College of Engineering,ECE,2AK,4862
+R V College of Engineering,ECE,2AR,6497
+R V College of Engineering,ECE,2BG,4622
+R V College of Engineering,ECE,2BR,7791
+R V College of Engineering,ECE,3AG,3168
+R V College of Engineering,ECE,3BG,2483
+R V College of Engineering,ECE,3BR,2691
+R V College of Engineering,ECE,GM,1100
+R V College of Engineering,ECE,GMK,3632
+R V College of Engineering,ECE,GMR,2295
+R V College of Engineering,ECE,SCG,14356
+R V College of Engineering,ECE,SCK,26600
+R V College of Engineering,ECE,SCR,20505
+R V College of Engineering,ECE,STG,12785
+R V College of Engineering,ECE,STK,24193
+R V College of Engineering,ECE,STR,13104
+R V College of Engineering,CSE AIML,GM,742
+R V College of Engineering,CSE AIML,GMK,2043
+R V College of Engineering,CSE AIML,GMR,1195
+R V College of Engineering,CSE AIML,SCG,7874
+R V College of Engineering,CSE AIML,SCK,13399
+R V College of Engineering,CSE AIML,SCR,16164.5
+R V College of Engineering,CSE AIML,STG,7862
+R V College of Engineering,CSE AIML,STR,11936
+R V College of Engineering,Civil,1G,25654
+R V College of Engineering,Civil,2AG,31362
+R V College of Engineering,Civil,2AK,79729
+R V College of Engineering,Civil,2AR,42996
+R V College of Engineering,Civil,2BG,36554
+R V College of Engineering,Civil,3AG,21896
+R V College of Engineering,Civil,3BG,19501
+R V College of Engineering,Civil,GM,10832
+R V College of Engineering,Civil,GMR,40611
+R V College of Engineering,Civil,SCG,34229
+R V College of Engineering,Civil,SCK,43116
+R V College of Engineering,Civil,SCR,42919
+R V College of Engineering,Mechanical,1G,9298
+R V College of Engineering,Mechanical,2AG,19179
+R V College of Engineering,Mechanical,2AR,29462
+R V College of Engineering,Mechanical,2BG,10241.5
+R V College of Engineering,Mechanical,3AG,9021
+R V College of Engineering,Mechanical,3BG,9690
+R V College of Engineering,Mechanical,3BR,19538
+R V College of Engineering,Mechanical,GM,5812
+R V College of Engineering,Mechanical,GMK,23881
+R V College of Engineering,Mechanical,GMR,14076
+R V College of Engineering,Mechanical,SCG,60651.5
+R V College of Engineering,Mechanical,SCK,140282
+R V College of Engineering,Mechanical,SCR,96917
+R V College of Engineering,Mechanical,STG,50016
+R V College of Engineering,Mechanical,STR,92894
+B M S College of Engineering,Civil,1G,70511
+B M S College of Engineering,Civil,2AG,49999
+B M S College of Engineering,Civil,2AR,56129
+B M S College of Engineering,Civil,2BG,45467
+B M S College of Engineering,Civil,3AG,35240
+B M S College of Engineering,Civil,3BG,42373
+B M S College of Engineering,Civil,3BK,64365
+B M S College of Engineering,Civil,3BR,90714
+B M S College of Engineering,Civil,GM,32722.5
+B M S College of Engineering,Civil,GMK,43006
+B M S College of Engineering,Civil,GMR,46090
+B M S College of Engineering,Civil,SCG,91450
+B M S College of Engineering,Civil,SCR,116899
+B M S College of Engineering,Civil,STG,82202
+B M S College of Engineering,Civil,STR,108840
+B M S College of Engineering,EEE,1G,17062
+B M S College of Engineering,EEE,2AG,18590
+B M S College of Engineering,EEE,2AR,43003
+B M S College of Engineering,EEE,2BG,13930
+B M S College of Engineering,EEE,2BR,25098
+B M S College of Engineering,EEE,3AG,11797
+B M S College of Engineering,EEE,3BG,15845
+B M S College of Engineering,EEE,GM,10575.75
+B M S College of Engineering,EEE,GMK,27060
+B M S College of Engineering,EEE,GMR,23875
+B M S College of Engineering,EEE,SCG,53808
+B M S College of Engineering,EEE,SCK,70324
+B M S College of Engineering,EEE,SCR,58322
+B M S College of Engineering,EEE,STG,45191.5
+B M S College of Engineering,EEE,STR,57867
+B M S College of Engineering,ECE,1G,4212
+B M S College of Engineering,ECE,2AG,5737
+B M S College of Engineering,ECE,2AR,11573
+B M S College of Engineering,ECE,2BG,12443
+B M S College of Engineering,ECE,2BK,20516
+B M S College of Engineering,ECE,3AG,4082
+B M S College of Engineering,ECE,3BG,5718
+B M S College of Engineering,ECE,3BR,7954
+B M S College of Engineering,ECE,GM,3114
+B M S College of Engineering,ECE,GMK,5426
+B M S College of Engineering,ECE,GMR,4114
+B M S College of Engineering,ECE,SCG,26045
+B M S College of Engineering,ECE,SCR,46479
+B M S College of Engineering,ECE,STG,32791
+B M S College of Engineering,ECE,STR,37313
+B M S College of Engineering,IEM,1G,53563
+B M S College of Engineering,IEM,1R,149116
+B M S College of Engineering,IEM,2AG,49749
+B M S College of Engineering,IEM,2AK,93770
+B M S College of Engineering,IEM,2AR,100468
+B M S College of Engineering,IEM,2BG,49182.25
+B M S College of Engineering,IEM,3AG,35074
+B M S College of Engineering,IEM,3AR,37026
+B M S College of Engineering,IEM,3BG,41587
+B M S College of Engineering,IEM,GM,32144
+B M S College of Engineering,IEM,GMK,84157
+B M S College of Engineering,IEM,GMR,67471
+B M S College of Engineering,IEM,SCG,119875
+B M S College of Engineering,IEM,SCR,180554
+B M S College of Engineering,IEM,STG,244802
+B M S College of Engineering,Mechanical,1G,35345
+B M S College of Engineering,Mechanical,1R,43804
+B M S College of Engineering,Mechanical,2AG,26891
+B M S College of Engineering,Mechanical,2AK,63226
+B M S College of Engineering,Mechanical,2AR,40161
+B M S College of Engineering,Mechanical,2BG,93102
+B M S College of Engineering,Mechanical,3AG,19058.5
+B M S College of Engineering,Mechanical,3BG,19458
+B M S College of Engineering,Mechanical,GM,17812
+B M S College of Engineering,Mechanical,GMK,50300
+B M S College of Engineering,Mechanical,GMR,27046
+B M S College of Engineering,Mechanical,SCG,78178
+B M S College of Engineering,Mechanical,SCK,158962
+B M S College of Engineering,Mechanical,SCR,178495
+B M S College of Engineering,Mechanical,STG,54954
+B M S College of Engineering,CSE,1G,5740
+B M S College of Engineering,CSE,1K,22440
+B M S College of Engineering,CSE,1R,6345
+B M S College of Engineering,CSE,2AG,6531
+B M S College of Engineering,CSE,2AK,9841
+B M S College of Engineering,CSE,2AR,8587
+B M S College of Engineering,CSE,2BG,10528.5
+B M S College of Engineering,CSE,2BK,26143.5
+B M S College of Engineering,CSE,2BR,15246
+B M S College of Engineering,CSE,3AG,5893
+B M S College of Engineering,CSE,3AK,7455
+B M S College of Engineering,CSE,3AR,7026
+B M S College of Engineering,CSE,3BG,4919
+B M S College of Engineering,CSE,3BK,7505
+B M S College of Engineering,CSE,3BR,6168
+B M S College of Engineering,CSE,GM,3870
+B M S College of Engineering,CSE,GMK,7102
+B M S College of Engineering,CSE,GMR,5954
+B M S College of Engineering,CSE,SCG,23377.5
+B M S College of Engineering,CSE,SCK,40136
+B M S College of Engineering,CSE,SCR,34736
+B M S College of Engineering,CSE,STG,26641
+B M S College of Engineering,CSE,STK,28844
+B M S College of Engineering,CSE,STR,32387
+B M S College of Engineering,CSE Data Science,1G,6885
+B M S College of Engineering,CSE Data Science,2AG,6946
+B M S College of Engineering,CSE Data Science,2AK,13841
+B M S College of Engineering,CSE Data Science,2AR,11543
+B M S College of Engineering,CSE Data Science,2BG,9421
+B M S College of Engineering,CSE Data Science,3AG,6184
+B M S College of Engineering,CSE Data Science,3BG,5698.5
+B M S College of Engineering,CSE Data Science,GM,4585
+B M S College of Engineering,CSE Data Science,GMK,8682
+B M S College of Engineering,CSE Data Science,GMR,6913
+B M S College of Engineering,CSE Data Science,SCG,25092
+B M S College of Engineering,CSE Data Science,SCK,35168
+B M S College of Engineering,CSE Data Science,SCR,28545
+B M S College of Engineering,CSE Data Science,STR,30143
+B M S College of Engineering,ECE,1G,9770
+B M S College of Engineering,ECE,2AG,13131
+B M S College of Engineering,ECE,2AK,8909
+B M S College of Engineering,ECE,2AR,18243
+B M S College of Engineering,ECE,2BG,13335
+B M S College of Engineering,ECE,2BK,16452
+B M S College of Engineering,ECE,2BR,41693
+B M S College of Engineering,ECE,3AG,19533
+B M S College of Engineering,ECE,3AK,7221
+B M S College of Engineering,ECE,3AR,17357
+B M S College of Engineering,ECE,3BG,9104
+B M S College of Engineering,ECE,3BK,7079
+B M S College of Engineering,ECE,GM,8883
+B M S College of Engineering,ECE,GMK,4794
+B M S College of Engineering,ECE,GMR,10587
+B M S College of Engineering,ECE,SCG,37102
+B M S College of Engineering,ECE,SCK,66495
+B M S College of Engineering,ECE,SCR,48282
+B M S College of Engineering,ECE,STG,37176
+B M S College of Engineering,ECE,STR,42607
+B M S College of Engineering,Mechanical,1K,160487
+B M S College of Engineering,Mechanical,2AG,29430.5
+B M S College of Engineering,Mechanical,2AR,46308
+B M S College of Engineering,Mechanical,3AG,28636
+B M S College of Engineering,Mechanical,GM,21879
+B M S College of Engineering,Mechanical,GMK,57048
+B M S College of Engineering,Mechanical,GMR,30625
+B M S College of Engineering,Mechanical,SCG,85955
+B M S College of Engineering,Mechanical,SCK,187735
+B M S College of Engineering,Mechanical,STG,100409
+B M S College of Engineering,Mechanical,STR,19102
+PES University,CSE,1G,3719
+PES University,CSE,1R,4157
+PES University,CSE,2AG,3398
+PES University,CSE,2AK,5813
+PES University,CSE,2AR,4712
+PES University,CSE,2BG,6968
+PES University,CSE,2BK,27343
+PES University,CSE,2BR,10663.9375
+PES University,CSE,3AG,2617
+PES University,CSE,3AK,3343
+PES University,CSE,3AR,2425
+PES University,CSE,3BG,10560
+PES University,CSE,3BR,3340
+PES University,CSE,GM,1654
+PES University,CSE,GMK,5252
+PES University,CSE,GMR,2911
+PES University,CSE,SCG,17432
+PES University,CSE,SCK,22582
+PES University,CSE,SCR,27734
+PES University,CSE,STG,16410
+PES University,CSE,STK,34220.5
+PES University,CSE,STR,41947
+PES University,CSE AIML,1G,4240
+PES University,CSE AIML,1R,6498
+PES University,CSE AIML,2AG,4509
+PES University,CSE AIML,2AK,8221
+PES University,CSE AIML,2AR,6925.5
+PES University,CSE AIML,2BG,8582
+PES University,CSE AIML,2BR,20220.5
+PES University,CSE AIML,3AG,4076
+PES University,CSE AIML,3AR,5801
+PES University,CSE AIML,3BG,3555
+PES University,CSE AIML,3BK,8330
+PES University,CSE AIML,3BR,6336
+PES University,CSE AIML,GM,2694
+PES University,CSE AIML,GMK,7761
+PES University,CSE AIML,GMR,4600
+PES University,CSE AIML,SCG,22730
+PES University,CSE AIML,SCK,48610.5
+PES University,CSE AIML,SCR,31564
+PES University,CSE AIML,STG,24531
+PES University,CSE AIML,STK,39783
+PES University,CSE AIML,STR,41445.5
+PES University,ECE,1G,6538
+PES University,ECE,1K,16107
+PES University,ECE,1R,9984.5
+PES University,ECE,2AG,9107
+PES University,ECE,2AK,27281
+PES University,ECE,2AR,13294.25
+PES University,ECE,2BG,14582
+PES University,ECE,2BR,32320
+PES University,ECE,3AG,4728
+PES University,ECE,3AR,9583
+PES University,ECE,3BG,6512
+PES University,ECE,3BR,9183
+PES University,ECE,GM,3765
+PES University,ECE,GMK,11056
+PES University,ECE,GMR,7493
+PES University,ECE,SCG,31259
+PES University,ECE,SCK,63523
+PES University,ECE,SCR,44311
+PES University,ECE,STG,25529
+PES University,ECE,STR,35608
+PES University,Mechanical,1R,148281
+PES University,Mechanical,2AG,27623
+PES University,Mechanical,2AK,128934
+PES University,Mechanical,3AR,16657
+PES University,Mechanical,GM,15958
+PES University,Mechanical,GMR,33345
+PES University,Mechanical,SCG,79371
+PES University,Mechanical,SCK,97381
+PES University,Mechanical,SCR,51929
+MS Ramaiah Institute of Technology,CSE,1G,3478
+MS Ramaiah Institute of Technology,CSE,2AG,3676
+MS Ramaiah Institute of Technology,CSE,2AK,12229
+MS Ramaiah Institute of Technology,CSE,2AR,4843
+MS Ramaiah Institute of Technology,CSE,2BG,3248
+MS Ramaiah Institute of Technology,CSE,3AG,2829
+MS Ramaiah Institute of Technology,CSE,3BG,2991
+MS Ramaiah Institute of Technology,CSE,3BR,3401
+MS Ramaiah Institute of Technology,CSE,GM,2076
+MS Ramaiah Institute of Technology,CSE,GMK,3115
+MS Ramaiah Institute of Technology,CSE,GMR,2765
+MS Ramaiah Institute of Technology,CSE,SCG,11785
+MS Ramaiah Institute of Technology,CSE,SCK,20040
+MS Ramaiah Institute of Technology,CSE,SCR,12305
+MS Ramaiah Institute of Technology,CSE,STG,13666
+MS Ramaiah Institute of Technology,CSE,STR,16267
+MS Ramaiah Institute of Technology,CSE AIML,1G,4494
+MS Ramaiah Institute of Technology,CSE AIML,2AG,4363
+MS Ramaiah Institute of Technology,CSE AIML,2AK,6892
+MS Ramaiah Institute of Technology,CSE AIML,2AR,8099.5
+MS Ramaiah Institute of Technology,CSE AIML,2BG,8079
+MS Ramaiah Institute of Technology,CSE AIML,3AG,3091
+MS Ramaiah Institute of Technology,CSE AIML,3AR,3631
+MS Ramaiah Institute of Technology,CSE AIML,3BG,2984
+MS Ramaiah Institute of Technology,CSE AIML,GM,2791
+MS Ramaiah Institute of Technology,CSE AIML,GMK,3255
+MS Ramaiah Institute of Technology,CSE AIML,GMR,3257
+MS Ramaiah Institute of Technology,CSE AIML,SCG,14715
+MS Ramaiah Institute of Technology,CSE AIML,SCK,33215
+MS Ramaiah Institute of Technology,CSE AIML,SCR,38296
+MS Ramaiah Institute of Technology,CSE AIML,STG,23175
+MS Ramaiah Institute of Technology,CSE AIML,STR,44462.5
+MS Ramaiah Institute of Technology,ECE,1G,7168
+MS Ramaiah Institute of Technology,ECE,2AG,7617.5
+MS Ramaiah Institute of Technology,ECE,2AK,17791
+MS Ramaiah Institute of Technology,ECE,2AR,9428.5
+MS Ramaiah Institute of Technology,ECE,2BG,10330
+MS Ramaiah Institute of Technology,ECE,2BR,32201
+MS Ramaiah Institute of Technology,ECE,3AG,4606
+MS Ramaiah Institute of Technology,ECE,3BG,5030.5
+MS Ramaiah Institute of Technology,ECE,3BR,9632
+MS Ramaiah Institute of Technology,ECE,GM,4080
+MS Ramaiah Institute of Technology,ECE,GMK,5505
+MS Ramaiah Institute of Technology,ECE,GMR,6418
+MS Ramaiah Institute of Technology,ECE,SCG,20202
+MS Ramaiah Institute of Technology,ECE,SCK,41720
+MS Ramaiah Institute of Technology,ECE,SCR,45350
+MS Ramaiah Institute of Technology,ECE,STG,28947
+MS Ramaiah Institute of Technology,ECE,STR,34733
+MS Ramaiah Institute of Technology,Mechanical,1G,34496
+MS Ramaiah Institute of Technology,Mechanical,2AG,33207
+MS Ramaiah Institute of Technology,Mechanical,2AK,111267
+MS Ramaiah Institute of Technology,Mechanical,2AR,49455
+MS Ramaiah Institute of Technology,Mechanical,2BG,53518
+MS Ramaiah Institute of Technology,Mechanical,3AG,20767
+MS Ramaiah Institute of Technology,Mechanical,3BG,29777
+MS Ramaiah Institute of Technology,Mechanical,3BR,58136
+MS Ramaiah Institute of Technology,Mechanical,GM,20751
+MS Ramaiah Institute of Technology,Mechanical,GMK,29753
+MS Ramaiah Institute of Technology,Mechanical,GMR,40847.5
+MS Ramaiah Institute of Technology,Mechanical,SCG,78746
+MS Ramaiah Institute of Technology,Mechanical,SCR,126393
+MS Ramaiah Institute of Technology,Mechanical,STR,112719
+MS Ramaiah Institute of Technology,Aerospace,1G,13846
+MS Ramaiah Institute of Technology,Aerospace,2AG,15667
+MS Ramaiah Institute of Technology,Aerospace,2AR,41857
+MS Ramaiah Institute of Technology,Aerospace,2BG,10674
+MS Ramaiah Institute of Technology,Aerospace,GM,6536
+MS Ramaiah Institute of Technology,Aerospace,GMK,24441
+MS Ramaiah Institute of Technology,Aerospace,GMR,11969
+MS Ramaiah Institute of Technology,Aerospace,SCG,31203
+MS Ramaiah Institute of Technology,Aerospace,SCR,36514
+MS Ramaiah Institute of Technology,Aerospace,STG,59844
+MS Ramaiah Institute of Technology,AI Data Science,1G,5619
+MS Ramaiah Institute of Technology,AI Data Science,1R,7452
+MS Ramaiah Institute of Technology,AI Data Science,2AG,5749
+MS Ramaiah Institute of Technology,AI Data Science,2BG,7737
+MS Ramaiah Institute of Technology,AI Data Science,3AG,4806
+MS Ramaiah Institute of Technology,AI Data Science,3AR,5743
+MS Ramaiah Institute of Technology,AI Data Science,3BG,4331.5
+MS Ramaiah Institute of Technology,AI Data Science,GM,4160
+MS Ramaiah Institute of Technology,AI Data Science,GMR,5733
+MS Ramaiah Institute of Technology,AI Data Science,SCG,13337
+MS Ramaiah Institute of Technology,AI Data Science,SCR,25226
+MS Ramaiah Institute of Technology,CSE Cyber Security,1G,5520
+MS Ramaiah Institute of Technology,CSE Cyber Security,2AG,5259
+MS Ramaiah Institute of Technology,CSE Cyber Security,2AR,8764
+MS Ramaiah Institute of Technology,CSE Cyber Security,2BG,4781
+MS Ramaiah Institute of Technology,CSE Cyber Security,3AG,4422
+MS Ramaiah Institute of Technology,CSE Cyber Security,3BG,4357
+MS Ramaiah Institute of Technology,CSE Cyber Security,GM,4208
+MS Ramaiah Institute of Technology,CSE Cyber Security,GMR,5423
+MS Ramaiah Institute of Technology,CSE Cyber Security,SCG,14971
+MS Ramaiah Institute of Technology,CSE Cyber Security,SCR,37882.5
+MS Ramaiah Institute of Technology,EEE,2AG,15433
+MS Ramaiah Institute of Technology,EEE,2AR,20381
+MS Ramaiah Institute of Technology,EEE,2BG,17129
+MS Ramaiah Institute of Technology,EEE,3AG,16679
+MS Ramaiah Institute of Technology,EEE,3BG,13499.25
+MS Ramaiah Institute of Technology,EEE,GM,10791
+MS Ramaiah Institute of Technology,EEE,GMR,18212
+MS Ramaiah Institute of Technology,EEE,SCG,36743
+MS Ramaiah Institute of Technology,EEE,SCR,37685
+MS Ramaiah Institute of Technology,EEE,STG,30951
+MS Ramaiah Institute of Technology,EEE,STR,49709
+MS Ramaiah Institute of Technology,Chemical,1G,44238
+MS Ramaiah Institute of Technology,Chemical,2AG,45293.5
+MS Ramaiah Institute of Technology,Chemical,2AR,112119
+MS Ramaiah Institute of Technology,Chemical,2BG,54253.5
+MS Ramaiah Institute of Technology,Chemical,3AG,36754
+MS Ramaiah Institute of Technology,Chemical,3BG,21788
+MS Ramaiah Institute of Technology,Chemical,GM,21060
+MS Ramaiah Institute of Technology,Chemical,GMK,32050
+MS Ramaiah Institute of Technology,Chemical,GMR,42666
+MS Ramaiah Institute of Technology,Chemical,SCG,55204
+MS Ramaiah Institute of Technology,Chemical,SCR,73953
+MS Ramaiah Institute of Technology,Chemical,STG,146911.5
+MS Ramaiah Institute of Technology,Biotechnology,1G,21754
+MS Ramaiah Institute of Technology,Biotechnology,2AG,24875
+MS Ramaiah Institute of Technology,Biotechnology,2AR,47574
+MS Ramaiah Institute of Technology,Biotechnology,2BG,13481
+MS Ramaiah Institute of Technology,Biotechnology,3AG,17079
+MS Ramaiah Institute of Technology,Biotechnology,3BG,14598
+MS Ramaiah Institute of Technology,Biotechnology,GM,12464
+MS Ramaiah Institute of Technology,Biotechnology,GMK,73387
+MS Ramaiah Institute of Technology,Biotechnology,GMR,38676
+MS Ramaiah Institute of Technology,Biotechnology,SCG,55144
+MS Ramaiah Institute of Technology,Biotechnology,SCR,166704
+MS Ramaiah Institute of Technology,Biotechnology,STG,40781
+MS Ramaiah Institute of Technology,ISE,1G,4763
+MS Ramaiah Institute of Technology,ISE,2AG,4481
+MS Ramaiah Institute of Technology,ISE,2AK,7106
+MS Ramaiah Institute of Technology,ISE,2AR,5328
+MS Ramaiah Institute of Technology,ISE,2BG,3863
+MS Ramaiah Institute of Technology,ISE,2BR,9415
+MS Ramaiah Institute of Technology,ISE,3AG,3647
+MS Ramaiah Institute of Technology,ISE,3BG,3552
+MS Ramaiah Institute of Technology,ISE,3BR,5863
+MS Ramaiah Institute of Technology,ISE,GM,3196
+MS Ramaiah Institute of Technology,ISE,GMK,5600
+MS Ramaiah Institute of Technology,ISE,GMR,4184
+MS Ramaiah Institute of Technology,ISE,SCG,22926
+MS Ramaiah Institute of Technology,ISE,SCK,31369
+MS Ramaiah Institute of Technology,ISE,SCR,24280
+MS Ramaiah Institute of Technology,ISE,STG,23535
+MS Ramaiah Institute of Technology,ISE,STR,37063
+PES University Electronic City,CSE AIML,1G,12789.5
+PES University Electronic City,CSE AIML,1R,15301
+PES University Electronic City,CSE AIML,2AG,10926
+PES University Electronic City,CSE AIML,2AK,18222
+PES University Electronic City,CSE AIML,2AR,19939
+PES University Electronic City,CSE AIML,2BG,15153
+PES University Electronic City,CSE AIML,2BR,22090
+PES University Electronic City,CSE AIML,3AG,8739
+PES University Electronic City,CSE AIML,3AK,16141
+PES University Electronic City,CSE AIML,3AR,14470
+PES University Electronic City,CSE AIML,3BG,9792
+PES University Electronic City,CSE AIML,3BK,11571
+PES University Electronic City,CSE AIML,3BR,7283
+PES University Electronic City,CSE AIML,GM,14355
+PES University Electronic City,CSE AIML,GMK,9370
+PES University Electronic City,CSE AIML,SCG,37935
+PES University Electronic City,CSE AIML,SCK,64265
+PES University Electronic City,CSE AIML,SCR,41921
+PES University Electronic City,CSE AIML,STG,42585
+PES University Electronic City,CSE AIML,STR,62039
+PES University Electronic City,CSE,1G,11923
+PES University Electronic City,CSE,1R,15474
+PES University Electronic City,CSE,2AG,10921
+PES University Electronic City,CSE,2AK,17362
+PES University Electronic City,CSE,2AR,18572
+PES University Electronic City,CSE,2BG,14841
+PES University Electronic City,CSE,2BK,40712
+PES University Electronic City,CSE,2BR,17574
+PES University Electronic City,CSE,3AG,8352
+PES University Electronic City,CSE,3AK,11359
+PES University Electronic City,CSE,3AR,8777
+PES University Electronic City,CSE,3BG,15052
+PES University Electronic City,CSE,3BK,13722
+PES University Electronic City,CSE,3BR,6056
+PES University Electronic City,CSE,GM,14942
+PES University Electronic City,CSE,GMK,10254
+PES University Electronic City,CSE,SCG,39249
+PES University Electronic City,CSE,SCK,54924
+PES University Electronic City,CSE,SCR,50654.5
+PES University Electronic City,CSE,STG,45139
+PES University Electronic City,CSE,STK,88760
+PES University Electronic City,CSE,STR,64395
+PES University Electronic City,ECE,1G,12098
+PES University Electronic City,ECE,1K,30262
+PES University Electronic City,ECE,2AG,12285
+PES University Electronic City,ECE,2AR,20556.5
+PES University Electronic City,ECE,2BG,23280
+PES University Electronic City,ECE,2BR,59317
+PES University Electronic City,ECE,3AG,8941
+PES University Electronic City,ECE,3AR,15516
+PES University Electronic City,ECE,3BG,12590
+PES University Electronic City,ECE,GM,7486
+PES University Electronic City,ECE,GMK,21899
+PES University Electronic City,ECE,GMR,14796
+PES University Electronic City,ECE,SCG,56506
+PES University Electronic City,ECE,SCK,85597
+PES University Electronic City,ECE,SCR,87704
+PES University Electronic City,ECE,STG,54332
+Bangalore Institute of Technology,CSE,1G,13500
+Bangalore Institute of Technology,CSE,1R,19139
+Bangalore Institute of Technology,CSE,2AG,11407
+Bangalore Institute of Technology,CSE,2AK,19908
+Bangalore Institute of Technology,CSE,2AR,17113
+Bangalore Institute of Technology,CSE,2BG,15932
+Bangalore Institute of Technology,CSE,2BR,26793
+Bangalore Institute of Technology,CSE,3AG,9458
+Bangalore Institute of Technology,CSE,3AR,9744
+Bangalore Institute of Technology,CSE,3BG,9565
+Bangalore Institute of Technology,CSE,3BR,10685
+Bangalore Institute of Technology,CSE,GM,8157
+Bangalore Institute of Technology,CSE,GMK,11519
+Bangalore Institute of Technology,CSE,GMR,9548.75
+Bangalore Institute of Technology,CSE,SCG,34482
+Bangalore Institute of Technology,CSE,SCK,47208
+Bangalore Institute of Technology,CSE,SCR,39928.5
+Bangalore Institute of Technology,CSE,STG,38137
+Bangalore Institute of Technology,CSE,STK,42289
+Bangalore Institute of Technology,CSE,STR,39005
+Bangalore Institute of Technology,CSE Data Science,1G,17132
+Bangalore Institute of Technology,CSE Data Science,2AG,13667
+Bangalore Institute of Technology,CSE Data Science,2BG,12056
+Bangalore Institute of Technology,CSE Data Science,2BK,37662
+Bangalore Institute of Technology,CSE Data Science,2BR,25961
+Bangalore Institute of Technology,CSE Data Science,3AG,11790
+Bangalore Institute of Technology,CSE Data Science,3AR,12537
+Bangalore Institute of Technology,CSE Data Science,3BG,12561
+Bangalore Institute of Technology,CSE Data Science,GM,10993.75
+Bangalore Institute of Technology,CSE Data Science,GMR,11437
+Bangalore Institute of Technology,CSE Data Science,SCG,38408
+Bangalore Institute of Technology,CSE Data Science,STG,37582
+Bangalore Institute of Technology,CSE IoT Cyber,1G,22344.5
+Bangalore Institute of Technology,CSE IoT Cyber,2AG,16179
+Bangalore Institute of Technology,CSE IoT Cyber,2AR,19787
+Bangalore Institute of Technology,CSE IoT Cyber,2BG,17411
+Bangalore Institute of Technology,CSE IoT Cyber,3AG,14242
+Bangalore Institute of Technology,CSE IoT Cyber,3BG,13624
+Bangalore Institute of Technology,CSE IoT Cyber,GM,12460
+Bangalore Institute of Technology,CSE IoT Cyber,GMK,25337
+Bangalore Institute of Technology,CSE IoT Cyber,GMR,14560
+Bangalore Institute of Technology,CSE IoT Cyber,SCG,40049.5
+Bangalore Institute of Technology,CSE IoT Cyber,SCR,44551
+Bangalore Institute of Technology,CSE IoT Cyber,STG,40029.5
+Bangalore Institute of Technology,AIML,1G,15502
+Bangalore Institute of Technology,AIML,2AG,13066
+Bangalore Institute of Technology,AIML,2AK,15354
+Bangalore Institute of Technology,AIML,2AR,16342
+Bangalore Institute of Technology,AIML,2BG,17547
+Bangalore Institute of Technology,AIML,3AG,10803
+Bangalore Institute of Technology,AIML,3BG,11588
+Bangalore Institute of Technology,AIML,3BR,12810
+Bangalore Institute of Technology,AIML,GM,9607
+Bangalore Institute of Technology,AIML,GMK,14460
+Bangalore Institute of Technology,AIML,GMR,12095
+Bangalore Institute of Technology,AIML,SCG,36972
+Bangalore Institute of Technology,AIML,SCK,41707
+Bangalore Institute of Technology,AIML,SCR,39333
+Bangalore Institute of Technology,AIML,STG,38850
+Bangalore Institute of Technology,BIT,STR,61771
+Bangalore Institute of Technology,ECE,1G,21509
+Bangalore Institute of Technology,ECE,2AG,19324
+Bangalore Institute of Technology,ECE,2AK,21486
+Bangalore Institute of Technology,ECE,2AR,23905
+Bangalore Institute of Technology,ECE,2BG,25952.5
+Bangalore Institute of Technology,ECE,3AG,14205
+Bangalore Institute of Technology,ECE,3BG,15097
+Bangalore Institute of Technology,ECE,3BR,20386.5
+Bangalore Institute of Technology,ECE,GM,13549
+Bangalore Institute of Technology,ECE,GMK,16198
+Bangalore Institute of Technology,ECE,GMR,19239
+Bangalore Institute of Technology,ECE,SCG,67020
+Bangalore Institute of Technology,ECE,SCK,68344
+Bangalore Institute of Technology,ECE,SCR,80934
+Bangalore Institute of Technology,ECE,STG,46835
+Bangalore Institute of Technology,ECE,STR,67522
+Bangalore Institute of Technology,EEE,1G,34448
+Bangalore Institute of Technology,EEE,2AG,46511.5
+Bangalore Institute of Technology,EEE,2AR,47327
+Bangalore Institute of Technology,EEE,2BG,32196.5
+Bangalore Institute of Technology,EEE,3AG,30694
+Bangalore Institute of Technology,EEE,3BG,34282
+Bangalore Institute of Technology,EEE,GM,30331
+Bangalore Institute of Technology,EEE,GMR,36002
+Bangalore Institute of Technology,EEE,SCG,92890
+Bangalore Institute of Technology,EEE,SCR,120441.5
+Bangalore Institute of Technology,EEE,STG,92607
+Bangalore Institute of Technology,Mechanical,1G,68971
+Bangalore Institute of Technology,Mechanical,2AG,102648
+Bangalore Institute of Technology,Mechanical,2AR,120932
+Bangalore Institute of Technology,Mechanical,2BG,209718
+Bangalore Institute of Technology,Mechanical,3AG,70961
+Bangalore Institute of Technology,Mechanical,3AR,142508
+Bangalore Institute of Technology,Mechanical,3BG,97719
+Bangalore Institute of Technology,Mechanical,GM,67835
+Bangalore Institute of Technology,Mechanical,GMK,102828.5
+Bangalore Institute of Technology,Mechanical,GMR,94393
+Bangalore Institute of Technology,Mechanical,SCG,170314
+Bangalore Institute of Technology,Mechanical,SCK,252386
+Bangalore Institute of Technology,Mechanical,SCR,181107
+Bangalore Institute of Technology,Mechanical,STG,190877
+Dayananda Sagar College of Engineering,CSE,1G,9967
+Dayananda Sagar College of Engineering,CSE,1R,10144
+Dayananda Sagar College of Engineering,CSE,2AG,9339
+Dayananda Sagar College of Engineering,CSE,2AK,15155
+Dayananda Sagar College of Engineering,CSE,2AR,11940.5
+Dayananda Sagar College of Engineering,CSE,2BG,11737
+Dayananda Sagar College of Engineering,CSE,2BR,11860
+Dayananda Sagar College of Engineering,CSE,3AG,7689
+Dayananda Sagar College of Engineering,CSE,3AR,8020
+Dayananda Sagar College of Engineering,CSE,3BG,7550
+Dayananda Sagar College of Engineering,CSE,3BR,8595
+Dayananda Sagar College of Engineering,CSE,GM,6584
+Dayananda Sagar College of Engineering,CSE,GMK,11347
+Dayananda Sagar College of Engineering,CSE,GMR,7674
+Dayananda Sagar College of Engineering,CSE,SCG,32213
+Dayananda Sagar College of Engineering,CSE,SCK,40731
+Dayananda Sagar College of Engineering,CSE,SCR,44157
+Dayananda Sagar College of Engineering,CSE,STG,32004
+Dayananda Sagar College of Engineering,CSE,STK,42283
+Dayananda Sagar College of Engineering,CSE,STR,40841
+Dayananda Sagar College of Engineering,CSE AIML,1G,8502
+Dayananda Sagar College of Engineering,CSE AIML,2AG,9754
+Dayananda Sagar College of Engineering,CSE AIML,2AR,13054
+Dayananda Sagar College of Engineering,CSE AIML,2BG,10610
+Dayananda Sagar College of Engineering,CSE AIML,3AG,9090
+Dayananda Sagar College of Engineering,CSE AIML,3BG,8300
+Dayananda Sagar College of Engineering,CSE AIML,3BR,10979
+Dayananda Sagar College of Engineering,CSE AIML,GM,7846
+Dayananda Sagar College of Engineering,CSE AIML,GMK,11000
+Dayananda Sagar College of Engineering,CSE AIML,GMR,8387
+Dayananda Sagar College of Engineering,CSE AIML,SCG,23698
+Dayananda Sagar College of Engineering,CSE AIML,SCK,39128
+Dayananda Sagar College of Engineering,CSE AIML,SCR,32834
+Dayananda Sagar College of Engineering,CSE AIML,STG,29681
+Dayananda Sagar College of Engineering,CSE AIML,STR,34056
+Dayananda Sagar College of Engineering,CSE Data Science,1G,12178
+Dayananda Sagar College of Engineering,CSE Data Science,2AG,9389
+Dayananda Sagar College of Engineering,CSE Data Science,2AR,16615
+Dayananda Sagar College of Engineering,CSE Data Science,2BG,11786
+Dayananda Sagar College of Engineering,CSE Data Science,3AG,9135
+Dayananda Sagar College of Engineering,CSE Data Science,3BG,8379
+Dayananda Sagar College of Engineering,CSE Data Science,GM,7565
+Dayananda Sagar College of Engineering,CSE Data Science,GMK,10092
+Dayananda Sagar College of Engineering,CSE Data Science,GMR,8784
+Dayananda Sagar College of Engineering,CSE Data Science,SCG,35327
+Dayananda Sagar College of Engineering,CSE Data Science,SCR,37808
+Dayananda Sagar College of Engineering,CSE Data Science,STG,27988
+Dayananda Sagar College of Engineering,CSE Cyber Security,1G,11582
+Dayananda Sagar College of Engineering,CSE Cyber Security,1K,11837
+Dayananda Sagar College of Engineering,CSE Cyber Security,2AG,13154
+Dayananda Sagar College of Engineering,CSE Cyber Security,2AR,14899
+Dayananda Sagar College of Engineering,CSE Cyber Security,2BG,13812
+Dayananda Sagar College of Engineering,CSE Cyber Security,3BG,10796
+Dayananda Sagar College of Engineering,CSE Cyber Security,GM,9323
+Dayananda Sagar College of Engineering,CSE Cyber Security,GMR,10790
+Dayananda Sagar College of Engineering,CSE Cyber Security,SCG,39288.5
+Dayananda Sagar College of Engineering,CSE Cyber Security,SCR,44244
+Dayananda Sagar College of Engineering,CSE Cyber Security,STG,36752
+Dayananda Sagar College of Engineering,ECE,1G,19403
+Dayananda Sagar College of Engineering,ECE,1R,27599
+Dayananda Sagar College of Engineering,ECE,2AG,16115
+Dayananda Sagar College of Engineering,ECE,2AK,16877
+Dayananda Sagar College of Engineering,ECE,2AR,20162
+Dayananda Sagar College of Engineering,ECE,2BG,19519
+Dayananda Sagar College of Engineering,ECE,2BR,41087.5
+Dayananda Sagar College of Engineering,ECE,3AG,13625
+Dayananda Sagar College of Engineering,ECE,3AR,15626
+Dayananda Sagar College of Engineering,ECE,3BG,12236
+Dayananda Sagar College of Engineering,ECE,3BR,15634
+Dayananda Sagar College of Engineering,ECE,GM,10755
+Dayananda Sagar College of Engineering,ECE,GMK,15290
+Dayananda Sagar College of Engineering,ECE,GMR,14017
+Dayananda Sagar College of Engineering,ECE,SCG,48407
+Dayananda Sagar College of Engineering,ECE,SCK,51798
+Dayananda Sagar College of Engineering,ECE,SCR,63903
+Dayananda Sagar College of Engineering,ECE,STG,48934
+Dayananda Sagar College of Engineering,ECE,STK,74132
+Dayananda Sagar College of Engineering,ECE,STR,50943.5
+Dayananda Sagar College of Engineering,EEE,1G,32857
+Dayananda Sagar College of Engineering,EEE,2AG,40366
+Dayananda Sagar College of Engineering,EEE,2AK,64665
+Dayananda Sagar College of Engineering,EEE,2AR,65373.5
+Dayananda Sagar College of Engineering,EEE,2BG,32019
+Dayananda Sagar College of Engineering,EEE,3AG,29396
+Dayananda Sagar College of Engineering,EEE,3BG,30159
+Dayananda Sagar College of Engineering,EEE,3BR,41830
+Dayananda Sagar College of Engineering,EEE,GM,26153
+Dayananda Sagar College of Engineering,EEE,GMK,48393
+Dayananda Sagar College of Engineering,EEE,GMR,35243
+Dayananda Sagar College of Engineering,EEE,SCG,84496
+Dayananda Sagar College of Engineering,EEE,SCR,98612
+Dayananda Sagar College of Engineering,EEE,STG,89675
+Dayananda Sagar College of Engineering,EEE,STR,124090
+Sir M Visvesvaraya Institute of Technology,CSE,1G,27628
+Sir M Visvesvaraya Institute of Technology,CSE,2AG,23982
+Sir M Visvesvaraya Institute of Technology,CSE,2AK,25514
+Sir M Visvesvaraya Institute of Technology,CSE,2AR,25844
+Sir M Visvesvaraya Institute of Technology,CSE,2BG,25503
+Sir M Visvesvaraya Institute of Technology,CSE,2BR,41253
+Sir M Visvesvaraya Institute of Technology,CSE,3AG,19617
+Sir M Visvesvaraya Institute of Technology,CSE,3AR,22850
+Sir M Visvesvaraya Institute of Technology,CSE,3BG,20567
+Sir M Visvesvaraya Institute of Technology,CSE,3BR,22189
+Sir M Visvesvaraya Institute of Technology,CSE,GM,19216
+Sir M Visvesvaraya Institute of Technology,CSE,GMK,20982
+Sir M Visvesvaraya Institute of Technology,CSE,GMR,21492
+Sir M Visvesvaraya Institute of Technology,CSE,SCG,57790
+Sir M Visvesvaraya Institute of Technology,CSE,SCK,65809
+Sir M Visvesvaraya Institute of Technology,CSE,SCR,82549
+Sir M Visvesvaraya Institute of Technology,CSE,STG,51121.5
+Sir M Visvesvaraya Institute of Technology,CSE,STK,53873
+Sir M Visvesvaraya Institute of Technology,CSE,STR,51840
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,1G,30993
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,1K,35656
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,2AG,28001
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,2BG,30755
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,3AR,25103
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,3BG,23871
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,GM,21659
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,GMR,24753
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,SCG,66616
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,SCR,116505
+Sir M Visvesvaraya Institute of Technology,CSE Data Science,STG,39016
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,1G,43169
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,2AG,31450
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,2AR,34200
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,2BG,37832
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,3AG,24412
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,3BG,24535
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,3BR,34891
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,GM,23008
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,GMR,27023
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,SCG,51534
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,SCR,81552
+Sir M Visvesvaraya Institute of Technology,CSE IoT Cyber,STG,76859.5
+Sir M Visvesvaraya Institute of Technology,AIML,1G,27889
+Sir M Visvesvaraya Institute of Technology,AIML,2AG,22153
+Sir M Visvesvaraya Institute of Technology,AIML,2AR,25033
+Sir M Visvesvaraya Institute of Technology,AIML,2BG,20809.5
+Sir M Visvesvaraya Institute of Technology,AIML,3AG,19035
+Sir M Visvesvaraya Institute of Technology,AIML,3BG,22191
+Sir M Visvesvaraya Institute of Technology,AIML,GM,18692
+Sir M Visvesvaraya Institute of Technology,AIML,GMR,22158
+Sir M Visvesvaraya Institute of Technology,AIML,SCG,46520
+Sir M Visvesvaraya Institute of Technology,AIML,SCR,68519
+Sir M Visvesvaraya Institute of Technology,AIML,STG,37266
+Sir M Visvesvaraya Institute of Technology,ECE,1G,36755
+Sir M Visvesvaraya Institute of Technology,ECE,2AG,34655
+Sir M Visvesvaraya Institute of Technology,ECE,2AR,40908
+Sir M Visvesvaraya Institute of Technology,ECE,2BG,42352
+Sir M Visvesvaraya Institute of Technology,ECE,3AG,32784
+Sir M Visvesvaraya Institute of Technology,ECE,3BG,30164
+Sir M Visvesvaraya Institute of Technology,ECE,3BR,36449
+Sir M Visvesvaraya Institute of Technology,ECE,GM,28117
+Sir M Visvesvaraya Institute of Technology,ECE,GMK,29285
+Sir M Visvesvaraya Institute of Technology,ECE,GMR,31407
+Sir M Visvesvaraya Institute of Technology,ECE,SCG,96247
+Sir M Visvesvaraya Institute of Technology,ECE,SCK,99364
+Sir M Visvesvaraya Institute of Technology,ECE,SCR,106780
+Sir M Visvesvaraya Institute of Technology,ECE,STG,70642
+Sir M Visvesvaraya Institute of Technology,ECE,STR,98096
+Sir M Visvesvaraya Institute of Technology,Mechanical,2BG,230022
+Sir M Visvesvaraya Institute of Technology,Mechanical,3AG,146603
+Sir M Visvesvaraya Institute of Technology,Mechanical,3BG,148506
+Sir M Visvesvaraya Institute of Technology,Mechanical,GM,139941
+Sir M Visvesvaraya Institute of Technology,Mechanical,GMK,210606
+Sir M Visvesvaraya Institute of Technology,Mechanical,GMR,240385.5
+JSS Science and Technology University,CSE,1G,5814
+JSS Science and Technology University,CSE,1K,10355
+JSS Science and Technology University,CSE,1R,10259
+JSS Science and Technology University,CSE,2AG,5984
+JSS Science and Technology University,CSE,2AR,6284
+JSS Science and Technology University,CSE,2BG,8526
+JSS Science and Technology University,CSE,2BR,22304
+JSS Science and Technology University,CSE,3AG,3921
+JSS Science and Technology University,CSE,3BG,4540
+JSS Science and Technology University,CSE,GM,3156
+JSS Science and Technology University,CSE,GMK,8500
+JSS Science and Technology University,CSE,GMR,0
+JSS Science and Technology University,CSE,SCG,17432
+JSS Science and Technology University,CSE,SCR,22582
+JSS Science and Technology University,Civil,1G,84881
+JSS Science and Technology University,Civil,2AG,105957
+JSS Science and Technology University,Civil,2AR,184915
+JSS Science and Technology University,Civil,2BG,147037.5
+JSS Science and Technology University,Civil,3AG,59152
+JSS Science and Technology University,Civil,3BG,69143
+JSS Science and Technology University,Civil,3BR,74659
+JSS Science and Technology University,Civil,GM,57460
+JSS Science and Technology University,Civil,GMK,59545
+JSS Science and Technology University,Civil,GMR,69925
+JSS Science and Technology University,Civil,SCG,106509
+JSS Science and Technology University,Civil,SCR,129000
+JSS Science and Technology University,Civil,STG,85818
+JSS Science and Technology University,Civil,STR,101386
+JSS Science and Technology University,EEE,1G,33444
+JSS Science and Technology University,EEE,2AG,26592
+JSS Science and Technology University,EEE,2AR,32493
+JSS Science and Technology University,EEE,2BG,31719
+JSS Science and Technology University,EEE,3AG,21078.875
+JSS Science and Technology University,EEE,3BG,18529.5
+JSS Science and Technology University,EEE,3BR,23003
+JSS Science and Technology University,EEE,GM,17844.5
+JSS Science and Technology University,EEE,GMK,43081
+JSS Science and Technology University,EEE,GMR,20939
+JSS Science and Technology University,EEE,SCG,54728.75
+JSS Science and Technology University,EEE,SCR,77631
+JSS Science and Technology University,EEE,STG,55956
+JSS Science and Technology University,EEE,STK,127862
+JSS Science and Technology University,EEE,STR,79785
+JSS Science and Technology University,ECE,1G,12456
+JSS Science and Technology University,ECE,2AG,11492
+JSS Science and Technology University,ECE,2AK,18972
+JSS Science and Technology University,ECE,2AR,15891
+JSS Science and Technology University,ECE,2BG,19960
+JSS Science and Technology University,ECE,2BR,51970
+JSS Science and Technology University,ECE,3AG,6799
+JSS Science and Technology University,ECE,3BG,10059
+JSS Science and Technology University,ECE,GM,6303
+JSS Science and Technology University,ECE,GMK,10442
+JSS Science and Technology University,ECE,GMR,7430
+JSS Science and Technology University,ECE,SCG,33547
+JSS Science and Technology University,ECE,SCK,41985
+JSS Science and Technology University,ECE,SCR,42780
+JSS Science and Technology University,ECE,STG,31434
+JSS Science and Technology University,Mechanical,1G,72065
+JSS Science and Technology University,Mechanical,2AG,52918
+JSS Science and Technology University,Mechanical,2AR,76572
+JSS Science and Technology University,Mechanical,2BG,40900
+JSS Science and Technology University,Mechanical,2BK,130527
+JSS Science and Technology University,Mechanical,3AG,44487
+JSS Science and Technology University,Mechanical,3BG,45714
+JSS Science and Technology University,Mechanical,3BR,91990
+JSS Science and Technology University,Mechanical,GM,38107
+JSS Science and Technology University,Mechanical,GMK,61086
+JSS Science and Technology University,Mechanical,GMR,54075
+JSS Science and Technology University,Mechanical,SCG,94749
+JSS Science and Technology University,Mechanical,SCR,109955.5
+JSS Science and Technology University,Mechanical,STG,116726
+JSS Science and Technology University,Mechanical,STR,153502
+National Institute of Engineering South Campus,Civil,1G,86215
+National Institute of Engineering South Campus,Civil,1R,119148
+National Institute of Engineering South Campus,Civil,2AG,120911
+National Institute of Engineering South Campus,Civil,2BG,169270
+National Institute of Engineering South Campus,Civil,3AG,73547
+National Institute of Engineering South Campus,Civil,3BG,94625
+National Institute of Engineering South Campus,Civil,3BR,71676
+National Institute of Engineering South Campus,Civil,GM,73151
+National Institute of Engineering South Campus,Civil,GMK,94852
+National Institute of Engineering South Campus,Civil,SCG,116111
+National Institute of Engineering South Campus,Civil,SCR,155192
+National Institute of Engineering South Campus,Civil,STG,129328
+National Institute of Engineering South Campus,ECE,1G,19331
+National Institute of Engineering South Campus,ECE,2AG,13724
+National Institute of Engineering South Campus,ECE,2AR,15508
+National Institute of Engineering South Campus,ECE,2BG,21023
+National Institute of Engineering South Campus,ECE,3AG,10798
+National Institute of Engineering South Campus,ECE,3AR,15352
+National Institute of Engineering South Campus,ECE,3BG,11893
+National Institute of Engineering South Campus,ECE,GM,10406.875
+National Institute of Engineering South Campus,ECE,GMK,18118
+National Institute of Engineering South Campus,ECE,GMR,14154
+National Institute of Engineering South Campus,ECE,SCG,40465
+National Institute of Engineering South Campus,ECE,SCK,49995
+National Institute of Engineering South Campus,ECE,SCR,47770
+National Institute of Engineering South Campus,ECE,STG,46004
+National Institute of Engineering South Campus,Mechanical,1G,78718
+National Institute of Engineering South Campus,Mechanical,2AG,52282
+National Institute of Engineering South Campus,Mechanical,2AR,73022
+National Institute of Engineering South Campus,Mechanical,2BG,47230.5
+National Institute of Engineering South Campus,Mechanical,3AG,44469
+National Institute of Engineering South Campus,Mechanical,3BG,43953
+National Institute of Engineering South Campus,Mechanical,3BR,71020
+National Institute of Engineering South Campus,Mechanical,GM,39968.5
+National Institute of Engineering South Campus,Mechanical,GMK,42432
+National Institute of Engineering South Campus,Mechanical,GMR,53781
+National Institute of Engineering South Campus,Mechanical,SCG,95911
+National Institute of Engineering South Campus,Mechanical,SCR,113505
+National Institute of Engineering South Campus,Mechanical,STG,111001
+National Institute of Engineering South Campus,Mechanical,STK,132674
+National Institute of Engineering South Campus,Mechanical,STR,123054
+BMS Institute of Technology,AIML,1G,19866
+BMS Institute of Technology,AIML,1R,22578
+BMS Institute of Technology,AIML,2AG,17710
+BMS Institute of Technology,AIML,2AK,25673
+BMS Institute of Technology,AIML,2AR,22194
+BMS Institute of Technology,AIML,2BG,24693
+BMS Institute of Technology,AIML,2BR,31294
+BMS Institute of Technology,AIML,3AG,14851
+BMS Institute of Technology,AIML,3AR,15252
+BMS Institute of Technology,AIML,3BG,15362
+BMS Institute of Technology,AIML,3BK,20217
+BMS Institute of Technology,AIML,3BR,16812
+BMS Institute of Technology,AIML,GM,13485
+BMS Institute of Technology,AIML,GMK,15350
+BMS Institute of Technology,AIML,GMR,15239
+BMS Institute of Technology,AIML,SCG,47642
+BMS Institute of Technology,AIML,SCK,54628
+BMS Institute of Technology,AIML,SCR,62137
+BMS Institute of Technology,AIML,STG,46824
+BMS Institute of Technology,AIML,STK,72286
+BMS Institute of Technology,AIML,STR,51026
+BMS Institute of Technology,CSE,1G,18175
+BMS Institute of Technology,CSE,1K,25464
+BMS Institute of Technology,CSE,1R,19454
+BMS Institute of Technology,CSE,2AG,17182
+BMS Institute of Technology,CSE,2AK,24070
+BMS Institute of Technology,CSE,2AR,21703
+BMS Institute of Technology,CSE,2BG,21562
+BMS Institute of Technology,CSE,2BK,47098
+BMS Institute of Technology,CSE,2BR,24734
+BMS Institute of Technology,CSE,3AG,14435
+BMS Institute of Technology,CSE,3AK,22684.5
+BMS Institute of Technology,CSE,3AR,15738
+BMS Institute of Technology,CSE,3BG,14354
+BMS Institute of Technology,CSE,3BK,21005
+BMS Institute of Technology,CSE,3BR,16562
+BMS Institute of Technology,CSE,GM,12263
+BMS Institute of Technology,CSE,GMK,18354
+BMS Institute of Technology,CSE,GMR,14820
+BMS Institute of Technology,CSE,SCG,50388
+BMS Institute of Technology,CSE,SCK,66566
+BMS Institute of Technology,CSE,SCR,67870
+BMS Institute of Technology,CSE,STG,53856
+BMS Institute of Technology,CSE,STK,64846
+BMS Institute of Technology,CSE,STR,70013
+BMS Institute of Technology,ECE,1G,19716
+BMS Institute of Technology,ECE,2AG,21475
+BMS Institute of Technology,ECE,2AK,31439
+BMS Institute of Technology,ECE,2AR,28583
+BMS Institute of Technology,ECE,2BG,32854
+BMS Institute of Technology,ECE,3AG,16395
+BMS Institute of Technology,ECE,3BG,17005
+BMS Institute of Technology,ECE,3BR,21387
+BMS Institute of Technology,ECE,GM,15498
+BMS Institute of Technology,ECE,GMK,24254
+BMS Institute of Technology,ECE,GMR,19700
+BMS Institute of Technology,ECE,SCG,63194
+BMS Institute of Technology,ECE,SCK,83034
+BMS Institute of Technology,ECE,SCR,109331
+BMS Institute of Technology,ECE,STG,56479
+BMS Institute of Technology,ECE,STR,71183
+BMS Institute of Technology,Mechanical,1G,82151
+BMS Institute of Technology,Mechanical,2AG,97260
+BMS Institute of Technology,Mechanical,2AR,138490
+BMS Institute of Technology,Mechanical,2BG,124604
+BMS Institute of Technology,Mechanical,3AG,87291
+BMS Institute of Technology,Mechanical,3BG,51220
+BMS Institute of Technology,Mechanical,3BR,40952
+BMS Institute of Technology,Mechanical,GM,66090
+BMS Institute of Technology,Mechanical,SCG,156637
+BMS Institute of Technology,Mechanical,SCR,241525
+BMS Institute of Technology,Mechanical,STG,175394
+National Institute of Engineering North Campus,CSE AIML,1G,12212
+National Institute of Engineering North Campus,CSE AIML,1R,13772
+National Institute of Engineering North Campus,CSE AIML,2AG,19245.75
+National Institute of Engineering North Campus,CSE AIML,2AR,17175
+National Institute of Engineering North Campus,CSE AIML,2BG,11482
+National Institute of Engineering North Campus,CSE AIML,3AG,14362
+National Institute of Engineering North Campus,CSE AIML,3BG,12870
+National Institute of Engineering North Campus,CSE AIML,GM,10634
+National Institute of Engineering North Campus,CSE AIML,GMK,12989
+National Institute of Engineering North Campus,CSE AIML,GMR,11949
+National Institute of Engineering North Campus,CSE AIML,SCG,39277
+National Institute of Engineering North Campus,CSE AIML,SCK,42276
+National Institute of Engineering North Campus,CSE AIML,SCR,49606
+National Institute of Engineering North Campus,CSE AIML,STG,44005
+National Institute of Engineering North Campus,CSE AIML,STR,49186
+National Institute of Engineering North Campus,CSE,1G,22005
+National Institute of Engineering North Campus,CSE,1R,24108
+National Institute of Engineering North Campus,CSE,2AG,16250.5
+National Institute of Engineering North Campus,CSE,2AK,18701
+National Institute of Engineering North Campus,CSE,2AR,18625
+National Institute of Engineering North Campus,CSE,2BG,17355
+National Institute of Engineering North Campus,CSE,2BR,22703
+National Institute of Engineering North Campus,CSE,3AG,13186
+National Institute of Engineering North Campus,CSE,3AR,15006
+National Institute of Engineering North Campus,CSE,3BG,13771
+National Institute of Engineering North Campus,CSE,3BK,16090
+National Institute of Engineering North Campus,CSE,3BR,15527
+National Institute of Engineering North Campus,CSE,GM,10948
+National Institute of Engineering North Campus,CSE,GMK,14372
+National Institute of Engineering North Campus,CSE,GMR,13443.75
+National Institute of Engineering North Campus,CSE,SCG,40394
+National Institute of Engineering North Campus,CSE,SCK,80090.5
+National Institute of Engineering North Campus,CSE,SCR,67901
+National Institute of Engineering North Campus,CSE,STG,44872
+National Institute of Engineering North Campus,CSE,STK,52638
+National Institute of Engineering North Campus,CSE,STR,51653
+New Horizon College of Engineering,AIML,1G,21369
+New Horizon College of Engineering,AIML,1R,26147
+New Horizon College of Engineering,AIML,2AG,28982
+New Horizon College of Engineering,AIML,2AK,30195
+New Horizon College of Engineering,AIML,2AR,28116
+New Horizon College of Engineering,AIML,2BG,30892
+New Horizon College of Engineering,AIML,3AG,23289
+New Horizon College of Engineering,AIML,3BG,22269
+New Horizon College of Engineering,AIML,3BR,24979
+New Horizon College of Engineering,AIML,GM,18381
+New Horizon College of Engineering,AIML,GMK,24449
+New Horizon College of Engineering,AIML,GMR,23344
+New Horizon College of Engineering,AIML,SCG,51431
+New Horizon College of Engineering,AIML,SCK,58070
+New Horizon College of Engineering,AIML,SCR,57978
+New Horizon College of Engineering,AIML,STG,51817
+New Horizon College of Engineering,AIML,STR,102106
+New Horizon College of Engineering,CSE,1G,22204
+New Horizon College of Engineering,CSE,1R,28959
+New Horizon College of Engineering,CSE,2AG,22017
+New Horizon College of Engineering,CSE,2AK,29069
+New Horizon College of Engineering,CSE,2AR,29003
+New Horizon College of Engineering,CSE,2BG,26457
+New Horizon College of Engineering,CSE,2BR,35116
+New Horizon College of Engineering,CSE,3AG,20947
+New Horizon College of Engineering,CSE,3AR,22253
+New Horizon College of Engineering,CSE,3BG,19211
+New Horizon College of Engineering,CSE,3BK,23681
+New Horizon College of Engineering,CSE,3BR,23759
+New Horizon College of Engineering,CSE,GM,17363
+New Horizon College of Engineering,CSE,GMK,23446
+New Horizon College of Engineering,CSE,GMR,21563
+New Horizon College of Engineering,CSE,SCG,57383
+New Horizon College of Engineering,CSE,SCK,96681
+New Horizon College of Engineering,CSE,SCR,75117
+New Horizon College of Engineering,CSE,STG,59943
+New Horizon College of Engineering,CSE,STK,61901
+New Horizon College of Engineering,CSE,STR,83298
+New Horizon College of Engineering,ECE,1G,37712
+New Horizon College of Engineering,ECE,2AG,27937
+New Horizon College of Engineering,ECE,2AK,42306
+New Horizon College of Engineering,ECE,2AR,33257
+New Horizon College of Engineering,ECE,2BG,36350
+New Horizon College of Engineering,ECE,3AG,26113
+New Horizon College of Engineering,ECE,3BG,24941
+New Horizon College of Engineering,ECE,3BR,30122
+New Horizon College of Engineering,ECE,GM,22469
+New Horizon College of Engineering,ECE,GMK,30603
+New Horizon College of Engineering,ECE,GMR,26386
+New Horizon College of Engineering,ECE,SCG,78325
+New Horizon College of Engineering,ECE,SCR,138314
+New Horizon College of Engineering,ECE,STG,78673
+New Horizon College of Engineering,ECE,STR,79957
+New Horizon College of Engineering,EEE,1G,65388
+New Horizon College of Engineering,EEE,2AG,67885
+New Horizon College of Engineering,EEE,2AR,88152
+New Horizon College of Engineering,EEE,2BG,48285
+New Horizon College of Engineering,EEE,2BK,85480
+New Horizon College of Engineering,EEE,3AG,56514
+New Horizon College of Engineering,EEE,3BG,69032
+New Horizon College of Engineering,EEE,3BR,48055.5
+New Horizon College of Engineering,EEE,GM,96127
+New Horizon College of Engineering,EEE,GMK,60206
+New Horizon College of Engineering,EEE,SCG,123388
+New Horizon College of Engineering,EEE,SCR,170361
+New Horizon College of Engineering,Mechanical,1G,149644
+New Horizon College of Engineering,Mechanical,2AG,149434
+New Horizon College of Engineering,Mechanical,2BG,159633.5
+New Horizon College of Engineering,Mechanical,3AG,113854.5
+New Horizon College of Engineering,Mechanical,3BG,259540
+New Horizon College of Engineering,Mechanical,GM,98807
+New Horizon College of Engineering,Mechanical,SCG,94747
+New Horizon College of Engineering,Mechanical,SCR,108691
+New Horizon College of Engineering,Mechanical,STG,192258
+New Horizon College of Engineering,Mechanical,STR,148943
+RNS Institute of Technology,CSE AIML,1G,20863
+RNS Institute of Technology,CSE AIML,1R,29872
+RNS Institute of Technology,CSE AIML,2AG,20001
+RNS Institute of Technology,CSE AIML,2AK,32739
+RNS Institute of Technology,CSE AIML,2AR,25475
+RNS Institute of Technology,CSE AIML,2BG,26749
+RNS Institute of Technology,CSE AIML,2BR,31018
+RNS Institute of Technology,CSE AIML,3AG,17662
+RNS Institute of Technology,CSE AIML,3AR,19087
+RNS Institute of Technology,CSE AIML,3BG,18039
+RNS Institute of Technology,CSE AIML,3BK,27768
+RNS Institute of Technology,CSE AIML,3BR,20902
+RNS Institute of Technology,CSE AIML,GM,16199
+RNS Institute of Technology,CSE AIML,GMK,24168.5
+RNS Institute of Technology,CSE AIML,GMR,19069
+RNS Institute of Technology,CSE AIML,SCG,61329
+RNS Institute of Technology,CSE AIML,SCK,86961
+RNS Institute of Technology,CSE AIML,SCR,83680
+RNS Institute of Technology,CSE AIML,STG,67880
+RNS Institute of Technology,CSE AIML,STK,134223.5
+RNS Institute of Technology,CSE AIML,STR,88872
+RNS Institute of Technology,CSE,1G,21476
+RNS Institute of Technology,CSE,1R,27136
+RNS Institute of Technology,CSE,2AG,20255
+RNS Institute of Technology,CSE,2AK,22919
+RNS Institute of Technology,CSE,2AR,25104
+RNS Institute of Technology,CSE,2BG,29807
+RNS Institute of Technology,CSE,2BK,40637
+RNS Institute of Technology,CSE,2BR,53218
+RNS Institute of Technology,CSE,3AG,16871
+RNS Institute of Technology,CSE,3AR,24072
+RNS Institute of Technology,CSE,3BG,18582
+RNS Institute of Technology,CSE,3BK,15674
+RNS Institute of Technology,CSE,3BR,29673
+RNS Institute of Technology,CSE,GM,19702
+RNS Institute of Technology,CSE,GMK,14842
+RNS Institute of Technology,CSE,GMR,21580
+RNS Institute of Technology,CSE,SCG,63093.5
+RNS Institute of Technology,CSE,SCK,93932
+RNS Institute of Technology,CSE,SCR,74234
+RNS Institute of Technology,CSE,STG,65605
+RNS Institute of Technology,CSE,STK,66412
+RNS Institute of Technology,CSE,STR,71997
+RNS Institute of Technology,CSE Cyber Security,1G,24616
+RNS Institute of Technology,CSE Cyber Security,1R,30132
+RNS Institute of Technology,CSE Cyber Security,2AG,24764
+RNS Institute of Technology,CSE Cyber Security,2AR,25601
+RNS Institute of Technology,CSE Cyber Security,2BG,27428
+RNS Institute of Technology,CSE Cyber Security,3AG,20051
+RNS Institute of Technology,CSE Cyber Security,3BG,20644
+RNS Institute of Technology,CSE Cyber Security,3BR,18915
+RNS Institute of Technology,CSE Cyber Security,GM,30828
+RNS Institute of Technology,CSE Cyber Security,GMK,20345
+RNS Institute of Technology,CSE Cyber Security,SCG,72123
+RNS Institute of Technology,CSE Cyber Security,SCK,130798
+RNS Institute of Technology,CSE Cyber Security,SCR,75897
+RNS Institute of Technology,CSE Cyber Security,STG,77768
+RNS Institute of Technology,CSE Cyber Security,STR,92823
+RNS Institute of Technology,CSE Data Science,1G,24051
+RNS Institute of Technology,CSE Data Science,2AG,22620
+RNS Institute of Technology,CSE Data Science,2AK,32271
+RNS Institute of Technology,CSE Data Science,2AR,26741
+RNS Institute of Technology,CSE Data Science,2BG,31042
+RNS Institute of Technology,CSE Data Science,3AG,18677
+RNS Institute of Technology,CSE Data Science,3BG,18477
+RNS Institute of Technology,CSE Data Science,3BR,21422
+RNS Institute of Technology,CSE Data Science,GM,18100
+RNS Institute of Technology,CSE Data Science,GMK,26203
+RNS Institute of Technology,CSE Data Science,GMR,19053
+RNS Institute of Technology,CSE Data Science,SCG,70833
+RNS Institute of Technology,CSE Data Science,SCK,93778
+RNS Institute of Technology,CSE Data Science,SCR,105939
+RNS Institute of Technology,CSE Data Science,STG,68209
+RNS Institute of Technology,CSE Data Science,STR,97165
+RNS Institute of Technology,ECE,1G,24928
+RNS Institute of Technology,ECE,1K,47473
+RNS Institute of Technology,ECE,2AG,27213
+RNS Institute of Technology,ECE,2AK,34127
+RNS Institute of Technology,ECE,2AR,31427
+RNS Institute of Technology,ECE,2BG,33295
+RNS Institute of Technology,ECE,2BR,78488
+RNS Institute of Technology,ECE,3AG,21940
+RNS Institute of Technology,ECE,3AR,26876
+RNS Institute of Technology,ECE,3BG,21977
+RNS Institute of Technology,ECE,3BK,26114
+RNS Institute of Technology,ECE,3BR,19792
+RNS Institute of Technology,ECE,GM,28397
+RNS Institute of Technology,ECE,GMK,25232
+RNS Institute of Technology,ECE,SCG,90998
+RNS Institute of Technology,ECE,SCK,96192
+RNS Institute of Technology,ECE,SCR,140143
+RNS Institute of Technology,ECE,STG,77638
+RNS Institute of Technology,ECE,STR,130151
+Siddaganga Institute of Technology,CSE AIML,1G,10726
+Siddaganga Institute of Technology,CSE AIML,2AG,13671
+Siddaganga Institute of Technology,CSE AIML,2AR,20382
+Siddaganga Institute of Technology,CSE AIML,2BG,22670
+Siddaganga Institute of Technology,CSE AIML,3AG,10338
+Siddaganga Institute of Technology,CSE AIML,3BG,10461
+Siddaganga Institute of Technology,CSE AIML,3BR,13264
+Siddaganga Institute of Technology,CSE AIML,GM,9562
+Siddaganga Institute of Technology,CSE AIML,GMK,9984
+Siddaganga Institute of Technology,CSE AIML,SCG,31854.75
+Siddaganga Institute of Technology,CSE AIML,SCK,39762
+Siddaganga Institute of Technology,CSE AIML,SCR,17087
+Siddaganga Institute of Technology,CSE,1G,17038
+Siddaganga Institute of Technology,CSE,2AG,13113
+Siddaganga Institute of Technology,CSE,2AK,13789
+Siddaganga Institute of Technology,CSE,2AR,16251
+Siddaganga Institute of Technology,CSE,2BG,18823
+Siddaganga Institute of Technology,CSE,2BR,57764
+Siddaganga Institute of Technology,CSE,3AG,12125
+Siddaganga Institute of Technology,CSE,3AR,12800
+Siddaganga Institute of Technology,CSE,3BG,12117
+Siddaganga Institute of Technology,CSE,3BK,15894
+Siddaganga Institute of Technology,CSE,3BR,9809
+Siddaganga Institute of Technology,CSE,GM,12910
+Siddaganga Institute of Technology,CSE,GMK,12036
+Siddaganga Institute of Technology,CSE,SCG,35795
+Siddaganga Institute of Technology,CSE,SCK,45219
+Siddaganga Institute of Technology,CSE,SCR,44130
+Siddaganga Institute of Technology,CSE,STG,38761
+Siddaganga Institute of Technology,CSE,STK,43856
+Siddaganga Institute of Technology,CSE,STR,42610
+Siddaganga Institute of Technology,ISE,1G,19863
+Siddaganga Institute of Technology,ISE,2AG,14371
+Siddaganga Institute of Technology,ISE,2AK,18742
+Siddaganga Institute of Technology,ISE,2AR,18868
+Siddaganga Institute of Technology,ISE,2BG,31733
+Siddaganga Institute of Technology,ISE,3AG,13569
+Siddaganga Institute of Technology,ISE,3BG,13444.5
+Siddaganga Institute of Technology,ISE,3BR,17083
+Siddaganga Institute of Technology,ISE,GM,12432
+Siddaganga Institute of Technology,ISE,GMK,15901
+Siddaganga Institute of Technology,ISE,GMR,14714
+Siddaganga Institute of Technology,ISE,SCG,50940
+Siddaganga Institute of Technology,ISE,SCK,64113
+Siddaganga Institute of Technology,ISE,SCR,48070
+Siddaganga Institute of Technology,ISE,STG,67103
+Siddaganga Institute of Technology,ECE,1G,17072
+Siddaganga Institute of Technology,ECE,2AG,17680
+Siddaganga Institute of Technology,ECE,2AR,25387
+Siddaganga Institute of Technology,ECE,2BG,28478.5
+Siddaganga Institute of Technology,ECE,3AG,15299
+Siddaganga Institute of Technology,ECE,3AR,19111
+Siddaganga Institute of Technology,ECE,3BG,16643.5
+Siddaganga Institute of Technology,ECE,GM,14310
+Siddaganga Institute of Technology,ECE,GMK,20340
+Siddaganga Institute of Technology,ECE,GMR,16674
+Siddaganga Institute of Technology,ECE,SCG,54315.5
+Siddaganga Institute of Technology,ECE,SCK,67997
+Siddaganga Institute of Technology,ECE,SCR,54479
+Siddaganga Institute of Technology,ECE,STG,57419
+Siddaganga Institute of Technology,ECE,STR,57494.5
+Siddaganga Institute of Technology,EEE,1G,33898
+Siddaganga Institute of Technology,EEE,1K,116731
+Siddaganga Institute of Technology,EEE,2AG,41212
+Siddaganga Institute of Technology,EEE,2AR,51489
+Siddaganga Institute of Technology,EEE,2BG,43779
+Siddaganga Institute of Technology,EEE,3AG,26566
+Siddaganga Institute of Technology,EEE,3BG,38041
+Siddaganga Institute of Technology,EEE,3BR,24741
+Siddaganga Institute of Technology,EEE,GM,55441
+Siddaganga Institute of Technology,EEE,GMK,36453
+Siddaganga Institute of Technology,EEE,SCG,89875
+Siddaganga Institute of Technology,EEE,SCR,71658
+Siddaganga Institute of Technology,EEE,STG,74618
+Sri Siddhartha Institute of Technology,AIML,1G,46887
+Sri Siddhartha Institute of Technology,AIML,2AG,42131
+Sri Siddhartha Institute of Technology,AIML,2AR,55929
+Sri Siddhartha Institute of Technology,AIML,2BG,67448
+Sri Siddhartha Institute of Technology,AIML,3AG,43447
+Sri Siddhartha Institute of Technology,AIML,3BG,58096
+Sri Siddhartha Institute of Technology,AIML,3BR,69312
+Sri Siddhartha Institute of Technology,AIML,GM,37311
+Sri Siddhartha Institute of Technology,AIML,GMK,42078
+Sri Siddhartha Institute of Technology,AIML,SCG,81271
+Sri Siddhartha Institute of Technology,AIML,SCK,112420.5
+Sri Siddhartha Institute of Technology,AIML,SCR,44893
+Sri Siddhartha Institute of Technology,CSE,1G,56778.75
+Sri Siddhartha Institute of Technology,CSE,2AG,73891
+Sri Siddhartha Institute of Technology,CSE,2AK,84127
+Sri Siddhartha Institute of Technology,CSE,2AR,82763
+Sri Siddhartha Institute of Technology,CSE,2BG,90626
+Sri Siddhartha Institute of Technology,CSE,3AG,69637
+Sri Siddhartha Institute of Technology,CSE,3BG,58683
+Sri Siddhartha Institute of Technology,CSE,3BR,59890
+Sri Siddhartha Institute of Technology,CSE,GM,50020
+Sri Siddhartha Institute of Technology,CSE,GMK,50895
+Sri Siddhartha Institute of Technology,CSE,GMR,55008
+Sri Siddhartha Institute of Technology,CSE,SCG,102753
+Sri Siddhartha Institute of Technology,CSE,SCK,122645
+Sri Siddhartha Institute of Technology,CSE,SCR,125163
+Sri Siddhartha Institute of Technology,CSE,STG,91118
+Sri Siddhartha Institute of Technology,CSE,STK,152967
+Sri Siddhartha Institute of Technology,CSE,STR,184445
+Sri Siddhartha Institute of Technology,CSE Cyber Security,1G,122356
+Sri Siddhartha Institute of Technology,CSE Cyber Security,2AG,93178
+Sri Siddhartha Institute of Technology,CSE Cyber Security,2AR,103647
+Sri Siddhartha Institute of Technology,CSE Cyber Security,2BG,103016
+Sri Siddhartha Institute of Technology,CSE Cyber Security,3AG,71430
+Sri Siddhartha Institute of Technology,CSE Cyber Security,3BG,58311
+Sri Siddhartha Institute of Technology,CSE Cyber Security,3BR,56944
+Sri Siddhartha Institute of Technology,CSE Cyber Security,GM,57513
+Sri Siddhartha Institute of Technology,CSE Cyber Security,SCG,118195
+Sri Siddhartha Institute of Technology,CSE Cyber Security,SCR,143674
+Sri Siddhartha Institute of Technology,CSE Cyber Security,STG,130976
+Sri Siddhartha Institute of Technology,CSE Data Science,1G,178127
+Sri Siddhartha Institute of Technology,CSE Data Science,2AG,90588
+Sri Siddhartha Institute of Technology,CSE Data Science,2BG,68081
+Sri Siddhartha Institute of Technology,CSE Data Science,3AG,85149
+Sri Siddhartha Institute of Technology,CSE Data Science,3BG,67216
+Sri Siddhartha Institute of Technology,CSE Data Science,3BR,50216
+Sri Siddhartha Institute of Technology,CSE Data Science,GM,51168
+Sri Siddhartha Institute of Technology,CSE Data Science,SCG,138009
+Sri Siddhartha Institute of Technology,CSE Data Science,SCR,138079
+Sri Siddhartha Institute of Technology,CSE Data Science,STG,114241
+Sri Siddhartha Institute of Technology,ECE,1G,157179
+Sri Siddhartha Institute of Technology,ECE,2AG,116104
+Sri Siddhartha Institute of Technology,ECE,2AK,149119
+Sri Siddhartha Institute of Technology,ECE,2AR,145789
+Sri Siddhartha Institute of Technology,ECE,2BG,112400
+Sri Siddhartha Institute of Technology,ECE,3AG,102329
+Sri Siddhartha Institute of Technology,ECE,3BG,94278
+Sri Siddhartha Institute of Technology,ECE,3BR,133580
+Sri Siddhartha Institute of Technology,ECE,GM,80078
+Sri Siddhartha Institute of Technology,ECE,GMK,101006
+Sri Siddhartha Institute of Technology,ECE,GMR,94558
+Sri Siddhartha Institute of Technology,ECE,SCG,175639
+Sri Siddhartha Institute of Technology,ECE,SCK,216904
+Sri Siddhartha Institute of Technology,ECE,SCR,257365
+Sri Siddhartha Institute of Technology,ECE,STG,185418
+Sri Siddhartha Institute of Technology,ECE,STR,228519
+Sri Siddhartha Institute of Technology,ISE,1G,110554
+Sri Siddhartha Institute of Technology,ISE,2AG,97970
+Sri Siddhartha Institute of Technology,ISE,2AR,98862
+Sri Siddhartha Institute of Technology,ISE,2BG,104121
+Sri Siddhartha Institute of Technology,ISE,3AG,89832
+Sri Siddhartha Institute of Technology,ISE,3BG,71654
+Sri Siddhartha Institute of Technology,ISE,3BR,66103
+Sri Siddhartha Institute of Technology,ISE,GM,66605
+Sri Siddhartha Institute of Technology,ISE,GMK,86818
+Sri Siddhartha Institute of Technology,ISE,SCG,195253
+Sri Siddhartha Institute of Technology,ISE,SCR,103137
+Sri Siddhartha Institute of Technology,ISE,STG,124960
+CMR University,Computer Engineering,1G,110722.5
+CMR University,Computer Engineering,2AG,61856
+CMR University,Computer Engineering,2AR,143343
+CMR University,Computer Engineering,2BG,66879
+CMR University,Computer Engineering,3AG,54115
+CMR University,Computer Engineering,3BG,57044
+CMR University,Computer Engineering,3BR,49754
+CMR University,Computer Engineering,GM,63063
+CMR University,Computer Engineering,GMK,65868
+CMR University,Computer Engineering,SCG,162412
+CMR University,Computer Engineering,SCR,190095
+CMR University,CSE AIML,1G,62159
+CMR University,CSE AIML,2AG,53578
+CMR University,CSE AIML,2AK,165563
+CMR University,CSE AIML,2AR,83706
+CMR University,CSE AIML,2BG,49595
+CMR University,CSE AIML,3AG,43537
+CMR University,CSE AIML,3BG,42231
+CMR University,CSE AIML,3BR,50654
+CMR University,CSE AIML,GM,36709
+CMR University,CSE AIML,GMK,38102
+CMR University,CSE AIML,GMR,45200
+CMR University,CSE AIML,SCG,89474
+CMR University,CSE AIML,SCK,178631
+CMR University,CSE AIML,SCR,157331
+CMR University,CSE AIML,STG,153397
+CMR University,CSE AIML,STR,231313
+CMR University,CSE,1G,62485
+CMR University,CSE,1R,67317
+CMR University,CSE,2AG,64389
+CMR University,CSE,2AK,84581
+CMR University,CSE,2AR,93972
+CMR University,CSE,2BG,66620
+CMR University,CSE,2BR,100854
+CMR University,CSE,3AG,49880
+CMR University,CSE,3AR,64483
+CMR University,CSE,3BG,50032
+CMR University,CSE,3BK,59340
+CMR University,CSE,3BR,43286
+CMR University,CSE,GM,65558
+CMR University,CSE,GMK,58030
+CMR University,CSE,SCG,152244
+CMR University,CSE,SCR,141065
+CMR University,CSE,STG,175397
+CMR University,CSE,STR,197216
+CMR University,CSE Data Science,1G,63059
+CMR University,CSE Data Science,2AG,68254
+CMR University,CSE Data Science,2AR,78089
+CMR University,CSE Data Science,2BG,64281
+CMR University,CSE Data Science,3AG,56002
+CMR University,CSE Data Science,3BG,48558
+CMR University,CSE Data Science,3BR,72441
+CMR University,CSE Data Science,GM,45752
+CMR University,CSE Data Science,GMK,61387
+CMR University,CSE Data Science,GMR,62873
+CMR University,CSE Data Science,SCG,134393
+CMR University,CSE Data Science,SCR,222077
+CMR University,CSE Data Science,STG,160387
+CMR University,CSE Data Science,STR,163003
+CMR University,ECE,1G,87128
+CMR University,ECE,1K,90937
+CMR University,ECE,2AG,185933
+CMR University,ECE,2BG,75163
+CMR University,ECE,3AG,57412
+CMR University,ECE,3BG,62728
+CMR University,ECE,3BR,51741
+CMR University,ECE,GM,51212
+CMR University,ECE,GMK,57994
+CMR University,ECE,SCG,106895
+CMR University,ECE,SCR,164658
+CMR University,Information Technology,2AG,83861
+CMR University,Information Technology,2AR,58373
+CMR University,Information Technology,2BG,93908
+CMR University,Information Technology,3AG,62632
+CMR University,Information Technology,3BG,62059
+CMR University,Information Technology,3BR,55398
+CMR University,Information Technology,GM,182205
+CMR University,Information Technology,GMK,70104
+CMR University,Information Technology,SCG,133990
+CMR University,Information Technology,SCR,219439
+CMR University,Information Technology,STG,184945
+Global Academy of Technology,Aeronautical,1G,152133
+Global Academy of Technology,Aeronautical,2AG,56622
+Global Academy of Technology,Aeronautical,2BG,136269
+Global Academy of Technology,Aeronautical,3AG,59301
+Global Academy of Technology,Aeronautical,3AK,130802
+Global Academy of Technology,Aeronautical,3BG,57657
+Global Academy of Technology,Aeronautical,GM,52206
+Global Academy of Technology,Aeronautical,GMK,52764
+Global Academy of Technology,Aeronautical,SCG,137503
+Global Academy of Technology,Aeronautical,SCR,85785
+Global Academy of Technology,AI Data Science,1G,49848
+Global Academy of Technology,AI Data Science,2AG,40650
+Global Academy of Technology,AI Data Science,2AK,56241
+Global Academy of Technology,AI Data Science,2AR,65014.5
+Global Academy of Technology,AI Data Science,2BG,41861
+Global Academy of Technology,AI Data Science,3AG,34979
+Global Academy of Technology,AI Data Science,3BG,41247
+Global Academy of Technology,AI Data Science,3BR,36947
+Global Academy of Technology,AI Data Science,GM,32187
+Global Academy of Technology,AI Data Science,GMK,37317
+Global Academy of Technology,AI Data Science,GMR,34137
+Global Academy of Technology,AI Data Science,SCG,96923
+Global Academy of Technology,AI Data Science,SCR,109251
+Global Academy of Technology,AI Data Science,STG,133084
+Global Academy of Technology,AI Data Science,STR,152042
+Global Academy of Technology,AIML,1G,46131.5
+Global Academy of Technology,AIML,2AG,35444
+Global Academy of Technology,AIML,2AR,45094
+Global Academy of Technology,AIML,2BG,44231.5
+Global Academy of Technology,AIML,3AG,32478
+Global Academy of Technology,AIML,3BG,32562
+Global Academy of Technology,AIML,3BR,39890
+Global Academy of Technology,AIML,GM,30045
+Global Academy of Technology,AIML,GMK,31377
+Global Academy of Technology,AIML,SCG,71616
+Global Academy of Technology,AIML,SCK,84760
+Global Academy of Technology,AIML,SCR,71288
+Global Academy of Technology,CSE,1G,45072
+Global Academy of Technology,CSE,1R,46458
+Global Academy of Technology,CSE,2AG,39285
+Global Academy of Technology,CSE,2AK,43155
+Global Academy of Technology,CSE,2AR,47571
+Global Academy of Technology,CSE,2BG,52664
+Global Academy of Technology,CSE,2BR,95634
+Global Academy of Technology,CSE,3AG,30627
+Global Academy of Technology,CSE,3AR,36714
+Global Academy of Technology,CSE,3BG,33067
+Global Academy of Technology,CSE,3BK,37098
+Global Academy of Technology,CSE,3BR,29774
+Global Academy of Technology,CSE,GM,38875
+Global Academy of Technology,CSE,GMK,36233
+Global Academy of Technology,CSE,SCG,94515
+Global Academy of Technology,CSE,SCK,104460
+Global Academy of Technology,CSE,SCR,155567
+Global Academy of Technology,CSE,STG,97920
+Global Academy of Technology,CSE,STK,163572
+Global Academy of Technology,CSE,STR,109723
+Global Academy of Technology,ISE,1G,49384
+Global Academy of Technology,ISE,2AG,43452
+Global Academy of Technology,ISE,2AK,65451
+Global Academy of Technology,ISE,2AR,45146
+Global Academy of Technology,ISE,2BG,65059
+Global Academy of Technology,ISE,3AG,38630
+Global Academy of Technology,ISE,3BG,40341
+Global Academy of Technology,ISE,3BR,45492
+Global Academy of Technology,ISE,GM,37655
+Global Academy of Technology,ISE,GMK,43894
+Global Academy of Technology,ISE,GMR,44276
+Global Academy of Technology,ISE,SCG,109628
+Global Academy of Technology,ISE,SCR,119852
+Global Academy of Technology,ISE,STG,129702
+Global Academy of Technology,ISE,STR,186499
+Global Academy of Technology,ECE,1G,54125
+Global Academy of Technology,ECE,1K,70589
+Global Academy of Technology,ECE,2AG,53826.5
+Global Academy of Technology,ECE,2AK,63400
+Global Academy of Technology,ECE,2AR,66635
+Global Academy of Technology,ECE,2BG,70817
+Global Academy of Technology,ECE,2BR,107895
+Global Academy of Technology,ECE,3AG,42481
+Global Academy of Technology,ECE,3BG,42488
+Global Academy of Technology,ECE,3BR,49986
+Global Academy of Technology,ECE,GM,40098
+Global Academy of Technology,ECE,GMK,59022
+Global Academy of Technology,ECE,GMR,49721
+Global Academy of Technology,ECE,SCG,158159
+Global Academy of Technology,ECE,SCK,228301.5
+Global Academy of Technology,ECE,SCR,201386
+Global Academy of Technology,ECE,STG,214577
+Dayananda Sagar Academy of Technology,CSE AIML,1G,24786
+Dayananda Sagar Academy of Technology,CSE AIML,1K,35034
+Dayananda Sagar Academy of Technology,CSE AIML,2AG,24821
+Dayananda Sagar Academy of Technology,CSE AIML,2AR,34393
+Dayananda Sagar Academy of Technology,CSE AIML,2BG,38551
+Dayananda Sagar Academy of Technology,CSE AIML,3AG,20835
+Dayananda Sagar Academy of Technology,CSE AIML,3BG,27236
+Dayananda Sagar Academy of Technology,CSE AIML,3BR,22227
+Dayananda Sagar Academy of Technology,CSE AIML,GM,19884
+Dayananda Sagar Academy of Technology,CSE AIML,GMK,27381
+Dayananda Sagar Academy of Technology,CSE AIML,GMR,27020
+Dayananda Sagar Academy of Technology,CSE AIML,SCG,71801
+Dayananda Sagar Academy of Technology,CSE AIML,SCK,79537
+Dayananda Sagar Academy of Technology,CSE AIML,SCR,67692
+Dayananda Sagar Academy of Technology,CSE AIML,STG,71641
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,1G,36450
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,1R,43222
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,2AG,36452
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,2AR,38682
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,2BG,42758
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,3AG,29862
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,3BG,30553
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,3BR,27685
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,GM,37639
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,GMK,31498
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,SCG,85022
+Dayananda Sagar Academy of Technology,CSE IoT Cyber,SCR,77670
+Dayananda Sagar Academy of Technology,CSE,1G,25924
+Dayananda Sagar Academy of Technology,CSE,1R,34193
+Dayananda Sagar Academy of Technology,CSE,2AG,29287
+Dayananda Sagar Academy of Technology,CSE,2AK,31594
+Dayananda Sagar Academy of Technology,CSE,2AR,34179
+Dayananda Sagar Academy of Technology,CSE,2BG,38428
+Dayananda Sagar Academy of Technology,CSE,2BR,43516
+Dayananda Sagar Academy of Technology,CSE,3AG,23420
+Dayananda Sagar Academy of Technology,CSE,3AR,25195
+Dayananda Sagar Academy of Technology,CSE,3BG,23268
+Dayananda Sagar Academy of Technology,CSE,3BK,31797
+Dayananda Sagar Academy of Technology,CSE,3BR,25715
+Dayananda Sagar Academy of Technology,CSE,GM,20616
+Dayananda Sagar Academy of Technology,CSE,GMK,28968
+Dayananda Sagar Academy of Technology,CSE,GMR,23741
+Dayananda Sagar Academy of Technology,CSE,SCG,66367
+Dayananda Sagar Academy of Technology,CSE,SCK,70722
+Dayananda Sagar Academy of Technology,CSE,SCR,85548
+Dayananda Sagar Academy of Technology,CSE,STG,69724
+Dayananda Sagar Academy of Technology,CSE,STK,125594
+Dayananda Sagar Academy of Technology,CSE,STR,76174
+Dayananda Sagar Academy of Technology,CSE Cyber Security,1G,30639
+Dayananda Sagar Academy of Technology,CSE Cyber Security,2AG,32195
+Dayananda Sagar Academy of Technology,CSE Cyber Security,2BG,31870
+Dayananda Sagar Academy of Technology,CSE Cyber Security,3AG,29132
+Dayananda Sagar Academy of Technology,CSE Cyber Security,3BG,38544
+Dayananda Sagar Academy of Technology,CSE Cyber Security,3BR,28449.5
+Dayananda Sagar Academy of Technology,CSE Cyber Security,GM,24826
+Dayananda Sagar Academy of Technology,CSE Cyber Security,GMK,27598
+Dayananda Sagar Academy of Technology,CSE Cyber Security,SCG,69856
+Dayananda Sagar Academy of Technology,CSE Cyber Security,SCR,83410
+Dayananda Sagar Academy of Technology,CSE Cyber Security,STG,70733
+Dayananda Sagar Academy of Technology,ECE,1G,45786
+Dayananda Sagar Academy of Technology,ECE,2AG,42147
+Dayananda Sagar Academy of Technology,ECE,2AK,46566
+Dayananda Sagar Academy of Technology,ECE,2AR,49236
+Dayananda Sagar Academy of Technology,ECE,2BG,45593
+Dayananda Sagar Academy of Technology,ECE,3AG,33826
+Dayananda Sagar Academy of Technology,ECE,3BG,34726
+Dayananda Sagar Academy of Technology,ECE,3BR,39594
+Dayananda Sagar Academy of Technology,ECE,GM,27528
+Dayananda Sagar Academy of Technology,ECE,GMK,42130
+Dayananda Sagar Academy of Technology,ECE,GMR,39359
+Dayananda Sagar Academy of Technology,ECE,SCG,86013
+Dayananda Sagar Academy of Technology,ECE,SCK,159743
+Dayananda Sagar Academy of Technology,ECE,SCR,118077
+Dayananda Sagar Academy of Technology,ECE,STG,94249
+Dayananda Sagar Academy of Technology,ECE,STR,132618
+Dayananda Sagar Academy of Technology,ISE,1G,42211
+Dayananda Sagar Academy of Technology,ISE,2AG,33353
+Dayananda Sagar Academy of Technology,ISE,2AK,44768
+Dayananda Sagar Academy of Technology,ISE,2AR,46907
+Dayananda Sagar Academy of Technology,ISE,2BG,44223
+Dayananda Sagar Academy of Technology,ISE,3AG,30185
+Dayananda Sagar Academy of Technology,ISE,3BG,29004
+Dayananda Sagar Academy of Technology,ISE,3BR,34379
+Dayananda Sagar Academy of Technology,ISE,GM,27027
+Dayananda Sagar Academy of Technology,ISE,GMK,29962
+Dayananda Sagar Academy of Technology,ISE,GMR,33236
+Dayananda Sagar Academy of Technology,ISE,SCG,94618
+Dayananda Sagar Academy of Technology,ISE,SCK,135187
+Dayananda Sagar Academy of Technology,ISE,SCR,115896
+Dayananda Sagar Academy of Technology,ISE,STG,99538
+Dayananda Sagar Academy of Technology,ISE,STR,146564
+KLE Technological University,CSE,1G,15050
+KLE Technological University,CSE,1R,28674
+KLE Technological University,CSE,2AG,14130.5
+KLE Technological University,CSE,2AK,15017
+KLE Technological University,CSE,2AR,20820
+KLE Technological University,CSE,2BG,16007
+KLE Technological University,CSE,2BR,16063
+KLE Technological University,CSE,3AG,16855
+KLE Technological University,CSE,3AR,20182
+KLE Technological University,CSE,3BG,13215
+KLE Technological University,CSE,3BK,13581
+KLE Technological University,CSE,3BR,14120
+KLE Technological University,CSE,GM,10412
+KLE Technological University,CSE,GMK,12314
+KLE Technological University,CSE,GMR,12992
+KLE Technological University,CSE,SCG,47178
+KLE Technological University,CSE,SCK,49820
+KLE Technological University,CSE,SCR,63283
+KLE Technological University,CSE,STG,37136
+KLE Technological University,CSE,STK,58953
+KLE Technological University,CSE,STR,47007
+KLE Technological University,CSE,1G,15050
+KLE Technological University,CSE,1R,28674
+KLE Technological University,CSE,2AG,14130.5
+KLE Technological University,CSE,2AK,15017
+KLE Technological University,CSE,2AR,20820
+KLE Technological University,CSE,2BG,16007
+KLE Technological University,CSE,2BR,16063
+KLE Technological University,CSE,3AG,16855
+KLE Technological University,CSE,3AR,20182
+KLE Technological University,CSE,3BG,13215
+KLE Technological University,CSE,3BK,13581
+KLE Technological University,CSE,3BR,14120
+KLE Technological University,CSE,GM,10412
+KLE Technological University,CSE,GMK,12314
+KLE Technological University,CSE,GMR,12992
+KLE Technological University,CSE,SCG,47178
+KLE Technological University,CSE,SCK,49820
+KLE Technological University,CSE,SCR,63283
+KLE Technological University,CSE,STG,37136
+KLE Technological University,CSE,STK,58953
+KLE Technological University,CSE,STR,47007
+KLE Technological University,ECE,1G,24858
+KLE Technological University,ECE,1R,36559
+KLE Technological University,ECE,2AG,21853
+KLE Technological University,ECE,2AK,26605
+KLE Technological University,ECE,2AR,29232
+KLE Technological University,ECE,2BG,30657.5
+KLE Technological University,ECE,2BR,41098
+KLE Technological University,ECE,3AG,21635
+KLE Technological University,ECE,3AR,21829
+KLE Technological University,ECE,3BG,16663
+KLE Technological University,ECE,3BK,21197
+KLE Technological University,ECE,3BR,21917
+KLE Technological University,ECE,GM,15143
+KLE Technological University,ECE,GMK,18034
+KLE Technological University,ECE,GMR,21111
+KLE Technological University,ECE,SCG,67255
+KLE Technological University,ECE,SCK,85547
+KLE Technological University,ECE,SCR,121194
+KLE Technological University,ECE,STG,71627
+KLE Technological University,ECE,STK,89746
+KLE Technological University,ECE,STR,106393
+KLE Technological University,EEE,1G,64869
+KLE Technological University,EEE,2AG,48911.5
+KLE Technological University,EEE,2AK,58845
+KLE Technological University,EEE,2AR,67091
+KLE Technological University,EEE,2BG,67557
+KLE Technological University,EEE,3AG,48458
+KLE Technological University,EEE,3BG,38859
+KLE Technological University,EEE,3BR,55981
+KLE Technological University,EEE,GM,33902
+KLE Technological University,EEE,GMK,42127
+KLE Technological University,EEE,GMR,45688
+KLE Technological University,EEE,SCG,113391
+KLE Technological University,EEE,SCK,163484
+KLE Technological University,EEE,SCR,192064.5
+KLE Technological University,EEE,STG,135460
+KLE Technological University,EEE,STR,141000
+KLE Technological University,Mechanical,1G,135469
+KLE Technological University,Mechanical,2AG,90081
+KLE Technological University,Mechanical,2AK,126771
+KLE Technological University,Mechanical,2AR,168007
+KLE Technological University,Mechanical,2BG,91091
+KLE Technological University,Mechanical,3AG,114846
+KLE Technological University,Mechanical,3BG,81678.75
+KLE Technological University,Mechanical,3BR,88894
+KLE Technological University,Mechanical,GM,69873
+KLE Technological University,Mechanical,GMK,77596
+KLE Technological University,Mechanical,GMR,87458
+KLE Technological University,Mechanical,SCG,197266
+KLE Technological University,Mechanical,SCK,223525
+KLE Technological University,Mechanical,SCR,201168
+KLE Technological University,Mechanical,STG,201629
+SDM College of Engineering,AIML,1G,26067
+SDM College of Engineering,AIML,2AG,23044
+SDM College of Engineering,AIML,2BG,19660
+SDM College of Engineering,AIML,3AG,24395
+SDM College of Engineering,AIML,3BG,18361
+SDM College of Engineering,AIML,3BR,25913
+SDM College of Engineering,AIML,GM,22349
+SDM College of Engineering,AIML,GMK,17862
+SDM College of Engineering,AIML,SCG,62999
+SDM College of Engineering,AIML,SCK,67683
+SDM College of Engineering,AIML,SCR,40923
+SDM College of Engineering,CSE,1G,24344
+SDM College of Engineering,CSE,2AG,22687
+SDM College of Engineering,CSE,2AK,23428
+SDM College of Engineering,CSE,2AR,26683
+SDM College of Engineering,CSE,2BG,16731
+SDM College of Engineering,CSE,3AG,20834
+SDM College of Engineering,CSE,3BG,17378
+SDM College of Engineering,CSE,3BR,16711.5
+SDM College of Engineering,CSE,GM,17231
+SDM College of Engineering,CSE,GMK,20112
+SDM College of Engineering,CSE,SCG,64587
+SDM College of Engineering,CSE,SCK,67815
+SDM College of Engineering,CSE,SCR,56171
+SDM College of Engineering,CSE,STG,70534
+SDM College of Engineering,ISE,1G,41469
+SDM College of Engineering,ISE,2AG,25565
+SDM College of Engineering,ISE,2AR,30580
+SDM College of Engineering,ISE,2BG,28100
+SDM College of Engineering,ISE,3AG,25427
+SDM College of Engineering,ISE,3BG,22654
+SDM College of Engineering,ISE,3BR,20914
+SDM College of Engineering,ISE,GM,23011
+SDM College of Engineering,ISE,GMK,25115
+SDM College of Engineering,ISE,SCG,63302
+SDM College of Engineering,ISE,SCK,122411
+SDM College of Engineering,ISE,SCR,70702
+SDM College of Engineering,ISE,1G,41469
+SDM College of Engineering,ISE,2AG,25565
+SDM College of Engineering,ISE,2AR,30580
+SDM College of Engineering,ISE,2BG,28100
+SDM College of Engineering,ISE,3AG,25427
+SDM College of Engineering,ISE,3BG,22654
+SDM College of Engineering,ISE,3BR,20914
+SDM College of Engineering,ISE,GM,23011
+SDM College of Engineering,ISE,GMK,25115
+SDM College of Engineering,ISE,SCG,63302
+SDM College of Engineering,ISE,SCK,122411
+SDM College of Engineering,ISE,SCR,70702
+SDM College of Engineering,ECE,1G,28597
+SDM College of Engineering,ECE,2AG,27015
+SDM College of Engineering,ECE,2AR,30068
+SDM College of Engineering,ECE,2BG,33827
+SDM College of Engineering,ECE,3AG,32849
+SDM College of Engineering,ECE,3BG,26392
+SDM College of Engineering,ECE,3BR,26559
+SDM College of Engineering,ECE,GM,23757
+SDM College of Engineering,ECE,GMK,24342
+SDM College of Engineering,ECE,GMR,25012
+SDM College of Engineering,ECE,SCG,68647
+SDM College of Engineering,ECE,SCK,109668
+SDM College of Engineering,ECE,SCR,99772
+SDM College of Engineering,ECE,STG,71748
+SDM College of Engineering,ECE,STR,89997
+SDM College of Engineering,EEE,1G,93956.5
+SDM College of Engineering,EEE,2AG,60627
+SDM College of Engineering,EEE,2BG,55905
+SDM College of Engineering,EEE,3AG,48009
+SDM College of Engineering,EEE,3BG,47008
+SDM College of Engineering,EEE,3BR,61133
+SDM College of Engineering,EEE,GM,116155
+SDM College of Engineering,EEE,GMK,100686
+SDM College of Engineering,Mechanical,1G,184143
+SDM College of Engineering,Mechanical,2AG,172769
+SDM College of Engineering,Mechanical,2AR,238506
+SDM College of Engineering,Mechanical,2BG,150256
+SDM College of Engineering,Mechanical,3AG,169733
+SDM College of Engineering,Mechanical,3BG,130989
+SDM College of Engineering,Mechanical,3BR,113311
+SDM College of Engineering,Mechanical,GM,127253
+SDM College of Engineering,Mechanical,GMK,207624
+SDM College of Engineering,Mechanical,SCG,245558
+SDM College of Engineering,Mechanical,SCR,260843
+REVA University,CSE,1G,26611
+REVA University,CSE,1R,43076.5
+REVA University,CSE,2AG,27024.5
+REVA University,CSE,2AK,40491
+REVA University,CSE,2AR,30657
+REVA University,CSE,2BG,26708
+REVA University,CSE,2BR,45510
+REVA University,CSE,3AG,23950
+REVA University,CSE,3AR,25052
+REVA University,CSE,3BG,22030
+REVA University,CSE,3BK,24134
+REVA University,CSE,3BR,19283
+REVA University,CSE,GM,24873
+REVA University,CSE,GMK,23298
+REVA University,CSE,SCG,58791
+REVA University,CSE,SCK,74687
+REVA University,CSE,SCR,102689
+REVA University,CSE,STG,64784
+REVA University,CSE,STK,88852
+REVA University,CSE,STR,88591
+REVA University,CSE AIML,1G,24312
+REVA University,CSE AIML,2AG,26491
+REVA University,CSE AIML,2AK,29542
+REVA University,CSE AIML,2AR,30006
+REVA University,CSE AIML,2BG,25030
+REVA University,CSE AIML,2BR,70945
+REVA University,CSE AIML,3AG,24698
+REVA University,CSE AIML,3AR,25535
+REVA University,CSE AIML,3BG,23287
+REVA University,CSE AIML,3BK,26504
+REVA University,CSE AIML,3BR,21356
+REVA University,CSE AIML,GM,26548
+REVA University,CSE AIML,GMK,24467
+REVA University,CSE AIML,SCG,58993
+REVA University,CSE AIML,SCK,63373
+REVA University,CSE AIML,SCR,82199
+REVA University,CSE AIML,STG,55386
+REVA University,CSE AIML,STK,100106
+REVA University,CSE AIML,STR,88641
+REVA University,AI Data Science,1G,31584
+REVA University,AI Data Science,1K,32040
+REVA University,AI Data Science,2AG,29832
+REVA University,AI Data Science,2AK,32032
+REVA University,AI Data Science,2AR,33055
+REVA University,AI Data Science,2BG,29419
+REVA University,AI Data Science,3AG,24554
+REVA University,AI Data Science,3BG,23115
+REVA University,AI Data Science,3BR,31545
+REVA University,AI Data Science,GM,22888
+REVA University,AI Data Science,GMK,28392
+REVA University,AI Data Science,GMR,26659
+REVA University,AI Data Science,SCG,66590
+REVA University,AI Data Science,SCK,95503
+REVA University,AI Data Science,SCR,83442
+REVA University,AI Data Science,STG,59412
+REVA University,AI Data Science,STK,115480.5
+REVA University,AI Data Science,STR,111744
+REVA University,ECE,1G,49681
+REVA University,ECE,1K,54819
+REVA University,ECE,2AG,37743
+REVA University,ECE,2AK,60389
+REVA University,ECE,2AR,54676
+REVA University,ECE,2BG,47358
+REVA University,ECE,2BR,75955
+REVA University,ECE,3AG,33995.75
+REVA University,ECE,3BG,35876
+REVA University,ECE,3BR,37372
+REVA University,ECE,GM,30626
+REVA University,ECE,GMK,45291
+REVA University,ECE,GMR,36727
+REVA University,ECE,SCG,94432
+REVA University,ECE,SCK,142078
+REVA University,ECE,SCR,170088
+REVA University,ECE,STG,95362
+REVA University,ECE,STR,111290
+REVA University,ISE,1G,30939
+REVA University,ISE,1R,37870
+REVA University,ISE,2AG,35088
+REVA University,ISE,2AR,36215
+REVA University,ISE,2BG,29876
+REVA University,ISE,3AG,29504
+REVA University,ISE,3BG,26593
+REVA University,ISE,3BR,25627
+REVA University,ISE,GM,29276
+REVA University,ISE,GMK,34716
+REVA University,ISE,SCG,83341
+REVA University,ISE,SCK,133901
+REVA University,ISE,SCR,237397
+REVA University,ISE,STG,93203
