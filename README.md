@@ -27,3 +27,23 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Sangu-dev/college-predictor.git  
+
+## 📁 Project Structure
+
+college-predictor/
+│
+├── app.py
+├── train_model.py
+├── extract_kcet.py
+├── requirements.txt
+├── README.md
+│
+├── data/
+│   └── kcet_cutoffs.csv
+│
+├── templates/
+│   ├── index.html
+│   ├── result.html
+│   └── favourites.html
+│
+└── .gitignore
