@@ -1,184 +1,685 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>KCET College Predictor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET & JEE College Predictor | AI Cutoff Analyzer (2023-2025)</title>
+    <meta name="description" content="AI-powered KCET and JEE college predictor with 150,000+ real cutoff trends across 460+ engineering colleges in Karnataka. Safe, Target, and Dream college recommendations.">
 
+    <!-- Modern Typography: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --bg-card: rgba(18, 26, 47, 0.75);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --primary-accent: #6366f1;
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+            --secondary-gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            --safe-color: #10b981;
+            --target-color: #f59e0b;
+            --dream-color: #ec4899;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
         body {
-            background: linear-gradient(to right, #141e30, #243b55);
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-main);
+            overflow-x: hidden;
         }
 
-        .main-box {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
+        /* Navbar */
+        .navbar-custom {
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-card);
+            padding: 16px 0;
+        }
+
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.35rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border-radius: 999px;
+            padding: 8px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+            font-size: 0.825rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+        }
+
+        /* Stats Pill Row */
+        .stat-pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 14px 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .stat-pill:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .stat-number {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Form Card */
+        .form-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-card);
+            border-radius: 24px;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            margin-top: 60px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            position: relative;
         }
 
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
+        .form-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .subtitle {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #dcdcdc;
+        .form-control, .form-select {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
 
-        .form-control,
-        .form-select {
-            height: 50px;
-            border-radius: 10px;
+        .form-control:focus, .form-select:focus {
+            background: rgba(15, 23, 42, 0.95);
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+            color: #fff;
         }
 
-        .btn-custom {
-            width: 100%;
-            height: 50px;
-            border-radius: 10px;
-            background: #00c6ff;
-            border: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
+        .form-select option {
+            background: #0f172a;
+            color: #fff;
         }
 
-        .btn-custom:hover {
-            background: #0072ff;
-            transform: scale(1.02);
-        }
-
-        .feature-box {
-            background: rgba(255,255,255,0.08);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .feature-box h5 {
+        /* Branch Quick Chips */
+        .chip-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 10px;
+        }
+
+        .branch-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-size: 0.78rem;
+            color: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .branch-chip:hover, .branch-chip.active {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+            color: #a5b4fc;
+        }
+
+        /* Submit Button */
+        .btn-predict {
+            background: var(--primary-gradient);
+            border: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 15px;
+            border-radius: 14px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+            transition: all 0.25s ease;
+            margin-top: 25px;
+        }
+
+        .btn-predict:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
+            color: #fff;
+        }
+
+        /* Tier Explanations */
+        .tier-legend {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 35px;
+        }
+
+        .tier-badge-sample {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .badge-safe { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge-target { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-dream { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+
+        /* Feature Cards */
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 28px;
+            height: 100%;
+            transition: all 0.25s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.3);
+            background: rgba(24, 34, 60, 0.85);
+        }
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-card {
+                padding: 24px;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
-<body style="background: linear-gradient(to right, #141e30, #243b55); color:white;">
+<body>
 
-<div class="container mt-5 p-4 rounded shadow-lg" style="background-color: rgba(0,0,0,0.5);">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="brand-logo">
+                <i class="bi bi-mortarboard-fill"></i> KCET Predictor <span class="badge bg-primary fs-6 px-2 py-1 rounded-pill">AI 2025</span>
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <a href="/favourites" class="nav-btn" id="favNavBtn">
+                    <i class="bi bi-heart-fill text-danger"></i>
+                    <span>Saved Colleges</span>
+                    <span class="badge bg-danger rounded-pill" id="favCountBadge" style="display:none;">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="main-box col-md-6 mx-auto">
+    <!-- Main Container -->
+    <div class="container my-5">
+        
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+            <div class="hero-badge">
+                <i class="bi bi-stars"></i> Powered by Multi-Year Cutoff Data (2023 - 2025)
+            </div>
+            <h1 class="hero-title">
+                Find Your Ideal College & <span class="gradient-text">Engineering Branch</span>
+            </h1>
+            <p class="hero-desc">
+                Accurate admission probability tiers, historical cutoff shifts, and AI recommendations trained on 460+ Karnataka engineering colleges.
+            </p>
 
-        <div class="title">🎓 KCET College Predictor</div>
-
-        <div class="subtitle">
-            Predict colleges and branches using real cutoff data
+            <!-- Metrics Bar -->
+            <div class="row g-3 justify-content-center max-w-lg mx-auto" style="max-width: 800px;">
+                <div class="col-6 col-md-3">
+                    <div class="stat-pill">
+                        <div class="stat-number">460+</div>
+                        <div class="stat-label">Colleges</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-pill">
+                        <div class="stat-number">146</div>
+                        <div class="stat-label">Courses / Branches</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-pill">
+                        <div class="stat-number">150,000+</div>
+                        <div class="stat-label">Historical Cutoffs</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-pill">
+                        <div class="stat-number">3 Years</div>
+                        <div class="stat-label">Trend Analysis</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <form method="POST">
+        <!-- Form Card Section -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <div class="form-card">
+                    <form method="POST" action="/" id="predictionForm">
+                        
+                        <!-- Exam Selection -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <label class="form-label">
+                                    <i class="bi bi-journal-check text-primary"></i> Entrance Exam
+                                </label>
+                                <select name="exam" id="examSelect" class="form-select">
+                                    <option value="KCET" selected>KCET (Karnataka CET)</option>
+                                    <option value="JEE">JEE Main (NITs / IIITs)</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">
+                                    <i class="bi bi-hash text-info"></i> Candidate Rank
+                                </label>
+                                <input type="number" name="rank" id="rankInput" class="form-control" 
+                                       placeholder="e.g. 12500" min="1" max="300000" required>
+                            </div>
+                        </div>
 
-            <div class="mb-3">
-                <label class="form-label">Enter Rank</label>
-                <input type="number" name="rank" class="form-control" placeholder="Enter your KCET rank" required>
+                        <!-- Category and Quota -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="form-label">
+                                    <i class="bi bi-person-badge text-warning"></i> KCET Category
+                                </label>
+                                <select name="category" id="categorySelect" class="form-select" required>
+                                    <optgroup label="General Merit">
+                                        <option value="GM" selected>GM - General Merit</option>
+                                        <option value="GMK">GMK - General (Kannada Medium)</option>
+                                        <option value="GMR">GMR - General (Rural)</option>
+                                        <option value="GMH">GMH - General (HK Quota)</option>
+                                        <option value="GMKH">GMKH - General (Kannada + HK)</option>
+                                        <option value="GMRH">GMRH - General (Rural + HK)</option>
+                                    </optgroup>
+                                    <optgroup label="Category 1">
+                                        <option value="1G">1G - Category 1 (General)</option>
+                                        <option value="1K">1K - Category 1 (Kannada)</option>
+                                        <option value="1R">1R - Category 1 (Rural)</option>
+                                        <option value="1H">1H - Category 1 (HK Quota)</option>
+                                    </optgroup>
+                                    <optgroup label="Category 2A">
+                                        <option value="2AG">2AG - Category 2A (General)</option>
+                                        <option value="2AK">2AK - Category 2A (Kannada)</option>
+                                        <option value="2AR">2AR - Category 2A (Rural)</option>
+                                        <option value="2AH">2AH - Category 2A (HK Quota)</option>
+                                        <option value="2ARH">2ARH - 2A (Rural + HK)</option>
+                                    </optgroup>
+                                    <optgroup label="Category 2B">
+                                        <option value="2BG">2BG - Category 2B (General)</option>
+                                        <option value="2BK">2BK - Category 2B (Kannada)</option>
+                                        <option value="2BR">2BR - Category 2B (Rural)</option>
+                                        <option value="2BH">2BH - Category 2B (HK Quota)</option>
+                                    </optgroup>
+                                    <optgroup label="Category 3A">
+                                        <option value="3AG">3AG - Category 3A (General)</option>
+                                        <option value="3AK">3AK - Category 3A (Kannada)</option>
+                                        <option value="3AR">3AR - Category 3A (Rural)</option>
+                                        <option value="3AH">3AH - Category 3A (HK Quota)</option>
+                                    </optgroup>
+                                    <optgroup label="Category 3B">
+                                        <option value="3BG">3BG - Category 3B (General)</option>
+                                        <option value="3BK">3BK - Category 3B (Kannada)</option>
+                                        <option value="3BR">3BR - Category 3B (Rural)</option>
+                                        <option value="3BH">3BH - Category 3B (HK Quota)</option>
+                                    </optgroup>
+                                    <optgroup label="Scheduled Caste (SC)">
+                                        <option value="SCG">SCG - SC (General)</option>
+                                        <option value="SCK">SCK - SC (Kannada)</option>
+                                        <option value="SCR">SCR - SC (Rural)</option>
+                                        <option value="SCH">SCH - SC (HK Quota)</option>
+                                    </optgroup>
+                                    <optgroup label="Scheduled Tribe (ST)">
+                                        <option value="STG">STG - ST (General)</option>
+                                        <option value="STK">STK - ST (Kannada)</option>
+                                        <option value="STR">STR - ST (Rural)</option>
+                                        <option value="STH">STH - ST (HK Quota)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">
+                                    <i class="bi bi-geo-alt text-danger"></i> Region / Article 371(J)
+                                </label>
+                                <select name="region" id="regionSelect" class="form-select">
+                                    <option value="All" selected>All Regions</option>
+                                    <option value="General">General Region (Non-HK)</option>
+                                    <option value="Hyderabad-Karnataka">Hyderabad-Karnataka (HK / Kalyana)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Course / Branch Input with Autocomplete & Quick Chips -->
+                        <div class="mb-4">
+                            <label class="form-label d-flex justify-content-between">
+                                <span><i class="bi bi-cpu text-success"></i> Preferred Engineering Branch</span>
+                                <small class="text-muted">Type or pick from popular presets</small>
+                            </label>
+                            
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary text-secondary">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" name="branch" id="branchInput" class="form-control" 
+                                       list="branchList" placeholder="Search branch (e.g. Computer Science, AI, ECE, or leave blank for All)" autocomplete="off">
+                                <datalist id="branchList">
+                                    <option value="All Branches">
+                                    {% for b in branches %}
+                                    <option value="{{ b }}">
+                                    {% endfor %}
+                                </datalist>
+                            </div>
+
+                            <!-- Quick Preset Chips -->
+                            <div class="chip-container">
+                                <span class="branch-chip" onclick="setBranch('')">All Branches</span>
+                                <span class="branch-chip" onclick="setBranch('COMPUTER SCIENCE AND ENGINEERING')">CSE</span>
+                                <span class="branch-chip" onclick="setBranch('ARTIFICIAL INTELLIGENCE AND DATA SCIENCE')">AI & DS</span>
+                                <span class="branch-chip" onclick="setBranch('ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING')">AI & ML</span>
+                                <span class="branch-chip" onclick="setBranch('INFORMATION SCIENCE AND ENGINEERING')">ISE</span>
+                                <span class="branch-chip" onclick="setBranch('ELECTRONICS AND COMMUNICATION ENGINEERING')">ECE</span>
+                                <span class="branch-chip" onclick="setBranch('ELECTRICAL & ELECTRONICS ENGINEERING')">EEE</span>
+                                <span class="branch-chip" onclick="setBranch('MECHANICAL ENGINEERING')">Mechanical</span>
+                                <span class="branch-chip" onclick="setBranch('CIVIL ENGINEERING')">Civil</span>
+                                <span class="branch-chip" onclick="setBranch('CYBER SECURITY')">Cyber Security</span>
+                                <span class="branch-chip" onclick="setBranch('ROBOTICS AND ARTIFICIAL INTELLIGENCE')">Robotics</span>
+                            </div>
+                        </div>
+
+                        <!-- Probability Tier Preference -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                <i class="bi bi-funnel text-primary"></i> Show Admission Tiers
+                            </label>
+                            <select name="tier" class="form-select">
+                                <option value="All" selected>All Tiers (Safe + Target + Dream)</option>
+                                <option value="Safe">🟢 Safe Colleges Only (High Admission Probability)</option>
+                                <option value="Target">🟡 Target Colleges Only (Realistic / Solid Chance)</option>
+                                <option value="Dream">🔴 Dream / Reach Colleges Only (Ambitious / Round 2-3 Scope)</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-predict">
+                            <span>Predict Colleges & Cutoff Trends</span>
+                            <i class="bi bi-arrow-right-circle-fill fs-5"></i>
+                        </button>
+                    </form>
+
+                    <!-- Tier Breakdown Legend -->
+                    <div class="tier-legend">
+                        <div class="fw-bold mb-2 fs-6 text-white-50 text-uppercase" style="letter-spacing: 0.05em; font-size: 0.8rem;">
+                            How Probability Tiers Work
+                        </div>
+                        <div class="row g-2 text-muted" style="font-size: 0.825rem;">
+                            <div class="col-md-4">
+                                <span class="tier-badge-sample badge-safe mb-1">🟢 Safe (85-99%)</span>
+                                <div>Cutoff rank is well above your rank. Highly likely admission.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="tier-badge-sample badge-target mb-1">🟡 Target (50-84%)</span>
+                                <div>Within recent closing ranks. Very realistic and competitive chance.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <span class="tier-badge-sample badge-dream mb-1">🔴 Dream (15-49%)</span>
+                                <div>Close to cutoff. Feasible during Round 2/3 or extended counseling.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </div>
 
-            <div class="mb-3">
-                <label class="form-label">Select Category</label>
-                <select name="category" class="form-select" required>
-                    <option value="GM">GM</option>
-                    <option value="1G">1G</option>
-                    <option value="1R">1R</option>
-                    <option value="2AG">2AG</option>
-                    <option value="2AK">2AK</option>
-                    <option value="2AR">2AR</option>
-
-                    <option value="2BG">2BG</option>
-                    <option value="2BK">2BK</option>
-                    <option value="2BR">2BR</option>
-
-                    <option value="3AG">3AG</option>
-                    <option value="3AK">3AK</option>
-                    <option value="3AR">3AR</option>
-
-                    <option value="3BG">3BG</option>
-                    <option value="3BK">3BK</option>
-                    <option value="3BR">3BR</option>
-
-                    <option value="SCG">SCG</option>
-                    <option value="SCK">SCK</option>
-                    <option value="SCR">SCR</option>
-
-                    <option value="STG">STG</option>
-                    <option value="STK">STK</option>
-                    <option value="STR">STR</option>
-                </select>
-                <div class="mb-3">
-                <label class="form-label">Select Branch</label>
-                <select name="branch" class="form-select">
-                <option value="">All Branches</option>
-                <option value="CSE">CSE</option>
-                <option value="CSE AIML">CSE AIML</option>
-                <option value="ECE">ECE</option>
-                <option value="ISE">ISE</option>
-                </select>
+        <!-- Features Showcase Section -->
+        <div class="row g-4 mt-5">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Multi-Year Cutoff Trends</h5>
+                    <p class="text-muted mb-0" style="font-size: 0.925rem;">
+                        Inspect how cutoffs shifted across 2023, 2024, and 2025 to gauge whether a branch is becoming more competitive or easier.
+                    </p>
                 </div>
             </div>
 
-            <div class="mb-4">
-                <label class="form-label">Select Exam</label>
-                <select name="exam" class="form-select">
-                    <option value="KCET">KCET</option>
-                    <option value="JEE">JEE</option>
-                </select>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">
+                        <i class="bi bi-pie-chart-fill"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Smart Tier Classification</h5>
+                    <p class="text-muted mb-0" style="font-size: 0.925rem;">
+                        Automatically categorizes 460+ engineering colleges into Safe, Target, and Dream tiers with estimated probability scores.
+                    </p>
+                </div>
             </div>
 
-            <button type="submit" class="btn btn-custom">
-                Predict Colleges 🚀
-            </button>
-
-        </form>
-    </div>
-
-
-    <div class="row mt-4 mb-5">
-
-        <div class="col-md-4">
-            <div class="feature-box">
-                <h2>📊</h2>
-                <h5>Real Data</h5>
-                <p>Uses real KCET cutoff dataset.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="feature-box">
-                <h2>⚡</h2>
-                <h5>Fast Prediction</h5>
-                <p>Get college prediction instantly.</p>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">
+                        <i class="bi bi-bookmark-heart-fill"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Shortlist & Favourites</h5>
+                    <p class="text-muted mb-0" style="font-size: 0.925rem;">
+                        Save your preferred colleges and branches to your personal shortlist. Export to CSV or print anytime for option entry preparation.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="feature-box">
-                <h2>🎯</h2>
-                <h5>Smart Results</h5>
-                <p>Shows branches based on your rank.</p>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="text-center text-muted mt-5 py-4 border-top border-secondary border-opacity-10" style="font-size: 0.85rem;">
+            KCET College Predictor &bull; Real Counseling Data &bull; 2023 - 2025 KCET Admissions
+        </footer>
 
     </div>
 
-</div>
+    <!-- JavaScript helpers -->
+    <script>
+        function setBranch(branchName) {
+            document.getElementById('branchInput').value = branchName;
+            
+            // Highlight active chip
+            document.querySelectorAll('.branch-chip').forEach(chip => {
+                if (chip.innerText.trim() === branchName || (branchName === '' && chip.innerText.trim() === 'All Branches')) {
+                    chip.classList.add('active');
+                } else {
+                    chip.classList.remove('active');
+                }
+            });
+        }
 
+        // Cache initial KCET categories and chips HTML
+        let kcetCategoryHTML = document.getElementById('categorySelect').innerHTML;
+        let kcetBranchChipsHTML = document.querySelector('.chip-container').innerHTML;
+        let kcetBranchListHTML = document.getElementById('branchList').innerHTML;
+
+        const jeeCategoriesHTML = `
+            <option value="General" selected>General (Open / CRL)</option>
+            <option value="OBC-NCL">OBC-NCL (Other Backward Class)</option>
+            <option value="EWS">GEN-EWS (Economically Weaker Section)</option>
+            <option value="SC">SC (Scheduled Caste)</option>
+            <option value="ST">ST (Scheduled Tribe)</option>
+            <option value="PwD">PwD (Persons with Disabilities)</option>
+        `;
+
+        const jeeBranchChipsHTML = `
+            <span class="branch-chip" onclick="setBranch('')">All Branches</span>
+            <span class="branch-chip" onclick="setBranch('Computer Science and Engineering')">CSE</span>
+            <span class="branch-chip" onclick="setBranch('Information Technology')">IT</span>
+            <span class="branch-chip" onclick="setBranch('Electronics and Communication Engineering')">ECE</span>
+            <span class="branch-chip" onclick="setBranch('Electrical Engineering')">Electrical</span>
+            <span class="branch-chip" onclick="setBranch('Mechanical Engineering')">Mechanical</span>
+            <span class="branch-chip" onclick="setBranch('Civil Engineering')">Civil</span>
+        `;
+
+        const jeeBranchListHTML = `
+            <option value="All Branches">
+            <option value="Computer Science and Engineering">
+            <option value="Information Technology">
+            <option value="Electronics and Communication Engineering">
+            <option value="Electrical Engineering">
+            <option value="Mechanical Engineering">
+            <option value="Civil Engineering">
+        `;
+
+        document.getElementById('examSelect').addEventListener('change', function() {
+            let exam = this.value;
+            let catSelect = document.getElementById('categorySelect');
+            let branchChips = document.querySelector('.chip-container');
+            let branchList = document.getElementById('branchList');
+            let branchInput = document.getElementById('branchInput');
+            let regionSelect = document.getElementById('regionSelect');
+
+            branchInput.value = '';
+
+            if (exam === 'JEE') {
+                catSelect.innerHTML = jeeCategoriesHTML;
+                branchChips.innerHTML = jeeBranchChipsHTML;
+                branchList.innerHTML = jeeBranchListHTML;
+                branchInput.placeholder = "Search JEE branch (e.g. Computer Science, ECE, Mechanical, or blank for All)";
+                regionSelect.innerHTML = `<option value="All" selected>All India (Top 10 NITs)</option>`;
+            } else {
+                catSelect.innerHTML = kcetCategoryHTML;
+                branchChips.innerHTML = kcetBranchChipsHTML;
+                branchList.innerHTML = kcetBranchListHTML;
+                branchInput.placeholder = "Search branch (e.g. Computer Science, AI, ECE, or leave blank for All)";
+                regionSelect.innerHTML = `
+                    <option value="All" selected>All Regions</option>
+                    <option value="General">General Region (Non-HK)</option>
+                    <option value="Hyderabad-Karnataka">Hyderabad-Karnataka (HK / Kalyana)</option>
+                `;
+            }
+        });
+
+        // Update favourite count badge in nav
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                let favs = JSON.parse(localStorage.getItem('kcet_favourites') || localStorage.getItem('favourites') || '[]');
+                let badge = document.getElementById('favCountBadge');
+                if (favs && favs.length > 0) {
+                    badge.innerText = favs.length;
+                    badge.style.display = 'inline-block';
+                }
+            } catch(e) {}
+        });
+    </script>
 </body>
 </html>

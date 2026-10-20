@@ -1,250 +1,773 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction Results</title>
+    <title>Prediction Results | KCET College Predictor</title>
 
+    <!-- Typography: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
+        :root {
+            --bg-dark: #0a0f1d;
+            --bg-card: rgba(18, 26, 47, 0.75);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+            --safe-color: #10b981;
+            --target-color: #f59e0b;
+            --dream-color: #ec4899;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
         body {
-            background: linear-gradient(to right, #141e30, #243b55);
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-main);
+            padding-bottom: 60px;
         }
 
-        .result-box {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 20px;
-            margin-top: 40px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        /* Navbar */
+        .navbar-custom {
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-card);
+            padding: 14px 0;
         }
 
-        table {
-            background: white;
-            color: black;
-            border-radius: 10px;
-            overflow: hidden;
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border-radius: 999px;
+            padding: 7px 16px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
         }
 
-        .info-box {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 10px;
+        /* Top Summary Cards */
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            backdrop-filter: blur(16px);
+            border-radius: 18px;
+            padding: 18px 22px;
+            transition: transform 0.2s;
+        }
+        .summary-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        .summary-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .summary-value {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+
+        /* Tab Navigation for Tiers */
+        .tier-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
             margin-bottom: 20px;
         }
 
-        .btn-back {
-            background: #00c6ff;
-            color: white;
-            border: none;
-            padding: 12px 20px;
+        .tier-tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tier-tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .tier-tab-btn.active {
+            background: #6366f1;
+            border-color: #6366f1;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+        }
+
+        .tier-tab-btn.active.tab-safe {
+            background: #059669;
+            border-color: #059669;
+        }
+
+        .tier-tab-btn.active.tab-target {
+            background: #d97706;
+            border-color: #d97706;
+        }
+
+        .tier-tab-btn.active.tab-dream {
+            background: #db2777;
+            border-color: #db2777;
+        }
+
+        /* Results Table / Card */
+        .results-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-custom {
+            margin-bottom: 0;
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .table-custom th {
+            background: rgba(15, 23, 42, 0.95);
+            color: #94a3b8;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+
+        .table-custom td {
+            background: transparent;
+            color: #f1f5f9;
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .table-custom tbody tr {
+            transition: background 0.15s;
+        }
+        .table-custom tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.035);
+        }
+
+        /* Badges */
+        .badge-college-id {
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 6px;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        /* Clean Admission Status Circles */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .status-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        .status-green {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+        }
+        .circle-green {
+            background: #10b981;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+        }
+
+        .status-yellow {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            color: #fbbf24;
+        }
+        .circle-yellow {
+            background: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+        }
+
+        .status-red {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+            color: #f87171;
+        }
+        .circle-red {
+            background: #ef4444;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+        }
+
+        /* Fav Button */
+        .btn-fav {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            width: 36px;
+            height: 36px;
             border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-fav:hover {
+            background: rgba(236, 72, 153, 0.2);
+            border-color: #ec4899;
+            color: #f472b6;
+        }
+        .btn-fav.active {
+            background: rgba(236, 72, 153, 0.25);
+            border-color: #ec4899;
+            color: #ec4899;
+        }
+
+        /* Search input */
+        .search-box {
+            position: relative;
+            max-width: 360px;
+        }
+        .search-box input {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            color: #fff;
+            padding: 9px 16px 9px 40px;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* Action Buttons */
+        .action-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cbd5e1;
+            border-radius: 10px;
+            padding: 8px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
             text-decoration: none;
-            font-weight: bold;
+        }
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
         }
 
-        .btn-back:hover {
-            background: #0072ff;
-            color: white;
+        /* Toast notification */
+        #toastContainer {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
         }
-        @media (max-width: 768px) {
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .result-box {
-                padding: 15px;
-            }
-
-            table {
-                font-size: 14px;
-            }
-
-            .btn {
-                margin-top: 10px;
-            }
-
-            .info-box {
-                text-align: center;
-            }
+        .custom-toast {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid #6366f1;
+            color: #fff;
+            backdrop-filter: blur(12px);
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="brand-logo">
+                <i class="bi bi-mortarboard-fill"></i> KCET Predictor <span class="badge bg-primary fs-6 px-2 py-1 rounded-pill">AI Results</span>
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <a href="/" class="nav-btn">
+                    <i class="bi bi-arrow-left"></i>
+                    <span>Modify Rank / Filter</span>
+                </a>
+                <a href="/favourites" class="nav-btn">
+                    <i class="bi bi-heart-fill text-danger"></i>
+                    <span>Favourites (<span id="navFavCount">0</span>)</span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="result-box">
+    <!-- Main Content -->
+    <div class="container my-4">
 
-        <h1 class="display-6 text-center">🎯 Prediction Results</h1>
-
-        <div class="row mb-4 g-3">
-            <div class="col-12 col-md-4">
-                <div class="info-box">
-                    <strong>Rank:</strong><br>
-                    {{ rank }}
+        <!-- User Search Details Row -->
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="summary-card">
+                    <div class="summary-label">Candidate Rank</div>
+                    <div class="summary-value text-info">#{{ "{:,}".format(rank) }}</div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-4">
-                <div class="info-box">
-                    <strong>Category:</strong><br>
-                    {{ category }}
+            <div class="col-6 col-md-3">
+                <div class="summary-card">
+                    <div class="summary-label">Category & Quota</div>
+                    <div class="summary-value text-warning">{{ category }}</div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-4">
-                <div class="info-box">
-                    <strong>Exam:</strong><br>
-                    {{ exam }}
+            <div class="col-6 col-md-3">
+                <div class="summary-card">
+                    <div class="summary-label">Branch Filter</div>
+                    <div class="summary-value text-truncate" title="{{ branch }}" style="font-size: 1.1rem;">
+                        {{ branch }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="summary-card">
+                    <div class="summary-label">Total Matches Found</div>
+                    <div class="summary-value text-success">{{ stats.total_matches }}</div>
                 </div>
             </div>
         </div>
 
-        <div class="alert alert-success mb-4">
-            <h4>🎯 Top Suggested College</h4>
 
-            <h3>
-               {% if "No colleges found" in predicted_college %}
-                    <span style="color:red;">
-                        {{ predicted_college }}
-                     </span>
-                {% else %}
-                {{ predicted_college }}
-                {% endif %}
-            </h3> 
-        </div> 
-
-        <div class="table-responsive">
-            <div class="mb-3">
-              <input type="text"
-                     id="searchInput"
-                     class="form-control"
-                     placeholder="Search College...">
+        <!-- Clean Color Key & Stats Cards -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 text-center" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25);">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <span class="status-circle circle-green" style="width: 14px; height: 14px;"></span>
+                        <span class="fw-bold fs-3" style="color: #34d399;">{{ stats.safe_count }}</span>
+                    </div>
+                    <div class="text-white-50 small fw-bold text-uppercase">Easy to Get (High Chance)</div>
+                </div>
             </div>
-            <table class="table table-dark table-hover table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Save</th>
-                        <th>College</th>
-                        <th>Branch</th>
-                        <th>Category</th>
-                        <th>Cutoff Rank</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {% for row in results %}
-                    <tr>
-
-                        <td>
-                           <button class="btn btn-warning btn-sm fav-btn">
-                            ⭐
-                           </button>
-                       </td> 
-
-                       <td>{{ row.college }}</td>
-                       <td>{{ row.branch }}</td>
-                       <td>{{ row.category }}</td>
-                       <td>{{ row.cutoff_rank }}</td>
-
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 text-center" style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25);">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <span class="status-circle circle-yellow" style="width: 14px; height: 14px;"></span>
+                        <span class="fw-bold fs-3" style="color: #fbbf24;">{{ stats.target_count }}</span>
+                    </div>
+                    <div class="text-white-50 small fw-bold text-uppercase">50-50 Chance (Medium)</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 rounded-4 text-center" style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25);">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                        <span class="status-circle circle-red" style="width: 14px; height: 14px;"></span>
+                        <span class="fw-bold fs-3" style="color: #f87171;">{{ stats.dream_count }}</span>
+                    </div>
+                    <div class="text-white-50 small fw-bold text-uppercase">Difficult to Get (Low Chance)</div>
+                </div>
+            </div>
         </div>
 
-        <div class="text-center mt-4">
+        <!-- Results Table Container -->
+        <div class="results-container">
+            
+            <!-- Toolbar: Tabs + Search + Export -->
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+                
+                <!-- Filter Tabs -->
+                <div class="tier-tabs mb-0">
+                    <button class="tier-tab-btn active" data-tier="all" onclick="setTierFilter('all', this)">
+                        All Colleges ({{ results|length }})
+                    </button>
+                    <button class="tier-tab-btn tab-safe" data-tier="Safe" onclick="setTierFilter('Safe', this)">
+                        <span class="status-circle circle-green" style="width: 8px; height: 8px;"></span> Easy ({{ stats.safe_count }})
+                    </button>
+                    <button class="tier-tab-btn tab-target" data-tier="Target" onclick="setTierFilter('Target', this)">
+                        <span class="status-circle circle-yellow" style="width: 8px; height: 8px;"></span> 50-50 Chance ({{ stats.target_count }})
+                    </button>
+                    <button class="tier-tab-btn tab-dream" data-tier="Dream" onclick="setTierFilter('Dream', this)">
+                        <span class="status-circle circle-red" style="width: 8px; height: 8px;"></span> Difficult ({{ stats.dream_count }})
+                    </button>
+                </div>
 
-        <a href="/" class="btn btn-info w-100 w-md-auto mb-2">
-                ← Back
-        </a>
+                <!-- Search and Export Controls -->
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="liveSearchInput" placeholder="Filter by college name or code...">
+                    </div>
+                    <button class="action-btn" onclick="exportToCSV()" title="Export results to CSV">
+                        <i class="bi bi-file-earmark-spreadsheet-fill text-success"></i> Export CSV
+                    </button>
+                    <button class="action-btn" onclick="window.print()" title="Print results">
+                        <i class="bi bi-printer-fill text-info"></i> Print
+                    </button>
+                </div>
 
-        <a href="/favourites" class="btn btn-warning w-100 w-md-auto">
-            💜 View Favourites
-        </a>
+            </div>
+
+            <!-- Simplified Clean Table -->
+            <div class="table-responsive">
+                <table class="table table-custom align-middle" id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 48px;">Save</th>
+                            <th>College Name & Code</th>
+                            <th>Engineering Branch</th>
+                            <th>Category</th>
+                            <th style="width: 170px;">Admission Chance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        {% for row in results %}
+                        <tr class="result-row" 
+                            data-tier="{{ row.tier }}" 
+                            data-college="{{ row.college|lower }}" 
+                            data-code="{{ row.college_id|lower }}"
+                            data-branch="{{ row.branch|lower }}">
+                            
+                            <!-- Bookmark Heart -->
+                            <td>
+                                <button class="btn-fav" 
+                                        data-college="{{ row.college }}"
+                                        data-code="{{ row.college_id }}"
+                                        data-branch="{{ row.branch }}"
+                                        data-category="{{ row.category }}"
+                                        data-cutoff="{{ row.cutoff_rank }}"
+                                        data-tier="{{ row.tier }}"
+                                        onclick="toggleFavourite(this)">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </td>
+
+                            <!-- College Name & Code with Cutoff Badge -->
+                            <td>
+                                <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                    {% if row.college_id %}
+                                    <span class="badge-college-id">{{ row.college_id }}</span>
+                                    {% endif %}
+                                    <span class="fw-bold fs-6">{{ row.college }}</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 flex-wrap">
+                                    <span class="badge bg-secondary bg-opacity-25 text-white-50 border border-secondary border-opacity-25" style="font-size: 0.74rem;">
+                                        Cutoff #{{ "{:,}".format(row.cutoff_rank) }}
+                                    </span>
+                                    {% if row.region == "Hyderabad-Karnataka" %}
+                                    <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25" style="font-size: 0.72rem;">
+                                        HK Quota 371(J)
+                                    </span>
+                                    {% endif %}
+                                </div>
+                            </td>
+
+                            <!-- Branch / Course -->
+                            <td>
+                                <span class="fw-medium text-light">{{ row.branch }}</span>
+                            </td>
+
+                            <!-- Category -->
+                            <td>
+                                <span class="badge bg-dark border border-secondary border-opacity-50 px-2 py-1 text-light">
+                                    {{ row.category }}
+                                </span>
+                            </td>
+
+                            <!-- Admission Chance: Green / Yellow / Red circle -->
+                            <td class="text-nowrap">
+                                {% if row.tier == "Safe" %}
+                                <div class="status-badge status-green">
+                                    <span class="status-circle circle-green"></span>
+                                    <span>Easy to Get</span>
+                                </div>
+                                {% elif row.tier == "Target" %}
+                                <div class="status-badge status-yellow">
+                                    <span class="status-circle circle-yellow"></span>
+                                    <span>50-50 Chance</span>
+                                </div>
+                                {% else %}
+                                <div class="status-badge status-red">
+                                    <span class="status-circle circle-red"></span>
+                                    <span>Difficult</span>
+                                </div>
+                                {% endif %}
+                            </td>
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <!-- Empty State -->
+                <div id="noResultsAlert" class="text-center py-5" style="display: none;">
+                    <i class="bi bi-exclamation-circle text-warning fs-1 mb-3"></i>
+                    <h5 class="fw-bold">No Colleges Found Matching Your Filters</h5>
+                    <p class="text-muted">Try clearing the search query or selecting "All Matches".</p>
+                </div>
+            </div>
+
+            <!-- Bottom Back & Shortlist Bar -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-4 pt-3 border-top border-secondary border-opacity-10">
+                <a href="/" class="action-btn">
+                    <i class="bi bi-arrow-left"></i> Adjust Rank & Exam
+                </a>
+                <a href="/favourites" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2">
+                    <i class="bi bi-heart-fill text-danger"></i> View Saved Favourites (<span id="bottomFavCount">0</span>)
+                </a>
+            </div>
 
         </div>
 
     </div>
 
-</div>
-<script>
-document.getElementById("searchInput").addEventListener("keyup", function() {
+    <!-- Toast Notification Container -->
+    <div id="toastContainer"></div>
 
-    let value = this.value.toLowerCase();
+    <!-- Interactive Scripts -->
+    <script>
+        let currentTierFilter = 'all';
 
-    let rows = document.querySelectorAll("tbody tr");
-
-    rows.forEach(row => {
-
-        let college = row.cells[1].textContent.toLowerCase();
-
-        if (college.includes(value)) {
-            row.style.display = "";
-        } else {
-            row.style.display = "none";
+        // Filter by Tab
+        function setTierFilter(tier, buttonEl) {
+            currentTierFilter = tier;
+            document.querySelectorAll('.tier-tab-btn').forEach(btn => btn.classList.remove('active'));
+            buttonEl.classList.add('active');
+            applyFilters();
         }
 
-    });
+        // Live Search Input
+        document.getElementById('liveSearchInput').addEventListener('input', applyFilters);
 
-});
-</script>
-<script>
+        function filterByCollege(name) {
+            document.getElementById('liveSearchInput').value = name;
+            applyFilters();
+            // Scroll to results table
+            document.getElementById('resultsTable').scrollIntoView({ behavior: 'smooth' });
+        }
 
-let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+        function applyFilters() {
+            let searchVal = document.getElementById('liveSearchInput').value.trim().toLowerCase();
+            let rows = document.querySelectorAll('.result-row');
+            let visibleCount = 0;
 
-document.querySelectorAll(".fav-btn").forEach((btn) => {
+            rows.forEach(row => {
+                let rowTier = row.getAttribute('data-tier');
+                let rowCollege = row.getAttribute('data-college');
+                let rowCode = row.getAttribute('data-code');
+                let rowBranch = row.getAttribute('data-branch');
 
-    btn.addEventListener("click", function () {
+                let matchesTier = (currentTierFilter === 'all' || rowTier === currentTierFilter);
+                let matchesSearch = (searchVal === '' || 
+                                     rowCollege.includes(searchVal) || 
+                                     rowCode.includes(searchVal) || 
+                                     rowBranch.includes(searchVal));
 
-        let collegeName = this.closest("tr")
-            .querySelectorAll("td")[1]
-            .innerText;
+                if (matchesTier && matchesSearch) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
 
-        if (!favourites.includes(collegeName)) {
+            document.getElementById('noResultsAlert').style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
 
-            favourites.push(collegeName);
+        // Favourites LocalStorage Management
+        function getFavourites() {
+            try {
+                return JSON.parse(localStorage.getItem('kcet_favourites') || '[]');
+            } catch(e) {
+                return [];
+            }
+        }
 
-            localStorage.setItem(
-            "favourites",
-            JSON.stringify(favourites)
-            );
+        function saveFavourites(favs) {
+            localStorage.setItem('kcet_favourites', JSON.stringify(favs));
+            updateFavBadges();
+        }
 
-            this.innerHTML = "💖";
+        function toggleFavourite(btn) {
+            let college = btn.getAttribute('data-college');
+            let branch = btn.getAttribute('data-branch');
+            let category = btn.getAttribute('data-category');
+            let cutoff = btn.getAttribute('data-cutoff');
+            let tier = btn.getAttribute('data-tier');
+            let code = btn.getAttribute('data-code');
 
-            alert(collegeName + " added to favourites 💖");
+            let favs = getFavourites();
+            let key = college + " - " + branch;
+            let existingIdx = favs.findIndex(item => (item.college === college && item.branch === branch));
 
-        } else {
+            if (existingIdx >= 0) {
+                // Remove
+                favs.splice(existingIdx, 1);
+                btn.classList.remove('active');
+                btn.innerHTML = '<i class="bi bi-heart"></i>';
+                showToast(`Removed "${college}" from favourites`);
+            } else {
+                // Add
+                favs.push({
+                    college: college,
+                    code: code,
+                    branch: branch,
+                    category: category,
+                    cutoff: cutoff,
+                    tier: tier,
+                    savedAt: new Date().toLocaleDateString()
+                });
+                btn.classList.add('active');
+                btn.innerHTML = '<i class="bi bi-heart-fill"></i>';
+                showToast(`Saved "${college}" to favourites ❤️`);
+            }
 
-            favourites = favourites.filter(
-                item => item !== collegeName
-            );
+            saveFavourites(favs);
+        }
 
-            localStorage.setItem(
-                "favourites",
-                JSON.stringify(favourites)
-            );
+        function updateFavBadges() {
+            let favs = getFavourites();
+            let count = favs.length;
+            let navCount = document.getElementById('navFavCount');
+            let bottomCount = document.getElementById('bottomFavCount');
+            if (navCount) navCount.innerText = count;
+            if (bottomCount) bottomCount.innerText = count;
 
-            this.innerHTML = "⭐";
+            // Highlight already favorited buttons on page load
+            document.querySelectorAll('.btn-fav').forEach(btn => {
+                let college = btn.getAttribute('data-college');
+                let branch = btn.getAttribute('data-branch');
+                let isFav = favs.some(item => item.college === college && item.branch === branch);
+                if (isFav) {
+                    btn.classList.add('active');
+                    btn.innerHTML = '<i class="bi bi-heart-fill"></i>';
+                } else {
+                    btn.classList.remove('active');
+                    btn.innerHTML = '<i class="bi bi-heart"></i>';
+                }
+            });
+        }
 
-            alert(collegeName + " removed from favourites");
-    }
+        function showToast(message) {
+            let container = document.getElementById('toastContainer');
+            let toast = document.createElement('div');
+            toast.className = 'custom-toast';
+            toast.innerHTML = `<i class="bi bi-check-circle-fill text-success fs-5"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.transition = 'opacity 0.4s';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 2500);
+        }
 
-    });
+        // Export to CSV
+        function exportToCSV() {
+            let rows = document.querySelectorAll('#resultsTable tr');
+            let csv = [];
+            rows.forEach(row => {
+                if (row.style.display !== 'none') {
+                    let cols = row.querySelectorAll('th, td');
+                    let rowData = [];
+                    cols.forEach((col, idx) => {
+                        if (idx > 0) { // Skip bookmark col
+                            let text = col.innerText.replace(/"/g, '""').replace(/\n/g, ' ');
+                            rowData.push(`"${text.trim()}"`);
+                        }
+                    });
+                    if (rowData.length > 0) csv.push(rowData.join(','));
+                }
+            });
 
-});
+            let csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
+            let encodedUri = encodeURI(csvContent);
+            let link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `kcet_prediction_rank_{{ rank }}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
-</script>
+        document.addEventListener('DOMContentLoaded', updateFavBadges);
+    </script>
 </body>
 </html>
