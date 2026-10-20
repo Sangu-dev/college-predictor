@@ -453,13 +453,38 @@
 
                             <div class="col-md-6">
                                 <label class="form-label">
-                                    <i class="bi bi-geo-alt text-danger"></i> Region / Article 371(J)
+                                    <i class="bi bi-geo text-info"></i> Region / Article 371(J)
                                 </label>
                                 <select name="region" id="regionSelect" class="form-select">
                                     <option value="All" selected>All Regions</option>
                                     <option value="General">General Region (Non-HK)</option>
                                     <option value="Hyderabad-Karnataka">Hyderabad-Karnataka (HK / Kalyana)</option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <!-- District / City Zone Filter -->
+                        <div class="mb-4">
+                            <label class="form-label d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-geo-alt-fill text-danger"></i> Preferred District / City Zone</span>
+                                <small class="text-muted" id="districtHelpText">Commuting & travel radius</small>
+                            </label>
+                            <select name="district" id="districtSelect" class="form-select mb-2" onchange="syncDistrictChips(this.value)">
+                                <option value="All" selected>All Districts / Cities (Entire Karnataka)</option>
+                                {% for d in districts %}
+                                <option value="{{ d }}">{{ d }}</option>
+                                {% endfor %}
+                            </select>
+
+                            <!-- Quick Preset City Chips -->
+                            <div class="chip-container" id="districtChips">
+                                <span class="branch-chip active" data-district="All" onclick="setDistrict('All')">All Karnataka</span>
+                                <span class="branch-chip" data-district="Bengaluru Urban & Rural" onclick="setDistrict('Bengaluru Urban & Rural')">🏙️ Bengaluru</span>
+                                <span class="branch-chip" data-district="Mysuru & Mandya" onclick="setDistrict('Mysuru & Mandya')">🏰 Mysuru & Mandya</span>
+                                <span class="branch-chip" data-district="Dakshina Kannada & Udupi" onclick="setDistrict('Dakshina Kannada & Udupi')">🌊 Mangaluru / Coastal</span>
+                                <span class="branch-chip" data-district="Hubballi-Dharwad & Belagavi" onclick="setDistrict('Hubballi-Dharwad & Belagavi')">🚂 Hubballi-Belagavi</span>
+                                <span class="branch-chip" data-district="Kalyana Karnataka" onclick="setDistrict('Kalyana Karnataka')">☀️ Kalyana Karnataka (371J)</span>
+                                <span class="branch-chip" data-district="Central & Southern Karnataka" onclick="setDistrict('Central & Southern Karnataka')">🌳 Central & Southern</span>
                             </div>
                         </div>
 
@@ -485,7 +510,7 @@
                             </div>
 
                             <!-- Quick Preset Chips -->
-                            <div class="chip-container">
+                            <div class="chip-container" id="branchChips">
                                 <span class="branch-chip" onclick="setBranch('')">All Branches</span>
                                 <span class="branch-chip" onclick="setBranch('COMPUTER SCIENCE AND ENGINEERING')">CSE</span>
                                 <span class="branch-chip" onclick="setBranch('ARTIFICIAL INTELLIGENCE AND DATA SCIENCE')">AI & DS</span>
@@ -596,8 +621,8 @@
         function setBranch(branchName) {
             document.getElementById('branchInput').value = branchName;
             
-            // Highlight active chip
-            document.querySelectorAll('.branch-chip').forEach(chip => {
+            // Highlight active chip in branchChips
+            document.querySelectorAll('#branchChips .branch-chip').forEach(chip => {
                 if (chip.innerText.trim() === branchName || (branchName === '' && chip.innerText.trim() === 'All Branches')) {
                     chip.classList.add('active');
                 } else {
@@ -606,9 +631,27 @@
             });
         }
 
-        // Cache initial KCET categories and chips HTML
+        function setDistrict(districtName) {
+            document.getElementById('districtSelect').value = districtName;
+            syncDistrictChips(districtName);
+        }
+
+        function syncDistrictChips(districtName) {
+            document.querySelectorAll('#districtChips .branch-chip').forEach(chip => {
+                let chipVal = chip.getAttribute('data-district');
+                if (chipVal === districtName) {
+                    chip.classList.add('active');
+                } else {
+                    chip.classList.remove('active');
+                }
+            });
+        }
+
+        // Cache initial KCET categories, districts, and chips HTML
         let kcetCategoryHTML = document.getElementById('categorySelect').innerHTML;
-        let kcetBranchChipsHTML = document.querySelector('.chip-container').innerHTML;
+        let kcetDistrictHTML = document.getElementById('districtSelect').innerHTML;
+        let kcetDistrictChipsHTML = document.getElementById('districtChips').innerHTML;
+        let kcetBranchChipsHTML = document.getElementById('branchChips').innerHTML;
         let kcetBranchListHTML = document.getElementById('branchList').innerHTML;
 
         const jeeCategoriesHTML = `
@@ -618,6 +661,30 @@
             <option value="SC">SC (Scheduled Caste)</option>
             <option value="ST">ST (Scheduled Tribe)</option>
             <option value="PwD">PwD (Persons with Disabilities)</option>
+        `;
+
+        const jeeDistrictsHTML = `
+            <option value="All" selected>All India / All NIT Campuses</option>
+            <option value="Karnataka (NIT Surathkal)">Karnataka (NIT Surathkal)</option>
+            <option value="Tamil Nadu (NIT Trichy)">Tamil Nadu (NIT Trichy)</option>
+            <option value="Telangana (NIT Warangal)">Telangana (NIT Warangal)</option>
+            <option value="Kerala (NIT Calicut)">Kerala (NIT Calicut)</option>
+            <option value="Odisha (NIT Rourkela)">Odisha (NIT Rourkela)</option>
+            <option value="Rajasthan (NIT Jaipur)">Rajasthan (NIT Jaipur)</option>
+            <option value="Maharashtra (VNIT Nagpur)">Maharashtra (VNIT Nagpur)</option>
+            <option value="Haryana (NIT Kurukshetra)">Haryana (NIT Kurukshetra)</option>
+            <option value="Uttar Pradesh (MNNIT Allahabad)">Uttar Pradesh (MNNIT Allahabad)</option>
+            <option value="West Bengal (NIT Durgapur)">West Bengal (NIT Durgapur)</option>
+        `;
+
+        const jeeDistrictChipsHTML = `
+            <span class="branch-chip active" data-district="All" onclick="setDistrict('All')">All NITs</span>
+            <span class="branch-chip" data-district="Karnataka (NIT Surathkal)" onclick="setDistrict('Karnataka (NIT Surathkal)')">Surathkal</span>
+            <span class="branch-chip" data-district="Tamil Nadu (NIT Trichy)" onclick="setDistrict('Tamil Nadu (NIT Trichy)')">Trichy</span>
+            <span class="branch-chip" data-district="Telangana (NIT Warangal)" onclick="setDistrict('Telangana (NIT Warangal)')">Warangal</span>
+            <span class="branch-chip" data-district="Kerala (NIT Calicut)" onclick="setDistrict('Kerala (NIT Calicut)')">Calicut</span>
+            <span class="branch-chip" data-district="Rajasthan (NIT Jaipur)" onclick="setDistrict('Rajasthan (NIT Jaipur)')">Jaipur</span>
+            <span class="branch-chip" data-district="Maharashtra (VNIT Nagpur)" onclick="setDistrict('Maharashtra (VNIT Nagpur)')">Nagpur</span>
         `;
 
         const jeeBranchChipsHTML = `
@@ -643,7 +710,9 @@
         document.getElementById('examSelect').addEventListener('change', function() {
             let exam = this.value;
             let catSelect = document.getElementById('categorySelect');
-            let branchChips = document.querySelector('.chip-container');
+            let distSelect = document.getElementById('districtSelect');
+            let distChips = document.getElementById('districtChips');
+            let branchChips = document.getElementById('branchChips');
             let branchList = document.getElementById('branchList');
             let branchInput = document.getElementById('branchInput');
             let regionSelect = document.getElementById('regionSelect');
@@ -652,12 +721,16 @@
 
             if (exam === 'JEE') {
                 catSelect.innerHTML = jeeCategoriesHTML;
+                distSelect.innerHTML = jeeDistrictsHTML;
+                distChips.innerHTML = jeeDistrictChipsHTML;
                 branchChips.innerHTML = jeeBranchChipsHTML;
                 branchList.innerHTML = jeeBranchListHTML;
                 branchInput.placeholder = "Search JEE branch (e.g. Computer Science, ECE, Mechanical, or blank for All)";
                 regionSelect.innerHTML = `<option value="All" selected>All India (Top 10 NITs)</option>`;
             } else {
                 catSelect.innerHTML = kcetCategoryHTML;
+                distSelect.innerHTML = kcetDistrictHTML;
+                distChips.innerHTML = kcetDistrictChipsHTML;
                 branchChips.innerHTML = kcetBranchChipsHTML;
                 branchList.innerHTML = kcetBranchListHTML;
                 branchInput.placeholder = "Search branch (e.g. Computer Science, AI, ECE, or leave blank for All)";

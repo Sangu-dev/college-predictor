@@ -89,6 +89,7 @@ def home():
     branches = sorted(df_kcet["branch"].dropna().unique().tolist()) if df_kcet is not None else []
     categories = sorted(df_kcet["category"].dropna().unique().tolist()) if df_kcet is not None else []
     regions = sorted(df_kcet["region"].dropna().unique().tolist()) if df_kcet is not None and "region" in df_kcet.columns else []
+    districts = sorted(df_kcet["district"].dropna().unique().tolist()) if df_kcet is not None and "district" in df_kcet.columns else []
 
     if request.method == "POST":
         try:
@@ -100,6 +101,7 @@ def home():
         branch = request.form.get("branch", "").strip()
         exam = request.form.get("exam", "KCET").strip().upper()
         region_filter = request.form.get("region", "All").strip()
+        district_filter = request.form.get("district", "All").strip()
         quota_filter = request.form.get("quota", "All").strip()
         tier_filter = request.form.get("tier", "All").strip()
 
@@ -108,6 +110,7 @@ def home():
             return "Dataset not found. Please verify data files exist.", 500
 
         filtered = data.copy()
+        exam_districts = sorted(data["district"].dropna().unique().tolist()) if "district" in data.columns else []
 
         # Normalize category for JEE vs KCET
         cat_search = category
@@ -151,12 +154,15 @@ def home():
         if quota_filter and quota_filter != "All" and "quota" in filtered.columns:
             filtered = filtered[filtered["quota"] == quota_filter]
 
+        # 5. Filter by District / City Zone
+        if district_filter and district_filter != "All" and "district" in filtered.columns:
+            filtered = filtered[filtered["district"] == district_filter]
+
         # Deduplicate and sort by Cutoff Rank ascending (best colleges first)
         filtered = filtered.drop_duplicates(subset=["college", "branch", "category"])
         filtered = filtered.sort_values(by="cutoff_rank", ascending=True)
 
-
-        # 7. Enrich records with Probability Tiers, Trends, and Badges
+        # 6. Enrich records with Probability Tiers, Trends, and Badges
         results = []
         safe_colleges = []
         target_colleges = []
@@ -173,6 +179,7 @@ def home():
                 "category": row["category"],
                 "quota": row.get("quota", "General"),
                 "region": row.get("region", "General"),
+                "district": row.get("district", "Other"),
                 "cutoff_rank": int(cutoff) if pd.notnull(cutoff) else "N/A",
                 "cutoff_2023": int(row["cutoff_2023"]) if pd.notnull(row.get("cutoff_2023")) else "—",
                 "cutoff_2024": int(row["cutoff_2024"]) if pd.notnull(row.get("cutoff_2024")) else "—",
@@ -224,6 +231,8 @@ def home():
             branch=branch if branch else "All Branches",
             exam=exam,
             region=region_filter,
+            district=district_filter,
+            districts=exam_districts,
             quota=quota_filter,
             tier_filter=tier_filter,
             stats=stats,
@@ -236,6 +245,7 @@ def home():
         branches=branches,
         categories=categories,
         regions=regions,
+        districts=districts,
         total_colleges=len(df_kcet["college"].unique()) if df_kcet is not None else 460,
         total_records=len(df_kcet) if df_kcet is not None else 47116
     )
@@ -259,6 +269,14 @@ def api_categories():
     df = get_dataset(exam)
     if df is not None and "category" in df.columns:
         return jsonify(sorted(df["category"].dropna().unique().tolist()))
+    return jsonify([])
+
+@app.route("/api/districts")
+def api_districts():
+    exam = request.args.get("exam", "KCET")
+    df = get_dataset(exam)
+    if df is not None and "district" in df.columns:
+        return jsonify(sorted(df["district"].dropna().unique().tolist()))
     return jsonify([])
 
 @app.route("/api/colleges")

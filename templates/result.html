@@ -470,8 +470,14 @@
                     </button>
                 </div>
 
-                <!-- Search and Export Controls -->
+                <!-- Search, District, and Export Controls -->
                 <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <select id="districtFilterSelect" class="form-select form-select-sm" style="width: auto; min-width: 170px; background: rgba(15, 23, 42, 0.85); color: #cbd5e1; border-color: rgba(255, 255, 255, 0.15); border-radius: 10px;" onchange="applyFilters()">
+                        <option value="all">📍 All Districts / Zones</option>
+                        {% for d in districts %}
+                        <option value="{{ d }}" {% if district == d %}selected{% endif %}>{{ d }}</option>
+                        {% endfor %}
+                    </select>
                     <div class="search-box">
                         <i class="bi bi-search"></i>
                         <input type="text" id="liveSearchInput" placeholder="Filter by college name or code...">
@@ -504,7 +510,8 @@
                             data-tier="{{ row.tier }}" 
                             data-college="{{ row.college|lower }}" 
                             data-code="{{ row.college_id|lower }}"
-                            data-branch="{{ row.branch|lower }}">
+                            data-branch="{{ row.branch|lower }}"
+                            data-district="{{ row.district }}">
                             
                             <!-- Bookmark Heart -->
                             <td>
@@ -514,6 +521,7 @@
                                         data-branch="{{ row.branch }}"
                                         data-category="{{ row.category }}"
                                         data-cutoff="{{ row.cutoff_rank }}"
+                                        data-district="{{ row.district }}"
                                         data-tier="{{ row.tier }}"
                                         onclick="toggleFavourite(this)">
                                     <i class="bi bi-heart"></i>
@@ -532,6 +540,11 @@
                                     <span class="badge bg-secondary bg-opacity-25 text-white-50 border border-secondary border-opacity-25" style="font-size: 0.74rem;">
                                         Cutoff #{{ "{:,}".format(row.cutoff_rank) }}
                                     </span>
+                                    {% if row.district and row.district != 'Other' %}
+                                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25" style="font-size: 0.72rem;">
+                                        <i class="bi bi-geo-alt-fill text-danger me-1"></i>{{ row.district }}
+                                    </span>
+                                    {% endif %}
                                     {% if row.region == "Hyderabad-Karnataka" %}
                                     <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25" style="font-size: 0.72rem;">
                                         HK Quota 371(J)
@@ -626,6 +639,7 @@
 
         function applyFilters() {
             let searchVal = document.getElementById('liveSearchInput').value.trim().toLowerCase();
+            let districtVal = document.getElementById('districtFilterSelect').value.trim();
             let rows = document.querySelectorAll('.result-row');
             let visibleCount = 0;
 
@@ -634,14 +648,16 @@
                 let rowCollege = row.getAttribute('data-college');
                 let rowCode = row.getAttribute('data-code');
                 let rowBranch = row.getAttribute('data-branch');
+                let rowDistrict = row.getAttribute('data-district') || '';
 
                 let matchesTier = (currentTierFilter === 'all' || rowTier === currentTierFilter);
                 let matchesSearch = (searchVal === '' || 
                                      rowCollege.includes(searchVal) || 
                                      rowCode.includes(searchVal) || 
                                      rowBranch.includes(searchVal));
+                let matchesDistrict = (districtVal === 'all' || rowDistrict.toLowerCase() === districtVal.toLowerCase());
 
-                if (matchesTier && matchesSearch) {
+                if (matchesTier && matchesSearch && matchesDistrict) {
                     row.style.display = '';
                     visibleCount++;
                 } else {
@@ -671,6 +687,7 @@
             let branch = btn.getAttribute('data-branch');
             let category = btn.getAttribute('data-category');
             let cutoff = btn.getAttribute('data-cutoff');
+            let district = btn.getAttribute('data-district') || '';
             let tier = btn.getAttribute('data-tier');
             let code = btn.getAttribute('data-code');
 
@@ -692,6 +709,7 @@
                     branch: branch,
                     category: category,
                     cutoff: cutoff,
+                    district: district,
                     tier: tier,
                     savedAt: new Date().toLocaleDateString()
                 });

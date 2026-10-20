@@ -268,6 +268,7 @@
                             <div class="d-flex gap-2 flex-wrap text-muted small mb-3">
                                 <span class="badge bg-dark border border-secondary px-2 py-1">Category: ${item.category || 'GM'}</span>
                                 ${item.cutoff && item.cutoff !== 'N/A' ? `<span class="badge bg-dark border border-secondary px-2 py-1">Cutoff: #${Number(item.cutoff).toLocaleString()}</span>` : ''}
+                                ${item.district && item.district !== 'Other' ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-2 py-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i>${item.district}</span>` : ''}
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-10">
@@ -301,9 +302,9 @@
         function exportShortlistCSV() {
             let favs = getFavourites();
             if (favs.length === 0) return;
-            let csv = ["Option,College Code,College Name,Branch,Category,Cutoff Rank,Tier"];
+            let csv = ["Option,College Code,College Name,Branch,Category,District,Cutoff Rank,Tier"];
             favs.forEach((item, idx) => {
-                csv.push(`"${idx+1}","${item.code || ''}","${item.college.replace(/"/g, '""')}","${(item.branch||'').replace(/"/g, '""')}","${item.category||''}","${item.cutoff||''}","${item.tier||''}"`);
+                csv.push(`"${idx+1}","${item.code || ''}","${item.college.replace(/"/g, '""')}","${(item.branch||'').replace(/"/g, '""')}","${item.category||''}","${(item.district||'').replace(/"/g, '""')}","${item.cutoff||''}","${item.tier||''}"`);
             });
             let csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
             let encodedUri = encodeURI(csvContent);
