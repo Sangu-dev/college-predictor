@@ -1074,21 +1074,27 @@
                             <div class="col-4">
                                 <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
                                     <div class="text-white-50 small mb-1">2023 Closing</div>
-                                    <div class="fw-bold text-white fs-6" id="modalY2023">—</div>
+                                    <div class="fw-bold fs-6" id="modalY2023">—</div>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
                                     <div class="text-white-50 small mb-1">2024 Closing</div>
-                                    <div class="fw-bold text-white fs-6" id="modalY2024">—</div>
+                                    <div class="fw-bold fs-6" id="modalY2024">—</div>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
                                     <div class="text-white-50 small mb-1">2025 Closing</div>
-                                    <div class="fw-bold text-white fs-6" id="modalY2025">—</div>
+                                    <div class="fw-bold fs-6" id="modalY2025">—</div>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Contextual Explanation for Missing Years -->
+                        <div class="d-flex align-items-center gap-2 mt-2 pt-2 border-top border-white border-opacity-10 text-white-50" style="font-size: 0.73rem;" id="modalYearNote">
+                            <i class="bi bi-info-circle text-info flex-shrink-0"></i>
+                            <span id="modalYearNoteText">Official counseling closing cutoff ranks across available academic cycles.</span>
                         </div>
                     </div>
 
@@ -1354,9 +1360,55 @@
             const y23El = document.getElementById('modalY2023');
             const y24El = document.getElementById('modalY2024');
             const y25El = document.getElementById('modalY2025');
-            if (y23El) y23El.innerText = !isNaN(y23) && y23 > 0 ? `#${y23.toLocaleString()}` : '—';
-            if (y24El) y24El.innerText = !isNaN(y24) && y24 > 0 ? `#${y24.toLocaleString()}` : '—';
-            if (y25El) y25El.innerText = !isNaN(y25) && y25 > 0 ? `#${y25.toLocaleString()}` : '—';
+            const noteTextEl = document.getElementById('modalYearNoteText');
+
+            const has23 = !isNaN(y23) && y23 > 0;
+            const has24 = !isNaN(y24) && y24 > 0;
+            const has25 = !isNaN(y25) && y25 > 0;
+
+            if (y23El) {
+                if (has23) {
+                    y23El.innerHTML = `<span class="text-white">#${y23.toLocaleString()}</span>`;
+                } else if (has24 || has25) {
+                    y23El.innerHTML = `<span class="text-white-50" style="font-size: 0.78rem;">Not Offered</span>`;
+                } else {
+                    y23El.innerHTML = `<span class="text-white-50">—</span>`;
+                }
+            }
+
+            if (y24El) {
+                if (has24) {
+                    y24El.innerHTML = `<span class="text-white">#${y24.toLocaleString()}</span>`;
+                } else if (has23 || has25) {
+                    y24El.innerHTML = `<span class="text-white-50" style="font-size: 0.78rem;">Not Offered</span>`;
+                } else {
+                    y24El.innerHTML = `<span class="text-white-50">—</span>`;
+                }
+            }
+
+            if (y25El) {
+                if (has25) {
+                    y25El.innerHTML = `<span class="text-white">#${y25.toLocaleString()}</span>`;
+                } else if (has24 || has23) {
+                    y25El.innerHTML = `<span class="text-white-50" style="font-size: 0.78rem;">Not Offered</span>`;
+                } else {
+                    y25El.innerHTML = `<span class="text-white-50">—</span>`;
+                }
+            }
+
+            if (noteTextEl) {
+                if (!has23 && has24 && !has25) {
+                    noteTextEl.innerText = "Specialized branch offered exclusively in the 2024 counseling seat matrix (not listed in 2023 or 2025 seat matrix).";
+                } else if (!has23 && has24 && has25) {
+                    noteTextEl.innerText = "Course introduced in the 2024 counseling cycle. Not offered in 2023 under this title.";
+                } else if (!has23 && !has24 && has25) {
+                    noteTextEl.innerText = "New branch introduced in the 2025 counseling seat matrix.";
+                } else if (has23 && has24 && !has25) {
+                    noteTextEl.innerText = "Branch seat allocation was not listed in the 2025 counseling seat matrix.";
+                } else {
+                    noteTextEl.innerText = "Official counseling closing cutoff ranks across available academic cycles.";
+                }
+            }
 
             let trendBadge = document.getElementById('modalTrendBadge');
             if (trendBadge) {
