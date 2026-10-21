@@ -46,6 +46,7 @@ No visual clutter or overwhelming numbers:
 
 ### 5. Interactive Counseling Tools
 - ⚡ **Instant Live Search & District Filter**: Filter table results instantly by college name, code, or geographic district without page reload.
+- 🏛️ **Click-to-Open College Detail Modal**: Click on any college row to view deep counseling insights including updated KEA-KUPECA fee structures, SNQ quota fees, VTU/Autonomous affiliation status, round-by-round breakdown (Round 1, Round 2, Extended Round), and multi-year cutoff trends.
 - 🏷️ **Quick Tier Tabs**: Toggle between **All Colleges**, **🟢 Easy to Get**, **🟡 50–50 Chance**, and **🔴 Difficult**.
 - 🚀 **1-Click Branch & City Chips**: Instant presets for branches and top Karnataka city zones.
 - 💜 **Favourites & Shortlist Dashboard (`/favourites`)**: Review saved colleges with district badges, delete choices, or clear all.

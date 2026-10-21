@@ -53,15 +53,32 @@
         }
 
         .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand-icon {
+            font-size: 1.4rem;
+            color: #818cf8;
+        }
+        .brand-title {
             font-weight: 800;
             font-size: 1.35rem;
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
+        }
+        .brand-badge {
+            background: rgba(99, 102, 241, 0.18);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #c7d2fe !important;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            -webkit-text-fill-color: initial !important;
         }
 
         .nav-btn {
@@ -308,7 +325,9 @@
     <nav class="navbar navbar-custom sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="brand-logo">
-                <i class="bi bi-mortarboard-fill"></i> KCET Predictor <span class="badge bg-primary fs-6 px-2 py-1 rounded-pill">AI 2025</span>
+                <i class="bi bi-mortarboard-fill brand-icon"></i>
+                <span class="brand-title">KCET Predictor</span>
+                <span class="brand-badge">AI 2025</span>
             </a>
             <div class="d-flex align-items-center gap-2">
                 <a href="/favourites" class="nav-btn" id="favNavBtn">

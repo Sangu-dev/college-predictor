@@ -50,15 +50,32 @@
         }
 
         .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand-icon {
+            font-size: 1.35rem;
+            color: #818cf8;
+        }
+        .brand-title {
             font-weight: 800;
             font-size: 1.25rem;
             background: var(--primary-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
+        }
+        .brand-badge {
+            background: rgba(99, 102, 241, 0.18);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #c7d2fe !important;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 999px;
+            letter-spacing: 0.04em;
+            -webkit-text-fill-color: initial !important;
         }
 
         .nav-btn {
@@ -360,6 +377,215 @@
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
+
+        /* Clickable Row Effects */
+        .result-row {
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .result-row:hover td {
+            background: rgba(99, 102, 241, 0.08) !important;
+        }
+        .result-row:hover td:first-child {
+            border-left: 3px solid #6366f1;
+        }
+        .row-click-hint {
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 0.70rem;
+        }
+        .result-row:hover .row-click-hint {
+            opacity: 1;
+        }
+
+        /* High-End Modal Styles (No solid color bars) */
+        .modal-backdrop.show {
+            backdrop-filter: blur(12px);
+            background-color: rgba(3, 7, 18, 0.88);
+        }
+        .college-detail-modal .modal-dialog {
+            max-width: 900px;
+            margin: 1.25rem auto;
+        }
+        .college-detail-modal .modal-content {
+            background: rgba(13, 20, 36, 0.98);
+            backdrop-filter: blur(28px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 22px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+            color: var(--text-main);
+            overflow: hidden;
+        }
+        .college-detail-modal .modal-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(23, 33, 56, 0.5);
+            padding: 18px 24px;
+        }
+        .college-detail-modal .modal-body {
+            padding: 18px 24px;
+            max-height: 82vh;
+            overflow-y: auto;
+        }
+        .college-detail-modal .modal-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .college-detail-modal .modal-body::-webkit-scrollbar-track {
+            background: rgba(10, 15, 29, 0.5);
+            border-radius: 999px;
+        }
+        .college-detail-modal .modal-body::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.4);
+            border-radius: 999px;
+        }
+        .college-detail-modal .modal-body::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.7);
+        }
+        .college-detail-modal .modal-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(23, 33, 56, 0.4);
+            padding: 14px 24px;
+        }
+        .modal-close-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #94a3b8;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .modal-close-btn:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #fca5a5;
+            transform: rotate(90deg);
+        }
+
+        /* Dedicated Glass Pills (High Contrast, Never Solid Blocks) */
+        .glass-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+            -webkit-text-fill-color: initial !important;
+        }
+        .glass-pill-location {
+            background: rgba(59, 130, 246, 0.12) !important;
+            border: 1px solid rgba(59, 130, 246, 0.35) !important;
+            color: #93c5fd !important;
+            -webkit-text-fill-color: #93c5fd !important;
+        }
+        .glass-pill-category {
+            background: rgba(255, 255, 255, 0.06) !important;
+            border: 1px solid rgba(255, 255, 255, 0.14) !important;
+            color: #e2e8f0 !important;
+            -webkit-text-fill-color: #e2e8f0 !important;
+        }
+        .glass-pill-branch {
+            background: rgba(6, 182, 212, 0.12) !important;
+            border: 1px solid rgba(6, 182, 212, 0.35) !important;
+            color: #67e8f9 !important;
+            -webkit-text-fill-color: #67e8f9 !important;
+        }
+        .glass-pill-cutoff {
+            background: rgba(245, 158, 11, 0.12) !important;
+            border: 1px solid rgba(245, 158, 11, 0.35) !important;
+            color: #fde68a !important;
+            -webkit-text-fill-color: #fde68a !important;
+        }
+        .glass-pill-subsidy {
+            background: rgba(16, 185, 129, 0.12) !important;
+            border: 1px solid rgba(16, 185, 129, 0.35) !important;
+            color: #6ee7b7 !important;
+            -webkit-text-fill-color: #6ee7b7 !important;
+        }
+        .glass-pill-stage {
+            background: rgba(99, 102, 241, 0.15) !important;
+            border: 1px solid rgba(99, 102, 241, 0.35) !important;
+            color: #c7d2fe !important;
+            -webkit-text-fill-color: #c7d2fe !important;
+        }
+
+        /* Modal Insight Tiles */
+        .insight-card {
+            background: rgba(23, 33, 56, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 15px;
+            height: 100%;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .insight-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.35);
+        }
+        .insight-card-title {
+            font-size: 0.74rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /* Fee Display Box */
+        .fee-display-box {
+            background: rgba(10, 15, 29, 0.6);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 12px;
+            padding: 10px 14px;
+        }
+        .fee-main-val {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fbbf24;
+            line-height: 1.2;
+        }
+        .fee-sub-label {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+
+        /* Round Progression Stepper */
+        .round-card {
+            background: rgba(10, 15, 29, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 14px 10px;
+            text-align: center;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .round-card.current-round-match {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.12);
+            box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
+        }
+        .round-card-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
     </style>
 </head>
 <body>
@@ -368,7 +594,9 @@
     <nav class="navbar navbar-custom sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="brand-logo">
-                <i class="bi bi-mortarboard-fill"></i> KCET Predictor <span class="badge bg-primary fs-6 px-2 py-1 rounded-pill">AI Results</span>
+                <i class="bi bi-mortarboard-fill brand-icon"></i>
+                <span class="brand-title">KCET Predictor</span>
+                <span class="brand-badge">AI Results</span>
             </a>
             <div class="d-flex align-items-center gap-2">
                 <a href="/" class="nav-btn">
@@ -511,7 +739,42 @@
                             data-college="{{ row.college|lower }}" 
                             data-code="{{ row.college_id|lower }}"
                             data-branch="{{ row.branch|lower }}"
-                            data-district="{{ row.district }}">
+                            data-district="{{ row.district }}"
+                            data-full-college="{{ row.college }}"
+                            data-full-code="{{ row.college_id }}"
+                            data-full-branch="{{ row.branch }}"
+                            data-category="{{ row.category }}"
+                            data-cutoff="{{ row.cutoff_rank }}"
+                            data-type="{{ row.college_type }}"
+                            data-type-short="{{ row.college_type_short }}"
+                            data-fee="{{ row.fee_range }}"
+                            data-fee-notes="{{ row.fee_notes }}"
+                            data-affiliation="{{ row.affiliation }}"
+                            data-icon="{{ row.fee_icon }}"
+                            data-snq="{{ row.snq_fee }}"
+                            data-r1="{{ row.round_1 }}"
+                            data-r2="{{ row.round_2 }}"
+                            data-rext="{{ row.round_ext }}"
+                            data-r1-status="{{ row.round_1_status }}"
+                            data-r2-status="{{ row.round_2_status }}"
+                            data-rext-status="{{ row.round_ext_status }}"
+                            data-likely-round="{{ row.likely_round }}"
+                            data-c2023="{{ row.cutoff_2023 }}"
+                            data-c2024="{{ row.cutoff_2024 }}"
+                            data-c2025="{{ row.cutoff_2025 }}"
+                            data-trend-pct="{{ row.trend_pct }}"
+                            data-trend-label="{{ row.trend_label }}"
+                            data-diff="{{ row.diff_text }}"
+                            data-prob="{{ row.prob }}"
+                            data-governance-desc="{{ row.governance_desc }}"
+                            data-accreditation-note="{{ row.accreditation_note }}"
+                            data-r1-title="{{ row.round_1_title }}"
+                            data-r2-title="{{ row.round_2_title }}"
+                            data-rext-title="{{ row.round_ext_title }}"
+                            data-progression-title="{{ row.progression_title }}"
+                            data-authority-label="{{ row.authority_label }}"
+                            data-strategy-tip="{{ row.strategy_tip }}"
+                            onclick="handleRowClick(event, this)">
                             
                             <!-- Bookmark Heart -->
                             <td>
@@ -523,7 +786,8 @@
                                         data-cutoff="{{ row.cutoff_rank }}"
                                         data-district="{{ row.district }}"
                                         data-tier="{{ row.tier }}"
-                                        onclick="toggleFavourite(this)">
+                                        onclick="toggleFavourite(event, this)"
+                                        title="Save to Favourites">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </td>
@@ -535,6 +799,9 @@
                                     <span class="badge-college-id">{{ row.college_id }}</span>
                                     {% endif %}
                                     <span class="fw-bold fs-6">{{ row.college }}</span>
+                                    <span class="badge bg-indigo bg-opacity-25 text-info border border-info border-opacity-30 row-click-hint">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i>View Fees & Rounds
+                                    </span>
                                 </div>
                                 <div class="d-flex align-items-center gap-2 flex-wrap">
                                     <span class="badge bg-secondary bg-opacity-25 text-white-50 border border-secondary border-opacity-25" style="font-size: 0.74rem;">
@@ -545,6 +812,9 @@
                                         <i class="bi bi-geo-alt-fill text-danger me-1"></i>{{ row.district }}
                                     </span>
                                     {% endif %}
+                                    <span class="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-25" style="font-size: 0.72rem;">
+                                        {{ row.fee_icon }} {{ row.college_type_short }}
+                                    </span>
                                     {% if row.region == "Hyderabad-Karnataka" %}
                                     <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25" style="font-size: 0.72rem;">
                                         HK Quota 371(J)
@@ -612,8 +882,237 @@
 
     </div>
 
+    <!-- College Detail Modal -->
+    <div class="modal fade college-detail-modal" id="collegeDetailModal" tabindex="-1" aria-labelledby="modalCollegeTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                
+                <!-- Modal Header -->
+                <div class="modal-header d-flex flex-column align-items-start gap-2">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <span class="badge-college-id" id="modalCollegeCode">E001</span>
+                            <span class="glass-pill glass-pill-location" id="modalDistrictBadge">
+                                <i class="bi bi-geo-alt-fill text-danger"></i><span id="modalDistrictText">District</span>
+                            </span>
+                            <span class="glass-pill glass-pill-category">
+                                Category: <strong class="text-white ms-1" id="modalCategoryText">GM</strong>
+                            </span>
+                            <span class="glass-pill glass-pill-category" id="modalExamTag">
+                                KCET Counseling
+                            </span>
+                        </div>
+                        <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+
+                    <h4 class="fw-extrabold text-white mb-1 mt-2" id="modalCollegeTitle" style="font-size: 1.35rem; line-height: 1.35;">
+                        College Name
+                    </h4>
+
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span class="glass-pill glass-pill-branch">
+                            <i class="bi bi-cpu-fill"></i><span id="modalBranchText">Engineering Branch</span>
+                        </span>
+                        <span class="glass-pill glass-pill-cutoff">
+                            Closing Cutoff: <strong class="text-white ms-1" id="modalCutoffText">#10,000</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    
+                    <!-- Row 1: 3 Clean Insight Cards -->
+                    <div class="row g-3 mb-3">
+                        
+                        <!-- Card 1: College Type & Estimated CET Fees -->
+                        <div class="col-md-4">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-title">
+                                        <span id="modalFeeIcon">🏛️</span> <span>College Type & Fees</span>
+                                    </div>
+                                    <div class="fw-bold fs-6 text-white mb-2" id="modalCollegeType">
+                                        Government Engineering College
+                                    </div>
+                                    <div class="fee-display-box mb-3">
+                                        <div class="fee-main-val" id="modalFeeRange">~₹40,860 – ₹45,750 / yr</div>
+                                        <div class="fee-sub-label">Regulated Annual Tuition Fee</div>
+                                    </div>
+                                    <div class="glass-pill glass-pill-subsidy mb-2 w-100 justify-content-start" id="modalSnqBadge">
+                                        <i class="bi bi-shield-check"></i><span id="modalSnqText">SNQ Quota: ₹21,360 / yr</span>
+                                    </div>
+                                </div>
+                                <div class="text-white-50" style="font-size: 0.74rem; line-height: 1.4;" id="modalFeeNotes">
+                                    Official KEA quota regulated fee.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Affiliation & Governance -->
+                        <div class="col-md-4">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-title">
+                                        <i class="bi bi-patch-check-fill text-info"></i> <span>Affiliation & Governance</span>
+                                    </div>
+                                    <div class="fw-bold fs-6 text-white mb-2" id="modalAffiliationText">
+                                        Autonomous under VTU
+                                    </div>
+                                    <div class="p-2 px-3 rounded-3 mb-2" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07);">
+                                        <div class="text-white-50" style="font-size: 0.77rem; line-height: 1.45;" id="modalGovernanceDesc">
+                                            Autonomous syllabus design with continuous semester internal assessments; degree awarded by VTU.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 mt-2 pt-2 border-top border-white border-opacity-10">
+                                    <span class="status-circle circle-green" style="width: 7px; height: 7px;"></span>
+                                    <span class="text-white-50" style="font-size: 0.74rem;" id="modalAccreditationNote">Recognized Autonomous Status</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Admission Chance & Rank Position -->
+                        <div class="col-md-4">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-title">
+                                        <i class="bi bi-graph-up-arrow text-success"></i> <span>Candidate Outlook</span>
+                                    </div>
+                                    <div class="mb-2" id="modalTierBadgeContainer">
+                                        <div class="status-badge status-green">
+                                            <span class="status-circle circle-green"></span>
+                                            <span id="modalTierText">Easy to Get</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-2 px-3 rounded-3 mb-2" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07);">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="text-white-50" style="font-size: 0.76rem;">Your Rank</span>
+                                            <span class="text-white fw-bold" style="font-size: 0.85rem;" id="modalCandidateRank">#10,000</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="text-white-50" style="font-size: 0.76rem;">Closing Cutoff</span>
+                                            <span class="text-warning fw-bold" style="font-size: 0.85rem;" id="modalClosingCutoff">#10,000</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center pt-1 border-top border-white border-opacity-10">
+                                            <span class="text-white-50" style="font-size: 0.76rem;">Rank Gap</span>
+                                            <span class="fw-bold text-info" style="font-size: 0.85rem;" id="modalDiffText">+5,240</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="glass-pill glass-pill-stage w-100 justify-content-start">
+                                    <i class="bi bi-calendar2-check"></i><span id="modalLikelyRoundText">Round 1 (Immediate Allotment)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 2: Round-by-Round Breakdown Matrix -->
+                    <div class="p-3 rounded-4 mb-3" style="background: rgba(23, 33, 56, 0.45); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-diagram-3-fill text-primary fs-5"></i>
+                                <span class="fw-bold text-white fs-6" id="modalProgressionTitle">Round-by-Round Cutoff Breakdown</span>
+                            </div>
+                            <span class="glass-pill glass-pill-category" id="modalAuthorityBadge" style="font-size: 0.72rem;">
+                                Official Counseling Progression
+                            </span>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <!-- Round 1 -->
+                            <div class="col-4">
+                                <div class="round-card" id="round1Card">
+                                    <div class="round-card-label" id="modalR1Title">Round 1</div>
+                                    <div class="fs-5 fw-extrabold text-white mb-1" id="modalR1Rank">#9,000</div>
+                                    <div class="small fw-semibold" id="modalR1Status">Wait for Upgrade</div>
+                                </div>
+                            </div>
+                            <!-- Round 2 -->
+                            <div class="col-4">
+                                <div class="round-card" id="round2Card">
+                                    <div class="round-card-label" id="modalR2Title">Round 2</div>
+                                    <div class="fs-5 fw-extrabold text-white mb-1" id="modalR2Rank">#9,800</div>
+                                    <div class="small fw-semibold" id="modalR2Status">Likely Allotted</div>
+                                </div>
+                            </div>
+                            <!-- Extended Round -->
+                            <div class="col-4">
+                                <div class="round-card" id="roundExtCard">
+                                    <div class="round-card-label" id="modalRextTitle">Extended Round</div>
+                                    <div class="fs-5 fw-extrabold text-white mb-1" id="modalRextRank">#10,800</div>
+                                    <div class="small fw-semibold" id="modalRextStatus">Safe Confirmed</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Counseling Strategy Alert -->
+                        <div class="p-2 px-3 rounded-3 d-flex align-items-center gap-2" style="background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); font-size: 0.78rem;">
+                            <i class="bi bi-lightbulb-fill text-warning flex-shrink-0"></i>
+                            <span class="text-white-50" id="modalStrategyTip">
+                                Cutoffs typically relax in later rounds as candidates surrender choices for other quotas.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Historical Year-on-Year Cutoffs & Stability -->
+                    <div class="p-3 rounded-4" style="background: rgba(23, 33, 56, 0.45); border: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-clock-history text-info fs-5"></i>
+                                <span class="fw-bold text-white fs-6">Multi-Year Closing Cutoffs (2023 – 2025)</span>
+                            </div>
+                            <span class="glass-pill glass-pill-category" id="modalTrendBadge" style="font-size: 0.75rem;">
+                                Stable Trend
+                            </span>
+                        </div>
+
+                        <div class="row g-2 text-center">
+                            <div class="col-4">
+                                <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                    <div class="text-white-50 small mb-1">2023 Closing</div>
+                                    <div class="fw-bold text-white fs-6" id="modalY2023">—</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                    <div class="text-white-50 small mb-1">2024 Closing</div>
+                                    <div class="fw-bold text-white fs-6" id="modalY2024">—</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 rounded-3" style="background: rgba(10, 15, 29, 0.6); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                    <div class="text-white-50 small mb-1">2025 Closing</div>
+                                    <div class="fw-bold text-white fs-6" id="modalY2025">—</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2" id="modalBookmarkBtn" onclick="toggleModalFavourite()">
+                        <i class="bi bi-heart" id="modalBookmarkIcon"></i> <span id="modalBookmarkText">Save to Favourites</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Notification Container -->
     <div id="toastContainer"></div>
+
+    <!-- Bootstrap 5.3 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Interactive Scripts -->
     <script>
@@ -668,6 +1167,255 @@
             document.getElementById('noResultsAlert').style.display = (visibleCount === 0) ? 'block' : 'none';
         }
 
+        let activeModalRow = null;
+
+        function handleRowClick(event, rowEl) {
+            if (event.target.closest('.btn-fav')) {
+                return; // User clicked bookmark heart; don't trigger modal
+            }
+            openCollegeModal(rowEl);
+        }
+
+        function openCollegeModal(rowEl) {
+            activeModalRow = rowEl;
+            const d = rowEl.dataset;
+
+            // 1. Header info
+            const codeEl = document.getElementById('modalCollegeCode');
+            if (codeEl) codeEl.innerText = d.fullCode || 'E---';
+
+            // Clean district: remove any "(...)" suffix
+            let rawDistrict = d.district || '';
+            if (rawDistrict.includes('(')) {
+                rawDistrict = rawDistrict.split('(')[0].trim();
+            }
+            const distBadge = document.getElementById('modalDistrictBadge');
+            const distText = document.getElementById('modalDistrictText');
+            if (rawDistrict && rawDistrict.toLowerCase() !== 'other' && rawDistrict.toLowerCase() !== 'none') {
+                if (distText) distText.innerText = rawDistrict;
+                if (distBadge) distBadge.style.display = 'inline-flex';
+            } else {
+                if (distBadge) distBadge.style.display = 'none';
+            }
+
+            const catText = document.getElementById('modalCategoryText');
+            if (catText) catText.innerText = d.category || 'GM';
+
+            // Exam tag: JoSAA vs KCET
+            const examTag = document.getElementById('modalExamTag');
+            if (examTag) {
+                const isJeeExam = (d.fullCode && d.fullCode.startsWith('NIT')) || (d.affiliation && d.affiliation.includes('National')) || (d.authorityLabel && d.authorityLabel.includes('JoSAA'));
+                examTag.innerText = isJeeExam ? 'JoSAA / CSAB Counseling' : 'KEA / KCET Counseling';
+            }
+
+            const titleEl = document.getElementById('modalCollegeTitle');
+            if (titleEl) titleEl.innerText = d.fullCollege || 'Engineering College';
+
+            const branchEl = document.getElementById('modalBranchText');
+            if (branchEl) branchEl.innerText = d.fullBranch || 'Engineering Branch';
+
+            let cutoffNum = Number(d.cutoff);
+            const cutoffText = document.getElementById('modalCutoffText');
+            if (cutoffText) {
+                cutoffText.innerText = !isNaN(cutoffNum) && cutoffNum > 0 ? `#${cutoffNum.toLocaleString()}` : (d.cutoff || 'N/A');
+            }
+
+            // 2. Card 1: College Type & Estimated CET / JoSAA Fees
+            const iconEl = document.getElementById('modalFeeIcon');
+            if (iconEl) iconEl.innerText = d.icon || '🏛️';
+
+            const typeEl = document.getElementById('modalCollegeType');
+            if (typeEl) typeEl.innerText = d.type || 'Engineering College';
+
+            const feeEl = document.getElementById('modalFeeRange');
+            if (feeEl) feeEl.innerText = d.fee || 'KEA Regulated Quota';
+
+            const snqText = document.getElementById('modalSnqText');
+            if (snqText) snqText.innerText = d.snq || 'SNQ Quota: Check KEA Rules';
+
+            const feeNotes = document.getElementById('modalFeeNotes');
+            if (feeNotes) feeNotes.innerText = d.feeNotes || 'Official government-regulated quota tuition fee.';
+
+            // 3. Card 2: Affiliation & Governance (Exam & College Aware)
+            const affEl = document.getElementById('modalAffiliationText');
+            if (affEl) affEl.innerText = d.affiliation || 'Autonomous Institution';
+
+            const govDescEl = document.getElementById('modalGovernanceDesc');
+            if (govDescEl) {
+                govDescEl.innerText = d.governanceDesc || 'Accredited higher education technical institution.';
+            }
+
+            const accredNoteEl = document.getElementById('modalAccreditationNote');
+            if (accredNoteEl) {
+                accredNoteEl.innerText = d.accreditationNote || 'Recognized Status';
+            }
+
+            // 4. Card 3: Candidate Outlook (Clean structured metrics)
+            const tierContainer = document.getElementById('modalTierBadgeContainer');
+            if (tierContainer) {
+                if (d.tier === 'Safe') {
+                    tierContainer.innerHTML = `<div class="status-badge status-green"><span class="status-circle circle-green"></span><span>Easy to Get (High Chance)</span></div>`;
+                } else if (d.tier === 'Target') {
+                    tierContainer.innerHTML = `<div class="status-badge status-yellow"><span class="status-circle circle-yellow"></span><span>50-50 Chance (Medium)</span></div>`;
+                } else {
+                    tierContainer.innerHTML = `<div class="status-badge status-red"><span class="status-circle circle-red"></span><span>Difficult (Low Chance)</span></div>`;
+                }
+            }
+
+            const rankEl = document.getElementById('modalCandidateRank');
+            if (rankEl) rankEl.innerText = `#{{ "{:,}".format(rank) }}`;
+
+            const closeCutoffEl = document.getElementById('modalClosingCutoff');
+            if (closeCutoffEl) {
+                closeCutoffEl.innerText = !isNaN(cutoffNum) && cutoffNum > 0 ? `#${cutoffNum.toLocaleString()}` : (d.cutoff || '—');
+            }
+
+            const diffEl = document.getElementById('modalDiffText');
+            if (diffEl) {
+                let diffVal = d.diff || '0';
+                diffEl.innerText = diffVal;
+                if (diffVal.startsWith('+')) {
+                    diffEl.className = 'fw-bold text-success';
+                } else if (diffVal.startsWith('-')) {
+                    diffEl.className = 'fw-bold text-danger';
+                } else {
+                    diffEl.className = 'fw-bold text-warning';
+                }
+            }
+
+            const likelyRoundEl = document.getElementById('modalLikelyRoundText');
+            if (likelyRoundEl) {
+                likelyRoundEl.innerText = d.likelyRound || 'Round 1 (Immediate Allotment)';
+            }
+
+            // 5. Row 2: Round-by-Round Breakdown Matrix
+            const progTitle = document.getElementById('modalProgressionTitle');
+            if (progTitle) progTitle.innerText = d.progressionTitle || 'Round-by-Round Cutoff Breakdown';
+
+            const authBadge = document.getElementById('modalAuthorityBadge');
+            if (authBadge) authBadge.innerText = d.authorityLabel || 'Official Counseling System';
+
+            const r1Title = document.getElementById('modalR1Title');
+            if (r1Title) r1Title.innerText = d.r1Title || 'Round 1';
+
+            const r2Title = document.getElementById('modalR2Title');
+            if (r2Title) r2Title.innerText = d.r2Title || 'Round 2';
+
+            const rextTitle = document.getElementById('modalRextTitle');
+            if (rextTitle) rextTitle.innerText = d.rextTitle || 'Extended Round';
+
+            const r1Rank = document.getElementById('modalR1Rank');
+            if (r1Rank) r1Rank.innerText = d.r1 ? `#${d.r1}` : '—';
+
+            const r2Rank = document.getElementById('modalR2Rank');
+            if (r2Rank) r2Rank.innerText = d.r2 ? `#${d.r2}` : '—';
+
+            const rextRank = document.getElementById('modalRextRank');
+            if (rextRank) rextRank.innerText = d.rext ? `#${d.rext}` : '—';
+
+            const r1StatusEl = document.getElementById('modalR1Status');
+            const r2StatusEl = document.getElementById('modalR2Status');
+            const rextStatusEl = document.getElementById('modalRextStatus');
+
+            if (r1StatusEl) {
+                r1StatusEl.innerText = d.r1Status || '—';
+                r1StatusEl.className = 'small fw-semibold ' + (d.r1Status === 'Likely Allotted' || d.r1Status === 'Safe Confirmed' ? 'text-success' : (d.r1Status && d.r1Status.includes('Wait') ? 'text-warning' : 'text-white-50'));
+            }
+            if (r2StatusEl) {
+                r2StatusEl.innerText = d.r2Status || '—';
+                r2StatusEl.className = 'small fw-semibold ' + (d.r2Status === 'Likely Allotted' || d.r2Status === 'Safe Confirmed' ? 'text-success' : (d.r2Status && d.r2Status.includes('Borderline') ? 'text-warning' : 'text-white-50'));
+            }
+            if (rextStatusEl) {
+                rextStatusEl.innerText = d.rextStatus || '—';
+                rextStatusEl.className = 'small fw-semibold ' + (d.rextStatus && (d.rextStatus.includes('Safe') || d.rextStatus.includes('Likely')) ? 'text-success' : 'text-danger');
+            }
+
+            // Highlight corresponding round card
+            document.querySelectorAll('.round-card').forEach(c => c.classList.remove('current-round-match'));
+            let lr = (d.likelyRound || '').toLowerCase();
+            if (lr.includes('round 1')) {
+                const r1Card = document.getElementById('round1Card');
+                if (r1Card) r1Card.classList.add('current-round-match');
+            } else if (lr.includes('round 2')) {
+                const r2Card = document.getElementById('round2Card');
+                if (r2Card) r2Card.classList.add('current-round-match');
+            } else if (lr.includes('extended') || lr.includes('csab')) {
+                const rextCard = document.getElementById('roundExtCard');
+                if (rextCard) rextCard.classList.add('current-round-match');
+            }
+
+            const tipEl = document.getElementById('modalStrategyTip');
+            if (tipEl) tipEl.innerText = d.strategyTip || 'Cutoffs typically relax in subsequent counseling rounds.';
+
+            // 6. Row 3: Multi-Year Trends
+            let y23 = Number(d.c2023);
+            let y24 = Number(d.c2024);
+            let y25 = Number(d.c2025);
+            const y23El = document.getElementById('modalY2023');
+            const y24El = document.getElementById('modalY2024');
+            const y25El = document.getElementById('modalY2025');
+            if (y23El) y23El.innerText = !isNaN(y23) && y23 > 0 ? `#${y23.toLocaleString()}` : '—';
+            if (y24El) y24El.innerText = !isNaN(y24) && y24 > 0 ? `#${y24.toLocaleString()}` : '—';
+            if (y25El) y25El.innerText = !isNaN(y25) && y25 > 0 ? `#${y25.toLocaleString()}` : '—';
+
+            let trendBadge = document.getElementById('modalTrendBadge');
+            if (trendBadge) {
+                let tLabel = d.trendLabel || 'Stable Trend';
+                trendBadge.innerText = tLabel;
+                if (tLabel.includes('Easier') || tLabel.includes('Relaxed')) {
+                    trendBadge.className = 'glass-pill glass-pill-subsidy';
+                    trendBadge.style.color = '#6ee7b7';
+                    trendBadge.style.borderColor = 'rgba(16, 185, 129, 0.35)';
+                    trendBadge.style.background = 'rgba(16, 185, 129, 0.12)';
+                } else if (tLabel.includes('Competitive')) {
+                    trendBadge.className = 'glass-pill glass-pill-cutoff';
+                    trendBadge.style.color = '#fca5a5';
+                    trendBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+                    trendBadge.style.background = 'rgba(239, 68, 68, 0.12)';
+                } else {
+                    trendBadge.className = 'glass-pill glass-pill-category';
+                    trendBadge.style.color = '#e2e8f0';
+                    trendBadge.style.borderColor = 'rgba(255, 255, 255, 0.14)';
+                    trendBadge.style.background = 'rgba(255, 255, 255, 0.06)';
+                }
+            }
+
+            // Sync bookmark button
+            syncModalBookmarkButton(d.fullCollege, d.fullBranch);
+
+            // Open Bootstrap Modal
+            const modalEl = document.getElementById('collegeDetailModal');
+            const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modalInstance.show();
+        }
+
+        function syncModalBookmarkButton(college, branch) {
+            const favs = getFavourites();
+            const isFav = favs.some(item => item.college === college && item.branch === branch);
+            const btn = document.getElementById('modalBookmarkBtn');
+            const icon = document.getElementById('modalBookmarkIcon');
+            const text = document.getElementById('modalBookmarkText');
+
+            if (isFav) {
+                btn.className = 'btn btn-danger rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2';
+                icon.className = 'bi bi-heart-fill';
+                text.innerText = 'Saved in Favourites';
+            } else {
+                btn.className = 'btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2';
+                icon.className = 'bi bi-heart';
+                text.innerText = 'Save to Favourites';
+            }
+        }
+
+        function toggleModalFavourite() {
+            if (!activeModalRow) return;
+            const btnFav = activeModalRow.querySelector('.btn-fav');
+            if (btnFav) {
+                toggleFavourite(null, btnFav);
+                syncModalBookmarkButton(activeModalRow.dataset.fullCollege, activeModalRow.dataset.fullBranch);
+            }
+        }
+
         // Favourites LocalStorage Management
         function getFavourites() {
             try {
@@ -682,7 +1430,10 @@
             updateFavBadges();
         }
 
-        function toggleFavourite(btn) {
+        function toggleFavourite(event, btn) {
+            if (event) {
+                event.stopPropagation();
+            }
             let college = btn.getAttribute('data-college');
             let branch = btn.getAttribute('data-branch');
             let category = btn.getAttribute('data-category');
@@ -692,7 +1443,6 @@
             let code = btn.getAttribute('data-code');
 
             let favs = getFavourites();
-            let key = college + " - " + branch;
             let existingIdx = favs.findIndex(item => (item.college === college && item.branch === branch));
 
             if (existingIdx >= 0) {
@@ -719,6 +1469,11 @@
             }
 
             saveFavourites(favs);
+
+            // Also sync active modal if currently showing this college
+            if (activeModalRow && activeModalRow.dataset.fullCollege === college && activeModalRow.dataset.fullBranch === branch) {
+                syncModalBookmarkButton(college, branch);
+            }
         }
 
         function updateFavBadges() {
