@@ -38,7 +38,7 @@ Clean, intuitive colored indicators eliminate confusing percentages and bloated 
 
 ### 4. Streamlined 5-Column Clean Results Table
 No visual clutter or overwhelming numbers:
-1. **Save**: One-click heart icon to bookmark options into your personal counseling shortlist.
+1. **Save**: One-click bookmark icon to save options into your personal counseling shortlist.
 2. **College Name & Code**: Official institution code (e.g. `E001`, `NIT08`), full college name, cutoff badge, geographic location badge, and Article 371(J) HK quota indicator.
 3. **Engineering Branch**: Target engineering branch/specialization.
 4. **Category**: Category pill (`GM`, `2AG`, `3BG`, `General`, `OBC-NCL`, etc.).

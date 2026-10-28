@@ -294,14 +294,14 @@
             transition: all 0.2s;
         }
         .btn-fav:hover {
-            background: rgba(236, 72, 153, 0.2);
-            border-color: #ec4899;
-            color: #f472b6;
+            background: rgba(245, 158, 11, 0.18);
+            border-color: rgba(245, 158, 11, 0.45);
+            color: #fbbf24;
         }
         .btn-fav.active {
-            background: rgba(236, 72, 153, 0.25);
-            border-color: #ec4899;
-            color: #ec4899;
+            background: rgba(245, 158, 11, 0.22);
+            border-color: #f59e0b;
+            color: #fbbf24;
         }
 
         /* Search input */
@@ -604,8 +604,8 @@
                     <span>Modify Rank / Filter</span>
                 </a>
                 <a href="/favourites" class="nav-btn">
-                    <i class="bi bi-heart-fill text-danger"></i>
-                    <span>Favourites (<span id="navFavCount">0</span>)</span>
+                    <i class="bi bi-bookmark-star-fill text-warning"></i>
+                    <span>Shortlist (<span id="navFavCount">0</span>)</span>
                 </a>
             </div>
         </div>
@@ -776,7 +776,7 @@
                             data-strategy-tip="{{ row.strategy_tip }}"
                             onclick="handleRowClick(event, this)">
                             
-                            <!-- Bookmark Heart -->
+                            <!-- Bookmark Shortlist -->
                             <td>
                                 <button class="btn-fav" 
                                         data-college="{{ row.college }}"
@@ -787,8 +787,8 @@
                                         data-district="{{ row.district }}"
                                         data-tier="{{ row.tier }}"
                                         onclick="toggleFavourite(event, this)"
-                                        title="Save to Favourites">
-                                    <i class="bi bi-heart"></i>
+                                        title="Save to Shortlist">
+                                    <i class="bi bi-bookmark"></i>
                                 </button>
                             </td>
 
@@ -874,7 +874,7 @@
                     <i class="bi bi-arrow-left"></i> Adjust Rank & Exam
                 </a>
                 <a href="/favourites" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2">
-                    <i class="bi bi-heart-fill text-danger"></i> View Saved Favourites (<span id="bottomFavCount">0</span>)
+                    <i class="bi bi-bookmark-star-fill"></i> View Saved Shortlist (<span id="bottomFavCount">0</span>)
                 </a>
             </div>
 
@@ -1106,7 +1106,7 @@
                         Close
                     </button>
                     <button type="button" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2" id="modalBookmarkBtn" onclick="toggleModalFavourite()">
-                        <i class="bi bi-heart" id="modalBookmarkIcon"></i> <span id="modalBookmarkText">Save to Favourites</span>
+                        <i class="bi bi-bookmark-star" id="modalBookmarkIcon"></i> <span id="modalBookmarkText">Save to Shortlist</span>
                     </button>
                 </div>
 
@@ -1177,7 +1177,7 @@
 
         function handleRowClick(event, rowEl) {
             if (event.target.closest('.btn-fav')) {
-                return; // User clicked bookmark heart; don't trigger modal
+                return; // User clicked bookmark; don't trigger modal
             }
             openCollegeModal(rowEl);
         }
@@ -1449,13 +1449,13 @@
             const text = document.getElementById('modalBookmarkText');
 
             if (isFav) {
-                btn.className = 'btn btn-danger rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2';
-                icon.className = 'bi bi-heart-fill';
-                text.innerText = 'Saved in Favourites';
+                btn.className = 'btn btn-outline-warning rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2';
+                icon.className = 'bi bi-bookmark-star-fill text-warning';
+                text.innerText = 'Saved in Shortlist';
             } else {
                 btn.className = 'btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2';
-                icon.className = 'bi bi-heart';
-                text.innerText = 'Save to Favourites';
+                icon.className = 'bi bi-bookmark-star';
+                text.innerText = 'Save to Shortlist';
             }
         }
 
@@ -1501,8 +1501,8 @@
                 // Remove
                 favs.splice(existingIdx, 1);
                 btn.classList.remove('active');
-                btn.innerHTML = '<i class="bi bi-heart"></i>';
-                showToast(`Removed "${college}" from favourites`);
+                btn.innerHTML = '<i class="bi bi-bookmark"></i>';
+                showToast(`Removed "${college}" from shortlist`);
             } else {
                 // Add
                 favs.push({
@@ -1516,8 +1516,8 @@
                     savedAt: new Date().toLocaleDateString()
                 });
                 btn.classList.add('active');
-                btn.innerHTML = '<i class="bi bi-heart-fill"></i>';
-                showToast(`Saved "${college}" to favourites ❤️`);
+                btn.innerHTML = '<i class="bi bi-bookmark-star-fill"></i>';
+                showToast(`Saved "${college}" to shortlist ⭐`);
             }
 
             saveFavourites(favs);
@@ -1543,10 +1543,10 @@
                 let isFav = favs.some(item => item.college === college && item.branch === branch);
                 if (isFav) {
                     btn.classList.add('active');
-                    btn.innerHTML = '<i class="bi bi-heart-fill"></i>';
+                    btn.innerHTML = '<i class="bi bi-bookmark-star-fill"></i>';
                 } else {
                     btn.classList.remove('active');
-                    btn.innerHTML = '<i class="bi bi-heart"></i>';
+                    btn.innerHTML = '<i class="bi bi-bookmark"></i>';
                 }
             });
         }
