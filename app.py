@@ -152,7 +152,7 @@ def classify_college_and_fees(name, exam="KCET", college_id=""):
             "fee_range": "₹40,860 (Aided) / ₹1,06,230 – ₹1,15,000 (Unaided)",
             "fee_notes": "Aided seats: ₹40,860/yr; Unaided autonomous seats: ~₹1.15L/yr (KEA quota).",
             "affiliation": "Autonomous under VTU",
-            "governance_desc": "Autonomous academic freedom allowing modern industry curricula and in-house continuous assessments; degree conferred by VTU.",
+            "governance_desc": "Autonomous academic freedom allowing modern industry curriculum and in-house continuous assessments; degree conferred by VTU.",
             "accreditation_note": "Autonomous Institution (VTU)",
             "icon": "🏢",
             "snq_fee": "🛡️ SNQ Quota: ₹21,360 (Aided) / ₹31,360 (Unaided)",
@@ -352,8 +352,9 @@ def home():
         if district_filter and district_filter != "All" and "district" in filtered.columns:
             filtered = filtered[filtered["district"] == district_filter]
 
-        # Deduplicate and sort by Cutoff Rank ascending (best colleges first)
-        filtered = filtered.drop_duplicates(subset=["college", "branch", "category"])
+        # Deduplicate by unique college ID (or name), branch, and category
+        dedup_col = "college_id" if "college_id" in filtered.columns else "college"
+        filtered = filtered.drop_duplicates(subset=[dedup_col, "branch", "category"])
         filtered = filtered.sort_values(by="cutoff_rank", ascending=True)
 
         # 6. Enrich records with Probability Tiers, Trends, and Badges
@@ -424,15 +425,22 @@ def home():
             elif tier == "Dream":
                 dream_colleges.append(item)
 
-            if tier_filter == "All" or tier_filter == tier:
-                results.append(item)
+        # User-friendly ordering: Easy to Get (Safe) first, followed by 50-50 Chance (Target), followed by Difficult (Dream)
+        if tier_filter == "Safe":
+            results = safe_colleges
+        elif tier_filter == "Target":
+            results = target_colleges
+        elif tier_filter == "Dream":
+            results = dream_colleges
+        else:
+            results = safe_colleges + target_colleges + dream_colleges
 
-        # AI Recommended (Balanced mix of Top Target & High-Quality Safe colleges)
+        # AI Recommended (Balanced mix of High-Quality Safe & Top Target colleges)
         recommended = []
-        if target_colleges:
-            recommended.extend(target_colleges[:3])
         if safe_colleges:
-            recommended.extend(safe_colleges[:2])
+            recommended.extend(safe_colleges[:3])
+        if target_colleges:
+            recommended.extend(target_colleges[:2])
         if not recommended and results:
             recommended = results[:5]
 

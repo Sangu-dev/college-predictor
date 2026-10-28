@@ -17,6 +17,7 @@
 
     <style>
         :root {
+            color-scheme: dark;
             --bg-base: #07090e;
             --bg-card: rgba(12, 17, 29, 0.75);
             --border-card: rgba(255, 255, 255, 0.08);
@@ -35,6 +36,10 @@
 
         *, *::before, *::after {
             box-sizing: border-box;
+        }
+
+        .text-muted {
+            color: var(--text-muted) !important;
         }
 
         body {
@@ -341,6 +346,24 @@
             width: 100%;
             transition: all 0.2s ease;
         }
+        .search-box input::placeholder,
+        input::placeholder {
+            color: #94a3b8 !important;
+            opacity: 1 !important;
+            font-weight: 400;
+        }
+        ::-webkit-input-placeholder {
+            color: #94a3b8 !important;
+            opacity: 1 !important;
+        }
+        ::-moz-placeholder {
+            color: #94a3b8 !important;
+            opacity: 1 !important;
+        }
+        :-ms-input-placeholder {
+            color: #94a3b8 !important;
+            opacity: 1 !important;
+        }
         .search-box input:focus {
             outline: none;
             background: rgba(8, 12, 22, 0.98);
@@ -620,7 +643,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="brand-logo">
                 <i class="bi bi-mortarboard-fill brand-icon"></i>
-                <span class="brand-title">KCET Predictor</span>
+                <span class="brand-title">College Predictor</span>
                 <span class="brand-badge">AI Results</span>
             </a>
             <div class="d-flex align-items-center gap-2">
@@ -670,36 +693,6 @@
         </div>
 
 
-        <!-- Clean Color Key & Stats Cards -->
-        <div class="row g-3 mb-4">
-            <div class="col-md-4">
-                <div class="p-3 text-center" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.22); border-radius: 18px;">
-                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
-                        <span class="status-circle circle-green" style="width: 12px; height: 12px;"></span>
-                        <span class="fw-bold fs-3" style="color: #34d399; letter-spacing: -0.02em;">{{ stats.safe_count }}</span>
-                    </div>
-                    <div class="text-white-50 small fw-bold text-uppercase" style="letter-spacing: 0.05em; font-size: 0.76rem;">Easy to Get (High Chance)</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3 text-center" style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.22); border-radius: 18px;">
-                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
-                        <span class="status-circle circle-yellow" style="width: 12px; height: 12px;"></span>
-                        <span class="fw-bold fs-3" style="color: #fbbf24; letter-spacing: -0.02em;">{{ stats.target_count }}</span>
-                    </div>
-                    <div class="text-white-50 small fw-bold text-uppercase" style="letter-spacing: 0.05em; font-size: 0.76rem;">50-50 Chance (Medium)</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3 text-center" style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.22); border-radius: 18px;">
-                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
-                        <span class="status-circle circle-red" style="width: 12px; height: 12px;"></span>
-                        <span class="fw-bold fs-3" style="color: #fb7185; letter-spacing: -0.02em;">{{ stats.dream_count }}</span>
-                    </div>
-                    <div class="text-white-50 small fw-bold text-uppercase" style="letter-spacing: 0.05em; font-size: 0.76rem;">Difficult to Get (Low Chance)</div>
-                </div>
-            </div>
-        </div>
 
         <!-- Results Table Container -->
         <div class="results-container">

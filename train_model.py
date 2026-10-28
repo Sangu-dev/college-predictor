@@ -32,6 +32,15 @@ raw_df["Base_Category"] = raw_df["Base_Category"].astype(str).str.strip()
 raw_df["Quota"] = raw_df["Quota"].astype(str).str.strip()
 raw_df["Region"] = raw_df["Region"].astype(str).str.strip()
 
+# Canonicalize CollegeName per CollegeID (prefer latest year e.g. 2025) to avoid duplicate rows from minor punctuation/comma differences
+latest_names = (
+    raw_df.sort_values(by="Year", ascending=False)
+    .drop_duplicates(subset=["CollegeID"])
+    .set_index("CollegeID")["CollegeName"]
+    .to_dict()
+)
+raw_df["CollegeName"] = raw_df["CollegeID"].map(latest_names).fillna(raw_df["CollegeName"])
+
 print("[Step 2] Aggregating multi-year trends (2023, 2024, 2025)...")
 yearly = (
     raw_df.groupby([
