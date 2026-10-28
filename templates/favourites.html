@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Favourite Colleges | KCET Predictor</title>
+    <title>Saved Shortlisted Colleges | KCET & JEE Predictor</title>
 
     <!-- Typography: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,29 +17,41 @@
 
     <style>
         :root {
-            --bg-dark: #0a0f1d;
-            --bg-card: rgba(18, 26, 47, 0.75);
+            --bg-base: #07090e;
+            --bg-card: rgba(12, 17, 29, 0.75);
             --border-card: rgba(255, 255, 255, 0.08);
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+            --border-card-hover: rgba(56, 189, 248, 0.35);
+            --primary-accent: #0284c7;
+            --accent-cyan: #38bdf8;
+            --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #2563eb 100%);
+            --safe-color: #10b981;
+            --target-color: #f59e0b;
+            --dream-color: #f43f5e;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
+            --text-subtle: #64748b;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-base);
             background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+                radial-gradient(ellipse 70% 40% at 50% 0%, rgba(14, 165, 233, 0.12), transparent 70%),
+                radial-gradient(ellipse 50% 30% at 90% 80%, rgba(16, 185, 129, 0.04), transparent 60%);
             background-attachment: fixed;
             min-height: 100vh;
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-main);
             padding-bottom: 60px;
+            letter-spacing: -0.01em;
         }
 
         .navbar-custom {
-            background: rgba(10, 15, 29, 0.85);
-            backdrop-filter: blur(16px);
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-card);
             padding: 14px 0;
         }
@@ -52,55 +64,59 @@
         }
         .brand-icon {
             font-size: 1.35rem;
-            color: #818cf8;
+            color: var(--accent-cyan);
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));
         }
         .brand-title {
             font-weight: 800;
             font-size: 1.25rem;
-            background: var(--primary-gradient);
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .brand-badge {
-            background: rgba(99, 102, 241, 0.18);
-            border: 1px solid rgba(99, 102, 241, 0.4);
-            color: #c7d2fe !important;
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            color: var(--accent-cyan) !important;
             font-size: 0.72rem;
             font-weight: 700;
             padding: 3px 10px;
             border-radius: 999px;
             letter-spacing: 0.04em;
-            -webkit-text-fill-color: initial !important;
+            -webkit-text-fill-color: var(--accent-cyan) !important;
         }
 
         .fav-card {
             background: var(--bg-card);
             border: 1px solid var(--border-card);
-            backdrop-filter: blur(16px);
-            border-radius: 18px;
-            padding: 22px;
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 24px;
             height: 100%;
-            transition: all 0.25s ease;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .fav-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border-color: var(--border-card-hover);
+            box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.65);
         }
 
         .badge-college-id {
-            background: rgba(99, 102, 241, 0.15);
-            color: #a5b4fc;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(14, 165, 233, 0.12);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(14, 165, 233, 0.3);
             border-radius: 6px;
-            padding: 2px 7px;
+            padding: 3px 8px;
             font-size: 0.75rem;
             font-weight: 700;
+            letter-spacing: 0.03em;
         }
 
         .tier-pill {
@@ -112,29 +128,30 @@
             font-size: 0.75rem;
             font-weight: 700;
         }
-        .tier-safe { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-        .tier-target { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-        .tier-dream { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+        .tier-safe { background: rgba(16, 185, 129, 0.12); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.25); }
+        .tier-target { background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.25); }
+        .tier-dream { background: rgba(244, 63, 94, 0.12); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.25); }
 
         .btn-remove {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.25);
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
             color: #f87171;
             border-radius: 8px;
-            padding: 6px 12px;
+            padding: 6px 14px;
             font-size: 0.8rem;
             font-weight: 600;
             transition: all 0.2s;
             cursor: pointer;
         }
         .btn-remove:hover {
-            background: rgba(239, 68, 68, 0.25);
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
             color: #fff;
         }
 
         .action-btn {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #cbd5e1;
             border-radius: 10px;
             padding: 8px 16px;
@@ -147,7 +164,8 @@
             text-decoration: none;
         }
         .action-btn:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.18);
             color: #fff;
         }
     </style>
@@ -176,8 +194,8 @@
         <!-- Header -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
             <div>
-                <h2 class="fw-bold mb-1">
-                    <i class="bi bi-bookmark-star-fill text-warning"></i> My Shortlisted Colleges
+                <h2 class="fw-bold mb-1" style="letter-spacing: -0.02em;">
+                    <i class="bi bi-bookmark-star-fill text-warning me-1"></i> My Shortlisted Colleges
                 </h2>
                 <p class="text-muted mb-0" id="favSubheading">
                     Manage and review your saved college options for KCET / JEE counseling.
@@ -204,13 +222,15 @@
         <!-- Empty State -->
         <div id="emptyState" class="text-center py-5" style="display: none;">
             <div class="mb-4">
-                <i class="bi bi-bookmark-star text-white-50" style="font-size: 4rem;"></i>
+                <div style="width: 80px; height: 80px; margin: 0 auto; border-radius: 50%; background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.2); display: flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-bookmark-star" style="font-size: 2.2rem; color: var(--accent-cyan);"></i>
+                </div>
             </div>
-            <h4 class="fw-bold text-white mb-2">No Shortlisted Colleges Yet</h4>
-            <p class="text-muted max-w-md mx-auto mb-4" style="max-width: 500px;">
-                Explore cutoffs with your rank and bookmark any college to save it to your counseling shortlist.
+            <h4 class="fw-bold text-white mb-2" style="letter-spacing: -0.02em;">No Shortlisted Colleges Yet</h4>
+            <p class="text-muted max-w-md mx-auto mb-4" style="max-width: 480px; line-height: 1.6;">
+                Explore cutoff ranks based on your candidate score and bookmark your preferred college choices for counseling.
             </p>
-            <a href="/" class="btn btn-primary rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2">
+            <a href="/" class="action-btn" style="background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%); border-color: rgba(56, 189, 248, 0.35); color: #fff; padding: 10px 22px; border-radius: 999px;">
                 <i class="bi bi-search"></i> Start Predicting Colleges
             </a>
         </div>
@@ -280,20 +300,20 @@
                                 ${item.code ? `<span class="badge-college-id">${item.code}</span>` : '<span></span>'}
                                 ${tierBadge}
                             </div>
-                            <h5 class="fw-bold mb-2 text-white">${item.college}</h5>
-                            <div class="text-info fw-semibold mb-3" style="font-size: 0.9rem;">
-                                <i class="bi bi-cpu"></i> ${item.branch || 'Course'}
+                            <h5 class="fw-bold mb-2 text-white" style="font-size: 1.05rem; line-height: 1.4;">${item.college}</h5>
+                            <div class="fw-semibold mb-3" style="font-size: 0.88rem; color: #38bdf8;">
+                                <i class="bi bi-cpu me-1"></i>${item.branch || 'Course'}
                             </div>
                             <div class="d-flex gap-2 flex-wrap text-muted small mb-3">
-                                <span class="badge bg-dark border border-secondary px-2 py-1">Category: ${item.category || 'GM'}</span>
-                                ${item.cutoff && item.cutoff !== 'N/A' ? `<span class="badge bg-dark border border-secondary px-2 py-1">Cutoff: #${Number(item.cutoff).toLocaleString()}</span>` : ''}
+                                <span class="badge bg-dark border border-secondary border-opacity-25 px-2 py-1 text-light">Category: ${item.category || 'GM'}</span>
+                                ${item.cutoff && item.cutoff !== 'N/A' ? `<span class="badge bg-dark border border-secondary border-opacity-25 px-2 py-1 text-light">Cutoff: #${Number(item.cutoff).toLocaleString()}</span>` : ''}
                                 ${item.district && item.district !== 'Other' ? `<span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-2 py-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i>${item.district}</span>` : ''}
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-10">
-                            <small class="text-muted" style="font-size: 0.75rem;">Option #${idx + 1}</small>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top border-white border-opacity-10">
+                            <small class="text-muted" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Option #${idx + 1}</small>
                             <button class="btn-remove" onclick="removeFavourite(${idx})">
-                                <i class="bi bi-trash3"></i> Remove
+                                <i class="bi bi-trash3 me-1"></i>Remove
                             </button>
                         </div>
                     </div>

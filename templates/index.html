@@ -18,38 +18,52 @@
 
     <style>
         :root {
-            --bg-dark: #0a0f1d;
-            --bg-card: rgba(18, 26, 47, 0.75);
+            --bg-base: #07090e;
+            --bg-card: rgba(12, 17, 29, 0.75);
+            --bg-surface: rgba(15, 23, 42, 0.6);
             --border-card: rgba(255, 255, 255, 0.08);
-            --primary-accent: #6366f1;
-            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
-            --secondary-gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            --border-card-hover: rgba(56, 189, 248, 0.35);
+            --primary-accent: #0284c7;
+            --accent-cyan: #38bdf8;
+            --accent-blue: #2563eb;
+            --primary-gradient: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #2563eb 100%);
+            --btn-gradient: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
             --safe-color: #10b981;
+            --safe-bg: rgba(16, 185, 129, 0.12);
             --target-color: #f59e0b;
-            --dream-color: #ec4899;
+            --target-bg: rgba(245, 158, 11, 0.12);
+            --dream-color: #f43f5e;
+            --dream-bg: rgba(244, 63, 94, 0.12);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
+            --text-subtle: #64748b;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-base);
             background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+                radial-gradient(ellipse 70% 40% at 50% 0%, rgba(14, 165, 233, 0.12), transparent 70%),
+                radial-gradient(ellipse 50% 30% at 90% 80%, rgba(16, 185, 129, 0.04), transparent 60%),
+                radial-gradient(ellipse 50% 30% at 10% 80%, rgba(2, 132, 199, 0.05), transparent 60%);
             background-attachment: fixed;
             min-height: 100vh;
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-main);
             overflow-x: hidden;
+            letter-spacing: -0.01em;
         }
 
         /* Navbar */
         .navbar-custom {
-            background: rgba(10, 15, 29, 0.85);
-            backdrop-filter: blur(16px);
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-card);
             padding: 16px 0;
+            transition: all 0.2s ease;
         }
 
         .brand-logo {
@@ -59,45 +73,48 @@
             text-decoration: none;
         }
         .brand-icon {
-            font-size: 1.4rem;
-            color: #818cf8;
+            font-size: 1.35rem;
+            color: var(--accent-cyan);
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));
         }
         .brand-title {
             font-weight: 800;
-            font-size: 1.35rem;
-            background: var(--primary-gradient);
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .brand-badge {
-            background: rgba(99, 102, 241, 0.18);
-            border: 1px solid rgba(99, 102, 241, 0.4);
-            color: #c7d2fe !important;
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            color: var(--accent-cyan) !important;
             font-size: 0.72rem;
             font-weight: 700;
             padding: 3px 10px;
             border-radius: 999px;
             letter-spacing: 0.04em;
-            -webkit-text-fill-color: initial !important;
+            -webkit-text-fill-color: var(--accent-cyan) !important;
         }
 
         .nav-btn {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             color: #e2e8f0;
             border-radius: 999px;
             padding: 8px 18px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
             text-decoration: none;
         }
 
         .nav-btn:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.16);
             color: #fff;
             transform: translateY(-1px);
         }
@@ -107,90 +124,96 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 16px;
+            padding: 5px 16px;
             border-radius: 999px;
-            background: rgba(99, 102, 241, 0.12);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #a5b4fc;
-            font-size: 0.825rem;
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid rgba(14, 165, 233, 0.25);
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
         }
 
         .hero-title {
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-size: clamp(2.3rem, 5.2vw, 3.6rem);
             font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
+            line-height: 1.14;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            color: #f8fafc;
         }
 
         .gradient-text {
-            background: var(--primary-gradient);
+            background: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-desc {
             color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: 0 auto 35px auto;
+            font-size: 1.08rem;
+            max-width: 660px;
+            margin: 0 auto 36px auto;
+            line-height: 1.6;
         }
 
         /* Stats Pill Row */
         .stat-pill {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border-card);
-            border-radius: 14px;
-            padding: 14px 20px;
+            border-radius: 16px;
+            padding: 16px 20px;
             text-align: center;
-            transition: transform 0.2s;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .stat-pill:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+            background: rgba(15, 23, 42, 0.65);
+            border-color: var(--border-card-hover);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
         }
         .stat-number {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff;
+            letter-spacing: -0.02em;
         }
         .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            font-weight: 600;
+            font-size: 0.72rem;
+            color: var(--text-subtle);
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
+            margin-top: 3px;
         }
 
         /* Main Form Card */
         .form-card {
             background: var(--bg-card);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(24px);
             border: 1px solid var(--border-card);
             border-radius: 24px;
             padding: 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.06);
             position: relative;
         }
 
         .form-label {
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #cbd5e1;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 7px;
         }
 
         .form-control, .form-select {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #fff;
+            background: rgba(8, 12, 22, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f8fafc;
             border-radius: 12px;
             padding: 12px 16px;
             font-size: 0.95rem;
@@ -199,15 +222,28 @@
         }
 
         .form-control:focus, .form-select:focus {
-            background: rgba(15, 23, 42, 0.95);
-            border-color: #6366f1;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+            background: rgba(8, 12, 22, 0.95);
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.18);
             color: #fff;
+            outline: none;
         }
 
         .form-select option {
-            background: #0f172a;
-            color: #fff;
+            background: #080c16;
+            color: #f8fafc;
+        }
+
+        .input-group-text {
+            background: rgba(8, 12, 22, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: none;
+            color: var(--text-muted);
+            border-radius: 12px 0 0 12px;
+        }
+        .input-group .form-control {
+            border-left: none;
+            border-radius: 0 12px 12px 0;
         }
 
         /* Branch Quick Chips */
@@ -219,55 +255,66 @@
         }
 
         .branch-chip {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.035);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 999px;
-            padding: 5px 12px;
+            padding: 6px 13px;
             font-size: 0.78rem;
-            color: #cbd5e1;
+            font-weight: 500;
+            color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.18s ease;
             user-select: none;
         }
 
-        .branch-chip:hover, .branch-chip.active {
-            background: rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-            color: #a5b4fc;
+        .branch-chip:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f1f5f9;
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .branch-chip.active {
+            background: rgba(14, 165, 233, 0.12);
+            border-color: rgba(14, 165, 233, 0.45);
+            color: var(--accent-cyan);
+            font-weight: 600;
+            box-shadow: 0 0 12px rgba(14, 165, 233, 0.15);
         }
 
         /* Submit Button */
         .btn-predict {
-            background: var(--primary-gradient);
-            border: none;
+            background: var(--btn-gradient);
+            border: 1px solid rgba(56, 189, 248, 0.35);
             color: #fff;
             font-weight: 700;
             font-size: 1.05rem;
-            padding: 15px;
+            padding: 15px 24px;
             border-radius: 14px;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
-            transition: all 0.25s ease;
+            box-shadow: 0 10px 25px -3px rgba(2, 132, 199, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
             margin-top: 25px;
+            cursor: pointer;
         }
 
         .btn-predict:hover {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
             transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
+            box-shadow: 0 16px 35px -3px rgba(2, 132, 199, 0.5);
             color: #fff;
         }
 
         /* Tier Explanations */
         .tier-legend {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(8, 12, 22, 0.6);
             border: 1px solid var(--border-card);
             border-radius: 16px;
             padding: 20px;
-            margin-top: 35px;
+            margin-top: 32px;
         }
 
         .tier-badge-sample {
@@ -276,12 +323,13 @@
             gap: 6px;
             padding: 4px 10px;
             border-radius: 999px;
-            font-size: 0.75rem;
+            font-size: 0.74rem;
             font-weight: 700;
+            letter-spacing: 0.02em;
         }
-        .badge-safe { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-        .badge-target { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-        .badge-dream { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+        .badge-safe { background: var(--safe-bg); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.25); }
+        .badge-target { background: var(--target-bg); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.25); }
+        .badge-dream { background: var(--dream-bg); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.25); }
 
         /* Feature Cards */
         .feature-card {
@@ -290,21 +338,22 @@
             border-radius: 20px;
             padding: 28px;
             height: 100%;
-            transition: all 0.25s;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(99, 102, 241, 0.3);
-            background: rgba(24, 34, 60, 0.85);
+            transform: translateY(-3px);
+            border-color: var(--border-card-hover);
+            background: rgba(18, 25, 42, 0.85);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
         }
         .feature-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             margin-bottom: 18px;
         }
 
@@ -393,7 +442,7 @@
                         <div class="row mb-4">
                             <div class="col-6">
                                 <label class="form-label">
-                                    <i class="bi bi-journal-check text-primary"></i> Entrance Exam
+                                    <i class="bi bi-journal-check text-info"></i> Entrance Exam
                                 </label>
                                 <select name="exam" id="examSelect" class="form-select">
                                     <option value="KCET" selected>KCET (Karnataka CET)</option>
@@ -515,7 +564,7 @@
                             </label>
                             
                             <div class="input-group">
-                                <span class="input-group-text bg-dark border-secondary text-secondary">
+                                <span class="input-group-text">
                                     <i class="bi bi-search"></i>
                                 </span>
                                 <input type="text" name="branch" id="branchInput" class="form-control" 
@@ -547,7 +596,7 @@
                         <!-- Probability Tier Preference -->
                         <div class="mb-4">
                             <label class="form-label">
-                                <i class="bi bi-funnel text-primary"></i> Show Admission Tiers
+                                <i class="bi bi-funnel text-info"></i> Show Admission Tiers
                             </label>
                             <select name="tier" class="form-select">
                                 <option value="All" selected>All Tiers (Safe + Target + Dream)</option>
@@ -566,7 +615,7 @@
 
                     <!-- Tier Breakdown Legend -->
                     <div class="tier-legend">
-                        <div class="fw-bold mb-2 fs-6 text-white-50 text-uppercase" style="letter-spacing: 0.05em; font-size: 0.8rem;">
+                        <div class="fw-bold mb-2 fs-6 text-white-50 text-uppercase" style="letter-spacing: 0.06em; font-size: 0.76rem;">
                             How Probability Tiers Work
                         </div>
                         <div class="row g-2 text-muted" style="font-size: 0.825rem;">
@@ -593,7 +642,7 @@
         <div class="row g-4 mt-5">
             <div class="col-md-4">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+                    <div class="feature-icon" style="background: rgba(14, 165, 233, 0.12); color: #38bdf8;">
                         <i class="bi bi-graph-up-arrow"></i>
                     </div>
                     <h5 class="fw-bold mb-2">Multi-Year Cutoff Trends</h5>
@@ -605,7 +654,7 @@
 
             <div class="col-md-4">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">
+                    <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12); color: #34d399;">
                         <i class="bi bi-pie-chart-fill"></i>
                     </div>
                     <h5 class="fw-bold mb-2">Smart Tier Classification</h5>
@@ -617,7 +666,7 @@
 
             <div class="col-md-4">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">
+                    <div class="feature-icon" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24;">
                         <i class="bi bi-bookmark-star-fill"></i>
                     </div>
                     <h5 class="fw-bold mb-2">Counseling Shortlist</h5>
@@ -629,7 +678,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="text-center text-muted mt-5 py-4 border-top border-secondary border-opacity-10" style="font-size: 0.85rem;">
+        <footer class="text-center text-muted mt-5 py-4 border-top border-white border-opacity-10" style="font-size: 0.85rem;">
             KCET College Predictor &bull; Real Counseling Data &bull; 2023 - 2025 KCET Admissions
         </footer>
 
