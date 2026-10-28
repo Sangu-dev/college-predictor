@@ -35,13 +35,17 @@ Students often have strict travel or relocation preferences. The system categori
 - **Instant Client-Side Filtering**: Change districts directly on the results toolbar without page reload.
 - **Location Badges**: Each college displays an informative geographic zone pill badge.
 
-### 4. Traffic-Light Admission Probability Indicators
-Clean, intuitive colored indicators eliminate confusing percentages and bloated tables:
-- 🟢 **Green Circle (`Easy to Get`)**: Cutoff rank is comfortably above your rank ($\text{Cutoff} \ge 1.25 \times \text{Rank}$). Safe backup choice with high admission certainty.
-- 🟡 **Yellow Circle (`50–50 Chance`)**: Cutoff is close to your rank ($0.85 \times \text{Rank} \le \text{Cutoff} < 1.25 \times \text{Rank}$). Very realistic and competitive choice.
-- 🔴 **Coral Red Circle (`Difficult`)**: Cutoff was stricter than your rank ($\text{Cutoff} < 0.85 \times \text{Rank}$). Ambitious reach option during later rounds or special rounds.
+### 4. Traffic-Light Admission Probability & User-First Ordering
+Results are logically sorted to prioritize the applicant's highest-probability options first:
+- **1. 🟢 Easy to Get (`Safe`)**: Shown first at the top of the results table. Cutoff rank is comfortably above your rank ($\text{Cutoff} \ge 1.25 \times \text{Rank}$). Safe backup choice with high admission certainty.
+- **2. 🟡 50–50 Chance (`Target`)**: Shown next in the middle. Cutoff is close to your rank ($0.85 \times \text{Rank} \le \text{Cutoff} < 1.25 \times \text{Rank}$). Very realistic and competitive choice.
+- **3. 🔴 Difficult (`Dream`)**: Shown last. Cutoff was stricter than your rank ($\text{Cutoff} < 0.85 \times \text{Rank}$). Ambitious reach option during later rounds or special rounds.
 
-### 5. Streamlined 5-Column Clean Results Table
+### 5. Zero-Duplicate Canonical Institution Pipeline
+- **Canonical College Mapping**: Mapped every college by its unique official KEA code (`college_id` e.g., `E059`). Eliminates duplicate rows previously caused by minor punctuation or spelling variations across multi-year KEA PDFs (e.g. comma vs. no comma).
+- **Consolidated Multi-Year History**: Unifies 2023, 2024, and 2025 cutoff closing ranks under a single row with exact trend percentages, so students never see the same institution and branch split into separate entries.
+
+### 6. Streamlined 5-Column Clean Results Table
 No visual clutter or overwhelming numbers:
 1. **Save**: One-click bookmark icon to save options into your personal counseling shortlist.
 2. **College Name & Code**: Official institution code (e.g. `E001`, `NIT08`), full college name, cutoff badge, geographic location badge, and Article 371(J) HK quota indicator.
@@ -49,10 +53,10 @@ No visual clutter or overwhelming numbers:
 4. **Category**: Category pill (`GM`, `2AG`, `3BG`, `General`, `OBC-NCL`, etc.).
 5. **Admission Chance**: Glowing color circles with clear status text.
 
-### 6. Interactive Counseling Tools
+### 7. Interactive Counseling Tools
 - ⚡ **Instant Live Search & District Filter**: Filter table results instantly by college name, code, or geographic district without page reload.
 - 🏛️ **Click-to-Open College Detail Modal**: Click on any college row to view deep counseling insights including updated KEA-KUPECA fee structures, SNQ quota fees, VTU/Autonomous affiliation status, round-by-round breakdown (Round 1, Round 2, Extended Round), and multi-year cutoff trends.
-- 🏷️ **Quick Tier Tabs**: Toggle between **All Colleges**, **🟢 Easy to Get**, **🟡 50–50 Chance**, and **🔴 Difficult**.
+- 🏷️ **Clean Toolbar Tier Tabs**: Quick tabs with live match counts (**All Colleges**, **🟢 Easy**, **🟡 50–50 Chance**, and **🔴 Difficult**) integrated right into the table toolbar.
 - 🚀 **1-Click Branch & City Chips**: Instant presets for branches and top Karnataka city zones.
 - ⭐ **Shortlist & Favourites Dashboard (`/favourites`)**: Review saved colleges with district badges, option numbering, delete choices, or clear all.
 - 📄 **Export & Print**: Download your shortlisted options (including districts) as a clean CSV or print them directly for option-entry preparation.
@@ -63,9 +67,9 @@ No visual clutter or overwhelming numbers:
 
 | Metric | KCET Dataset | JEE Mains Dataset |
 | :--- | :--- | :--- |
-| **Total Records** | **151,974 raw records** (47,116 aggregated) | **2,520 records** (360 aggregated) |
+| **Total Records** | **151,974 raw records** (37,034 enriched unique records) | **2,520 records** (360 aggregated) |
 | **Years Covered** | 2023, 2024, 2025 | 2020 through 2026 |
-| **Colleges** | 460+ Karnataka Engineering Colleges | Top 10 National Institutes of Technology (NITs) |
+| **Colleges** | 460+ Karnataka Engineering Colleges (Zero Duplicates) | Top 10 National Institutes of Technology (NITs) |
 | **Geographic Zones** | 6 Karnataka Zones (Bengaluru, Mysuru, Coastal, Hubballi, HK, Central) | 10 NIT Campus States (Karnataka, Tamil Nadu, Telangana, etc.) |
 | **Courses** | 146 Engineering Branches | 6 Core Engineering Specializations |
 | **Categories** | 48 Categories (GM, 1G, 2A, 2B, 3A, 3B, SC, ST, Rural, Kannada, HK) | General, OBC-NCL, EWS, SC, ST, PwD |
@@ -96,7 +100,7 @@ college_predictor/
 ├── README.md                   # Project documentation
 │
 ├── data/
-│   ├── kcet_cutoffs.csv        # Curated 47k multi-year KCET cutoff & district records (2023-2025)
+│   ├── kcet_cutoffs.csv        # Curated 37k multi-year KCET cutoff & district records (2023-2025)
 │   ├── kcet_ai_ready.csv       # Raw KCET dataset (151k rows)
 │   ├── jee_cutoffs.csv         # Curated 360 multi-year NIT cutoff & state records (2020-2026)
 │   └── jee_mains/              # Raw JEE Mains shift, category & NIT cutoff datasets
