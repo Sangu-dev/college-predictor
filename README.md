@@ -3,21 +3,26 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-0284c7?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-An intelligent, data-driven college admission predictor for **KCET (Karnataka CET)** and **JEE Main (National Institutes of Technology)**. Powered by 150,000+ official cutoff trends, instant probability scoring, and an uncluttered dark-mode interface.
+An intelligent, data-driven college admission predictor for **KCET (Karnataka CET)** and **JEE Main (National Institutes of Technology)**. Powered by 150,000+ official cutoff trends, instant probability scoring, and an executive, minimal obsidian and electric azure dark-mode interface.
 
 ---
 
 ## 🌟 Highlights & Key Features
 
-### 1. Dual Exam Engine (KCET & JEE Main)
+### 1. Modern Minimal & Executive Dark UI (Obsidian & Electric Azure)
+- **Zero Distracting Purple/Neon Hues**: Engineered with a sophisticated dark palette—rich obsidian (`#07090e`), crisp slate glassmorphism, and high-trust electric cyan/azure accents (`#38bdf8` / `#0284c7`).
+- **Precision Micro-Interactions**: Smooth hover elevations, subtle inner border glows, and tactile preset chips.
+- **Ultra-Clean Typography**: Set in Google Fonts' geometric [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) for maximum readability.
+
+### 2. Dual Exam Engine (KCET & JEE Main)
 - **KCET (Karnataka CET)**: Covers **460+ engineering institutions**, **146 courses**, and **48 categories/sub-quotas** using official 2023, 2024, and 2025 closing ranks.
 - **JEE Main (NITs)**: Covers India's top **10 National Institutes of Technology** (NIT Surathkal, NIT Trichy, NIT Warangal, MNNIT Allahabad, etc.) across 7 years of JoSAA closing ranks (2020–2026).
 - **Dynamic Form Adaptation**: The UI automatically swaps categories, branches, and quota options when switching between KCET and JEE.
 
-### 2. District & City Zone Filter (Geographic Radius)
+### 3. District & City Zone Filter (Geographic Radius)
 Students often have strict travel or relocation preferences. The system categorizes **100% of all 460 engineering institutions** into 6 regional hubs with zero unmapped colleges:
 - 🏙️ **Bengaluru Urban & Rural**: RVCE, BMSCE, PES, MSRIT, BIT, Dayananda Sagar, New Horizon, etc. (~199 colleges / 21,470 cutoffs)
 - 🌳 **Central & Southern Karnataka**: SIT Tumakuru, UBDT Davangere, JNNCE Shimoga, MCE Hassan, etc. (~73 colleges)
@@ -30,13 +35,13 @@ Students often have strict travel or relocation preferences. The system categori
 - **Instant Client-Side Filtering**: Change districts directly on the results toolbar without page reload.
 - **Location Badges**: Each college displays an informative geographic zone pill badge.
 
-### 3. Traffic-Light Admission Probability Indicators
+### 4. Traffic-Light Admission Probability Indicators
 Clean, intuitive colored indicators eliminate confusing percentages and bloated tables:
 - 🟢 **Green Circle (`Easy to Get`)**: Cutoff rank is comfortably above your rank ($\text{Cutoff} \ge 1.25 \times \text{Rank}$). Safe backup choice with high admission certainty.
 - 🟡 **Yellow Circle (`50–50 Chance`)**: Cutoff is close to your rank ($0.85 \times \text{Rank} \le \text{Cutoff} < 1.25 \times \text{Rank}$). Very realistic and competitive choice.
-- 🔴 **Red Circle (`Difficult`)**: Cutoff was stricter than your rank ($\text{Cutoff} < 0.85 \times \text{Rank}$). Ambitious reach option during later rounds or special rounds.
+- 🔴 **Coral Red Circle (`Difficult`)**: Cutoff was stricter than your rank ($\text{Cutoff} < 0.85 \times \text{Rank}$). Ambitious reach option during later rounds or special rounds.
 
-### 4. Streamlined 5-Column Clean Results Table
+### 5. Streamlined 5-Column Clean Results Table
 No visual clutter or overwhelming numbers:
 1. **Save**: One-click bookmark icon to save options into your personal counseling shortlist.
 2. **College Name & Code**: Official institution code (e.g. `E001`, `NIT08`), full college name, cutoff badge, geographic location badge, and Article 371(J) HK quota indicator.
@@ -44,12 +49,12 @@ No visual clutter or overwhelming numbers:
 4. **Category**: Category pill (`GM`, `2AG`, `3BG`, `General`, `OBC-NCL`, etc.).
 5. **Admission Chance**: Glowing color circles with clear status text.
 
-### 5. Interactive Counseling Tools
+### 6. Interactive Counseling Tools
 - ⚡ **Instant Live Search & District Filter**: Filter table results instantly by college name, code, or geographic district without page reload.
 - 🏛️ **Click-to-Open College Detail Modal**: Click on any college row to view deep counseling insights including updated KEA-KUPECA fee structures, SNQ quota fees, VTU/Autonomous affiliation status, round-by-round breakdown (Round 1, Round 2, Extended Round), and multi-year cutoff trends.
 - 🏷️ **Quick Tier Tabs**: Toggle between **All Colleges**, **🟢 Easy to Get**, **🟡 50–50 Chance**, and **🔴 Difficult**.
 - 🚀 **1-Click Branch & City Chips**: Instant presets for branches and top Karnataka city zones.
-- 💜 **Favourites & Shortlist Dashboard (`/favourites`)**: Review saved colleges with district badges, delete choices, or clear all.
+- ⭐ **Shortlist & Favourites Dashboard (`/favourites`)**: Review saved colleges with district badges, option numbering, delete choices, or clear all.
 - 📄 **Export & Print**: Download your shortlisted options (including districts) as a clean CSV or print them directly for option-entry preparation.
 
 ---
@@ -73,7 +78,7 @@ No visual clutter or overwhelming numbers:
 - **Backend**: Python 3.11, [Flask](https://flask.palletsprojects.com/)
 - **Data Processing**: [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/)
 - **Machine Learning**: [Scikit-learn](https://scikit-learn.org/) (LabelEncoders & Random Forest models)
-- **Frontend**: Semantic HTML5, Vanilla CSS, [Bootstrap 5.3](https://getbootstrap.com/), [Bootstrap Icons](https://icons.getbootstrap.com/)
+- **Frontend & Styling**: Semantic HTML5, Vanilla CSS Design System (Obsidian & Electric Azure), [Bootstrap 5.3](https://getbootstrap.com/), [Bootstrap Icons](https://icons.getbootstrap.com/)
 - **Typography**: [Google Fonts (Plus Jakarta Sans)](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
 - **Storage**: In-memory caching for sub-millisecond query execution + `localStorage` for offline shortlist persistence
 
