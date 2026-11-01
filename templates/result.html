@@ -453,26 +453,43 @@
             background-color: rgba(3, 6, 12, 0.88);
         }
         .college-detail-modal .modal-dialog {
-            max-width: 900px;
-            margin: 1.25rem auto;
+            width: 95vw;
+            max-width: 1240px;
+            margin: 1.5rem auto;
+        }
+        @media (min-width: 1400px) {
+            .college-detail-modal .modal-dialog {
+                max-width: 1320px;
+            }
+        }
+        @media (min-width: 1600px) {
+            .college-detail-modal .modal-dialog {
+                max-width: 1400px;
+            }
+        }
+        @media (max-width: 767.98px) {
+            .college-detail-modal .modal-dialog {
+                width: 96vw;
+                margin: 0.5rem auto;
+            }
         }
         .college-detail-modal .modal-content {
-            background: rgba(10, 15, 28, 0.96);
-            backdrop-filter: blur(28px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 22px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            background: rgba(10, 15, 28, 0.97);
+            backdrop-filter: blur(32px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            box-shadow: 0 35px 85px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             color: var(--text-main);
             overflow: hidden;
         }
         .college-detail-modal .modal-header {
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(15, 23, 42, 0.65);
-            padding: 20px 26px;
+            background: rgba(15, 23, 42, 0.7);
+            padding: 24px 32px 20px;
         }
         .college-detail-modal .modal-body {
-            padding: 20px 26px;
-            max-height: 82vh;
+            padding: 26px 32px;
+            max-height: 85vh;
             overflow-y: auto;
         }
         .college-detail-modal .modal-body::-webkit-scrollbar {
@@ -491,8 +508,15 @@
         }
         .college-detail-modal .modal-footer {
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(15, 23, 42, 0.55);
-            padding: 16px 26px;
+            background: rgba(15, 23, 42, 0.65);
+            padding: 18px 32px;
+        }
+        @media (max-width: 767.98px) {
+            .college-detail-modal .modal-header,
+            .college-detail-modal .modal-body,
+            .college-detail-modal .modal-footer {
+                padding: 16px 18px;
+            }
         }
         .modal-close-btn {
             background: rgba(255, 255, 255, 0.05);
@@ -566,12 +590,12 @@
 
         /* Modal Insight Tiles */
         .insight-card {
-            background: rgba(15, 23, 42, 0.55);
+            background: rgba(15, 23, 42, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 16px;
+            border-radius: 18px;
+            padding: 20px;
             height: 100%;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -579,44 +603,45 @@
         .insight-card:hover {
             transform: translateY(-2px);
             border-color: rgba(56, 189, 248, 0.35);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
         }
         .insight-card-title {
-            font-size: 0.74rem;
+            font-size: 0.76rem;
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 0.06em;
             color: #94a3b8;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 8px;
         }
 
         /* Fee Display Box */
         .fee-display-box {
-            background: rgba(8, 12, 22, 0.7);
+            background: rgba(8, 12, 22, 0.75);
             border: 1px solid rgba(245, 158, 11, 0.25);
-            border-radius: 12px;
-            padding: 10px 14px;
+            border-radius: 14px;
+            padding: 12px 16px;
         }
         .fee-main-val {
-            font-size: 1.15rem;
+            font-size: 1.18rem;
             font-weight: 800;
             color: #fbbf24;
-            line-height: 1.2;
+            line-height: 1.25;
         }
         .fee-sub-label {
-            font-size: 0.72rem;
+            font-size: 0.74rem;
             color: #94a3b8;
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         /* Round Progression Stepper */
         .round-card {
-            background: rgba(8, 12, 22, 0.7);
+            background: rgba(8, 12, 22, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 14px 10px;
+            border-radius: 16px;
+            padding: 16px 14px;
             text-align: center;
             position: relative;
             transition: all 0.2s;
@@ -902,7 +927,7 @@
 
     <!-- College Detail Modal -->
     <div class="modal fade college-detail-modal" id="collegeDetailModal" tabindex="-1" aria-labelledby="modalCollegeTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
             <div class="modal-content">
                 
                 <!-- Modal Header -->
@@ -925,7 +950,7 @@
                         </button>
                     </div>
 
-                    <h4 class="fw-extrabold text-white mb-1 mt-2" id="modalCollegeTitle" style="font-size: 1.35rem; line-height: 1.35;">
+                    <h4 class="fw-extrabold text-white mb-1 mt-2" id="modalCollegeTitle" style="font-size: 1.55rem; line-height: 1.35; letter-spacing: -0.02em;">
                         College Name
                     </h4>
 
@@ -1029,7 +1054,7 @@
                     </div>
 
                     <!-- Row 2: Round-by-Round Breakdown Matrix -->
-                    <div class="p-3 rounded-4 mb-3" style="background: rgba(23, 33, 56, 0.45); border: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="p-3 p-md-4 rounded-4 mb-3" style="background: rgba(23, 33, 56, 0.45); border: 1px solid rgba(255, 255, 255, 0.08);">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center gap-2">
                                 <i class="bi bi-diagram-3-fill text-primary fs-5"></i>
@@ -1077,7 +1102,7 @@
                     </div>
 
                     <!-- Row 3: Historical Year-on-Year Cutoffs & Stability -->
-                    <div class="p-3 rounded-4" style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="p-3 p-md-4 rounded-4" style="background: rgba(15, 23, 42, 0.55); border: 1px solid rgba(255, 255, 255, 0.08);">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
                             <div class="d-flex align-items-center gap-2">
                                 <i class="bi bi-clock-history text-info fs-5"></i>

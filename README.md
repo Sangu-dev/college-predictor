@@ -1,119 +1,56 @@
-# 🎓 KCET & JEE College Predictor
+# KCET & JEE College Predictor
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-3.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-0284c7?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-
-An intelligent, data-driven college admission predictor for **KCET (Karnataka CET)** and **JEE Main (National Institutes of Technology)**. Powered by 150,000+ official cutoff trends, instant probability scoring, and an executive, minimal obsidian and electric azure dark-mode interface.
+An admission prediction and counseling analytics platform for Karnataka Common Entrance Test (KCET) and JEE Main (NITs). Built with Flask, Pandas, and Scikit-learn, the application evaluates multi-year cutoff trends to provide candidates with data-driven probability tiers, regulatory fee classifications, and round-by-round seat allotment insights.
 
 ---
 
-## 🌟 Highlights & Key Features
+## Key Features
 
-### 1. Modern Minimal & Executive Dark UI (Obsidian & Electric Azure)
-- **Zero Distracting Purple/Neon Hues**: Engineered with a sophisticated dark palette—rich obsidian (`#07090e`), crisp slate glassmorphism, and high-trust electric cyan/azure accents (`#38bdf8` / `#0284c7`).
-- **Precision Micro-Interactions**: Smooth hover elevations, subtle inner border glows, and tactile preset chips.
-- **Ultra-Clean Typography**: Set in Google Fonts' geometric [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) for maximum readability.
-
-### 2. Dual Exam Engine (KCET & JEE Main)
-- **KCET (Karnataka CET)**: Covers **460+ engineering institutions**, **146 courses**, and **48 categories/sub-quotas** using official 2023, 2024, and 2025 closing ranks.
-- **JEE Main (NITs)**: Covers India's top **10 National Institutes of Technology** (NIT Surathkal, NIT Trichy, NIT Warangal, MNNIT Allahabad, etc.) across 7 years of JoSAA closing ranks (2020–2026).
-- **Dynamic Form Adaptation**: The UI automatically swaps categories, branches, and quota options when switching between KCET and JEE.
-
-### 3. District & City Zone Filter (Geographic Radius)
-Students often have strict travel or relocation preferences. The system categorizes **100% of all 460 engineering institutions** into 6 regional hubs with zero unmapped colleges:
-- 🏙️ **Bengaluru Urban & Rural**: RVCE, BMSCE, PES, MSRIT, BIT, Dayananda Sagar, New Horizon, etc. (~199 colleges / 21,470 cutoffs)
-- 🌳 **Central & Southern Karnataka**: SIT Tumakuru, UBDT Davangere, JNNCE Shimoga, MCE Hassan, etc. (~73 colleges)
-- 🚂 **Hubballi-Dharwad & Belagavi**: KLE Tech, SDM, GIT Belagavi, BLDEA Bijapur, BEC Bagalkot, etc. (~66 colleges)
-- 🏰 **Mysuru & Mandya Region**: SJCE / JSS STU, NIE, VVCE, PESCE Mandya, etc. (~42 colleges)
-- ☀️ **Kalyana Karnataka (HK Region / 371J)**: PDA Gulbarga, BKIT Bhalki, RYMEC Ballari, etc. (~40 colleges)
-- 🌊 **Dakshina Kannada & Udupi (Coastal Hub)**: NITK Surathkal, Sahyadri, NMAMIT Nitte, Canara, St. Joseph, etc. (~40 colleges)
-- 🇮🇳 **All India NIT Campus States (JEE)**: Surathkal, Trichy, Warangal, Calicut, Rourkela, Jaipur, Nagpur, Kurukshetra, Allahabad, Durgapur.
-- **1-Click Quick City Chips**: Instantly select your preferred region with responsive chips.
-- **Instant Client-Side Filtering**: Change districts directly on the results toolbar without page reload.
-- **Location Badges**: Each college displays an informative geographic zone pill badge.
-
-### 4. Traffic-Light Admission Probability & User-First Ordering
-Results are logically sorted to prioritize the applicant's highest-probability options first:
-- **1. 🟢 Easy to Get (`Safe`)**: Shown first at the top of the results table. Cutoff rank is comfortably above your rank ($\text{Cutoff} \ge 1.25 \times \text{Rank}$). Safe backup choice with high admission certainty.
-- **2. 🟡 50–50 Chance (`Target`)**: Shown next in the middle. Cutoff is close to your rank ($0.85 \times \text{Rank} \le \text{Cutoff} < 1.25 \times \text{Rank}$). Very realistic and competitive choice.
-- **3. 🔴 Difficult (`Dream`)**: Shown last. Cutoff was stricter than your rank ($\text{Cutoff} < 0.85 \times \text{Rank}$). Ambitious reach option during later rounds or special rounds.
-
-### 5. Zero-Duplicate Canonical Institution Pipeline
-- **Canonical College Mapping**: Mapped every college by its unique official KEA code (`college_id` e.g., `E059`). Eliminates duplicate rows previously caused by minor punctuation or spelling variations across multi-year KEA PDFs (e.g. comma vs. no comma).
-- **Consolidated Multi-Year History**: Unifies 2023, 2024, and 2025 cutoff closing ranks under a single row with exact trend percentages, so students never see the same institution and branch split into separate entries.
-
-### 6. Streamlined 5-Column Clean Results Table
-No visual clutter or overwhelming numbers:
-1. **Save**: One-click bookmark icon to save options into your personal counseling shortlist.
-2. **College Name & Code**: Official institution code (e.g. `E001`, `NIT08`), full college name, cutoff badge, geographic location badge, and Article 371(J) HK quota indicator.
-3. **Engineering Branch**: Target engineering branch/specialization.
-4. **Category**: Category pill (`GM`, `2AG`, `3BG`, `General`, `OBC-NCL`, etc.).
-5. **Admission Chance**: Glowing color circles with clear status text.
-
-### 7. Interactive Counseling Tools
-- ⚡ **Instant Live Search & District Filter**: Filter table results instantly by college name, code, or geographic district without page reload.
-- 🏛️ **Click-to-Open College Detail Modal**: Click on any college row to view deep counseling insights including updated KEA-KUPECA fee structures, SNQ quota fees, VTU/Autonomous affiliation status, round-by-round breakdown (Round 1, Round 2, Extended Round), and multi-year cutoff trends.
-- 🏷️ **Clean Toolbar Tier Tabs**: Quick tabs with live match counts (**All Colleges**, **🟢 Easy**, **🟡 50–50 Chance**, and **🔴 Difficult**) integrated right into the table toolbar.
-- 🚀 **1-Click Branch & City Chips**: Instant presets for branches and top Karnataka city zones.
-- ⭐ **Shortlist & Favourites Dashboard (`/favourites`)**: Review saved colleges with district badges, option numbering, delete choices, or clear all.
-- 📄 **Export & Print**: Download your shortlisted options (including districts) as a clean CSV or print them directly for option-entry preparation.
+- **Dual Examination Coverage**: Evaluates closing ranks for **KCET** (460+ engineering institutions, 146 branches, 48 category quotas) and **JEE Main** (Top 10 National Institutes of Technology across 10 campus states).
+- **Probability Tier Classification**: Categorizes admission feasibility into **Safe** ($\ge 1.25\times$), **Target** ($0.85\times - 1.24\times$), and **Dream** ($< 0.85\times$) based on candidate rank against closing cutoffs.
+- **Geographic Zone Filtering**: Categorizes institutions into 6 Karnataka regional zones (Bengaluru Urban & Rural, Central & Southern, Hubballi-Dharwad & Belagavi, Mysuru & Mandya, Kalyana Karnataka, and Coastal) and All India NIT campus states.
+- **Multi-Year Trend Analysis**: Aggregates historical cutoff records (2023–2025 for KCET, 2020–2026 for JEE) with canonical institution mapping to track year-over-year rank shifts.
+- **Institutional & Fee Insights**: Displays regulatory fee ranges (KEA-KUPECA government, aided, autonomous, deemed, and JoSAA central rates), Supernumerary Quota (SNQ) waivers, and affiliation details.
+- **Round-by-Round Progression**: Simulates seat allotment likelihood across Round 1, Round 2, and Extended / CSAB Special Rounds.
+- **Counseling Shortlist & Export**: Local persistence for bookmarking preferred institutions with export to CSV and printable option-entry formats.
 
 ---
 
-## 📊 Dataset Specifications
+## Tech Stack
 
-| Metric | KCET Dataset | JEE Mains Dataset |
-| :--- | :--- | :--- |
-| **Total Records** | **151,974 raw records** (37,034 enriched unique records) | **2,520 records** (360 aggregated) |
-| **Years Covered** | 2023, 2024, 2025 | 2020 through 2026 |
-| **Colleges** | 460+ Karnataka Engineering Colleges (Zero Duplicates) | Top 10 National Institutes of Technology (NITs) |
-| **Geographic Zones** | 6 Karnataka Zones (Bengaluru, Mysuru, Coastal, Hubballi, HK, Central) | 10 NIT Campus States (Karnataka, Tamil Nadu, Telangana, etc.) |
-| **Courses** | 146 Engineering Branches | 6 Core Engineering Specializations |
-| **Categories** | 48 Categories (GM, 1G, 2A, 2B, 3A, 3B, SC, ST, Rural, Kannada, HK) | General, OBC-NCL, EWS, SC, ST, PwD |
-| **Sources** | Kaggle (`sowmithns/kcet-college-admission...`) | Kaggle (`edudev-commons-org/jee-mains...`) |
+| Layer | Technologies |
+| :--- | :--- |
+| **Backend** | Python 3.10+, Flask 3 |
+| **Data & ML** | Pandas, NumPy, Scikit-learn (RandomForestRegressor, LabelEncoder) |
+| **Frontend** | HTML5, Vanilla CSS, Bootstrap 5.3, Bootstrap Icons |
+| **Data Extraction** | Camelot (PDF table parsing) |
+| **Data Storage** | In-memory dataset caching, browser `localStorage` |
 
 ---
 
-## 🛠️ Tech Stack & Architecture
-
-- **Backend**: Python 3.11, [Flask](https://flask.palletsprojects.com/)
-- **Data Processing**: [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/)
-- **Machine Learning**: [Scikit-learn](https://scikit-learn.org/) (LabelEncoders & Random Forest models)
-- **Frontend & Styling**: Semantic HTML5, Vanilla CSS Design System (Obsidian & Electric Azure), [Bootstrap 5.3](https://getbootstrap.com/), [Bootstrap Icons](https://icons.getbootstrap.com/)
-- **Typography**: [Google Fonts (Plus Jakarta Sans)](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
-- **Storage**: In-memory caching for sub-millisecond query execution + `localStorage` for offline shortlist persistence
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
 college_predictor/
-│
-├── app.py                      # Flask backend, routing, API endpoints & in-memory caching
-├── train_model.py              # Data pipeline, district mapper, multi-year aggregation & training
-├── extract_kcet.py             # PDF extraction script (Camelot)
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-│
+├── app.py                  # Flask application routes, caching, and prediction engine
+├── train_model.py          # Data cleaning, regional tagging, trend calculation & ML training
+├── extract_kcet.py         # KEA PDF cutoff table extraction utility
+├── requirements.txt        # Project dependencies
+├── README.md               # Project documentation
 ├── data/
-│   ├── kcet_cutoffs.csv        # Curated 37k multi-year KCET cutoff & district records (2023-2025)
-│   ├── kcet_ai_ready.csv       # Raw KCET dataset (151k rows)
-│   ├── jee_cutoffs.csv         # Curated 360 multi-year NIT cutoff & state records (2020-2026)
-│   └── jee_mains/              # Raw JEE Mains shift, category & NIT cutoff datasets
-│
+│   ├── kcet_cutoffs.csv    # Processed KCET dataset with district tags (2023–2025)
+│   ├── kcet_ai_ready.csv   # Raw KCET multi-year cutoff records
+│   ├── jee_cutoffs.csv     # Curated NIT cutoff records (2020–2026)
+│   └── jee_mains/          # Raw JEE category and shift analysis datasets
 └── templates/
-    ├── index.html              # Search portal with dynamic exam switching, district dropdown & chips
-    ├── result.html             # Simplified 5-column results table with district live filter & badges
-    └── favourites.html         # Saved colleges dashboard with district tags, CSV export & print support
+    ├── index.html          # Search portal and exam parameter selection
+    ├── result.html         # Prediction results, interactive filters & detail modal
+    └── favourites.html     # Shortlisted colleges dashboard with CSV export
 ```
 
 ---
 
-## 🚀 Getting Started Locally
+## Installation & Setup
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -125,11 +62,11 @@ git clone https://github.com/Sangu-dev/college-predictor.git
 cd college-predictor
 ```
 
-### 2. Set Up Virtual Environment (Recommended)
+### 2. Set Up a Virtual Environment
 ```bash
 # Windows
 python -m venv venv
-venv\Scripts\activate
+.\venv\Scripts\activate
 
 # macOS / Linux
 python3 -m venv venv
@@ -141,68 +78,73 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-*(Optional: If downloading datasets directly via code, install `pip install kagglehub`).*
+---
 
-### 4. Run Data Processing & Training (If updating datasets)
+## How to Run
+
+### 1. Data Pipeline & Model Training (Optional)
+To regenerate multi-year aggregations, district tags, and model encoders from raw data:
 ```bash
 python train_model.py
 ```
 
-### 5. Launch Application
+### 2. Start the Application
 ```bash
 python app.py
 ```
-Open your browser and navigate to:
+
+Access the application in your browser at:
 ```
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 🔌 API Endpoints
+## Admission Probability Logic
 
-The Flask application also exposes lightweight JSON endpoints for programmatic access and autocomplete:
+Admission probability is determined using the ratio of the historical closing cutoff rank ($C$) to the candidate's rank ($R$):
 
-| Endpoint | Method | Description |
+$$\text{Ratio} = \frac{C}{R}$$
+
+| Tier | Ratio Threshold | Definition & Counseling Strategy |
 | :--- | :---: | :--- |
-| `/api/districts?exam=KCET` | `GET` | Returns list of geographic district / city zones |
-| `/api/branches?exam=KCET`  | `GET` | Returns list of all available branches for the given exam |
-| `/api/categories?exam=KCET`| `GET` | Returns list of valid category codes |
-| `/api/colleges?exam=KCET`  | `GET` | Returns list of unique college names and official IDs |
-| `/favourites`              | `GET` | Renders user's saved shortlist |
+| **Safe (Easy)** | $\text{Ratio} \ge 1.25$ | Cutoff rank is at least 25% higher than candidate rank. High admission certainty for backup choices. |
+| **Target (50–50)** | $0.85 \le \text{Ratio} < 1.25$ | Cutoff is within competitive range ($\pm 15\text{--}25\%$). Realistic choices for primary allotment rounds. |
+| **Dream (Difficult)** | $\text{Ratio} < 0.85$ | Cutoff is stricter than candidate rank. Ambitious reach choices for second extended or special vacancy rounds. |
 
 ---
 
-## 🎯 How Admission Tiers Work
+## API Documentation
 
-The predictor uses standard counseling margin formulas to prevent unrealistic predictions:
+The application provides lightweight REST endpoints for dynamic querying:
 
-```text
-Let R = Candidate Rank, C = College Closing Cutoff Rank
-
-         Ratio = C / R
-┌─────────────────────────────────────────────────────────────┐
-│  🟢 Easy to Get     (Ratio ≥ 1.25)                          │
-│     Cutoff rank is at least 25% higher than your rank       │
-├─────────────────────────────────────────────────────────────┤
-│  🟡 50–50 Chance    (0.85 ≤ Ratio < 1.25)                   │
-│     Cutoff is within your competitive rank range (±15-25%)  │
-├─────────────────────────────────────────────────────────────┤
-│  🔴 Difficult       (Ratio < 0.85)                          │
-│     Cutoff was more selective; ambitious round 2/3 reach   │
-└─────────────────────────────────────────────────────────────┘
-```
+| Endpoint | Method | Query Parameters | Description |
+| :--- | :---: | :--- | :--- |
+| `/api/districts` | `GET` | `exam` (`KCET` \| `JEE`) | Returns list of geographic zones/districts. |
+| `/api/branches` | `GET` | `exam` (`KCET` \| `JEE`) | Returns available branches for the selected exam. |
+| `/api/categories` | `GET` | `exam` (`KCET` \| `JEE`) | Returns supported reservation categories. |
+| `/api/colleges` | `GET` | `exam` (`KCET` \| `JEE`) | Returns unique institutions with IDs and names. |
+| `/api/college_details` | `GET` | `college`, `exam`, `college_id`, `cutoff`, `rank` | Returns institution metadata, fee structures, and round breakdown. |
+| `/favourites` | `GET` | — | Renders the candidate's saved shortlist view. |
 
 ---
 
-## 👨‍💻 Author
+## Future Improvements
+
+- Integration of COMEDK UGET and JEE Advanced (IIT) cutoff datasets.
+- Automated ingestion pipeline for official KEA counseling seat allotment notifications.
+- Algorithmic option-entry preference list generator optimized for cutoff variance.
+- User authentication and cloud persistence for cross-device shortlist synchronization.
+
+---
+
+## Author
 
 **Sangamesh**  
-*Artificial Intelligence & Machine Learning Student*  
 GitHub: [@Sangu-dev](https://github.com/Sangu-dev)
 
 ---
 
-## 🌟 Support
+## License
 
-If this project helped you or provided useful counseling insights, consider giving it a **Star (⭐)** on [GitHub](https://github.com/Sangu-dev/college-predictor)!
+This project is licensed under the MIT License.
